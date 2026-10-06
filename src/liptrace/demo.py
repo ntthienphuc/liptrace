@@ -44,7 +44,7 @@ def run_demo(out='demo_run', onnx=False):
     cmd = [sys.executable, '-m', 'liptrace.training', '--train_csv', str(paths[0]),
            '--val_csv', str(paths[1]), '--test_csv', str(paths[2]), '--out_dir', str(root / 'run'),
            '--img_size', '16', '--max_frames', '6', '--rnn_units', '4', '--batch_size', '2',
-           '--epochs', '1', '--num_workers', '0']
+           '--epochs', '1', '--num_workers', '0', '--device', 'cpu']
     run = subprocess.run(cmd, env=env, capture_output=True, text=True)
     (root / 'training_stdout.txt').write_text(run.stdout, encoding='utf-8')
     (root / 'training_stderr.txt').write_text(run.stderr, encoding='utf-8')

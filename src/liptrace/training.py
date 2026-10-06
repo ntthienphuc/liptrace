@@ -307,10 +307,17 @@ def main():
     ap.add_argument("--num_workers", type=int, default=0)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--amp", action="store_true")
+    ap.add_argument("--device", choices=["auto", "cpu", "cuda"], default="auto")
+    ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--normalization", choices=["legacy-lower-v1", "nfc-lower-v1"], default="legacy-lower-v1")
     args = ap.parse_args()
     if args.epochs < 1 or args.batch_size < 1:
         ap.error("epochs and batch_size must be positive")
+    if args.threads < 1:
+        ap.error("threads must be positive")
+    if args.device == 'cuda' and not torch.cuda.is_available():
+        ap.error("CUDA requested but unavailable")
+    torch.set_num_threads(args.threads)
     if Path(args.out_dir).exists():
         ap.error("out_dir already exists; choose a new experiment directory")
     from .contracts import profile_from_checkpoint
@@ -328,7 +335,7 @@ def main():
     ensure_dir(args.out_dir)
     set_seed(args.seed)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device(("cuda" if torch.cuda.is_available() else "cpu") if args.device == 'auto' else args.device)
     print(f"[INFO] device = {device}")
     if device.type == "cuda":
         print(f"[INFO] cuda = {torch.cuda.get_device_name(0)}")

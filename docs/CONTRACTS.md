@@ -19,6 +19,10 @@ metadata-count-driven reader to actual-frame decoding; this is not a claim of
 bit-identical historical preprocessing for malformed containers. Train and replay
 use the same new reader and packing implementation.
 
+Training accepts `--device auto|cpu|cuda` and `--threads N`; auto chooses CUDA
+when available. The generated demo explicitly trains on CPU, and the public
+replay/ONNX path is CPU-only in v0.1.0.
+
 ## Bundles
 
 `model.pt` and `manifest.json` are required; exported bundles also have

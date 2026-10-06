@@ -19,7 +19,7 @@ def main():
         train()
         return
     parser = argparse.ArgumentParser(description='LipTrace: traceable character-CTC lip reading')
-    parser.add_argument('--threads', type=int, default=2, help='PyTorch CPU thread count (default 2)')
+    parser.add_argument('--threads', type=int, default=2, help='Inference/demo CPU threads (default 2); training has its own --threads flag')
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('train', help='Train CNN + two BiGRUs with audited train/val/test CSVs')
     b = sub.add_parser('bundle', help='Create a sanitized, hash-bound model bundle')

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the LipTrace version used in your experiments."
+title: "LipTrace: Traceable CTC lip-reading from dataset contracts to runtime parity"
+type: software
+authors:
+  - family-names: "Nguyễn"
+    given-names: "Trần Thiên Phúc"
+version: 0.1.0
+date-released: 2026-10-06
+license: MIT
+repository-code: "https://github.com/ntthienphuc/liptrace"
+url: "https://github.com/ntthienphuc/liptrace"
+abstract: "A checkpoint-compatible LipNet-style training and inference toolkit with CTC-aware dataset auditing, semantic model bundles, and stage-level PyTorch/ONNX replay verification."
+keywords:
+  - lip-reading
+  - CTC
+  - reproducibility
+  - ONNX

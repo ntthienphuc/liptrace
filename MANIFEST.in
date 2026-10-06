@@ -1,0 +1,9 @@
+include LICENSE THIRD_PARTY_NOTICES.md CITATION.cff CHANGELOG.md REPRODUCE.md CONTRIBUTING.md
+include requirements-tested-win311.txt
+recursive-include docs *.md *.svg *.json
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include .github *.yml
+prune validation_local
+prune .venv
+prune .venv-clean

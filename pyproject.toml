@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liptrace"
+version = "0.1.0"
+description = "Traceable CTC lip-reading: dataset audits, bound model bundles, and stage-level runtime replay"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Nguyễn Trần Thiên Phúc"}]
+dependencies = ["torch>=2.6,<2.9", "numpy>=1.23,<3", "opencv-python-headless>=4.7,<5", "pandas>=1.5,<3", "tqdm>=4.64,<5"]
+keywords = ["lipreading", "ctc", "reproducibility", "onnx", "vietnamese"]
+
+[project.optional-dependencies]
+onnx = ["onnx>=1.15,<2", "onnxruntime>=1.17,<2"]
+dev = ["build>=1.2", "twine>=5", "pytest>=8,<9"]
+
+[project.urls]
+Repository = "https://github.com/ntthienphuc/liptrace"
+Documentation = "https://github.com/ntthienphuc/liptrace/tree/main/docs"
+Issues = "https://github.com/ntthienphuc/liptrace/issues"
+
+[project.scripts]
+liptrace = "liptrace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

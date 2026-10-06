@@ -21,6 +21,14 @@ def main():
         if artifact.suffix == '.whl':
             with zipfile.ZipFile(artifact) as handle:
                 contents = {name: handle.read(name) for name in handle.namelist() if not name.endswith('/')}
+            source = Path(__file__).resolve().parents[1] / 'src' / 'liptrace'
+            expected = {'liptrace/' + p.name: p.read_text(encoding='utf-8') for p in source.glob('*.py')}
+            packaged = {name for name in contents if name.startswith('liptrace/') and name.endswith('.py')}
+            if packaged != set(expected):
+                raise RuntimeError('Wheel module set differs from source checkout')
+            for name, text in expected.items():
+                if contents[name].decode('utf-8').replace('\r\n', '\n') != text.replace('\r\n', '\n'):
+                    raise RuntimeError(f'Wheel source differs from checkout: {name}')
         else:
             with tarfile.open(artifact) as handle:
                 contents = {member.name: handle.extractfile(member).read() for member in handle.getmembers() if member.isfile()}

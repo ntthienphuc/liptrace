@@ -43,7 +43,8 @@ flowchart LR
 
 ## Install and run a complete example
 
-Python 3.9–3.12 is the initial supported range. Use a fresh environment and install
+The initial validation covers Python 3.9–3.12 (specific OS/version combinations
+are listed in [validation](docs/VALIDATION.md)). Use a fresh environment and install
 CPU PyTorch first (or choose a compatible CUDA build yourself).
 
 ```bash
@@ -107,6 +108,10 @@ liptrace inspect --bundle my_bundle --expect-manifest-sha256 <trusted-digest>
 
 The checkpoint must contain `model_state`, `charset`, `blank_index`, and `args`
 with `img_size,max_frames,rnn_units,dropout`, and match the supplied architecture.
+Registration inherits an existing `args.normalization` declaration and rejects
+a conflicting override; checkpoints without that metadata use the legacy mode
+unless explicitly declared otherwise. Newly created bundles preserve that choice
+inside the sanitized checkpoint as well as the manifest.
 The library currently supports **one architecture adapter**, not arbitrary
 recognizers. [Contract and API details](docs/CONTRACTS.md).
 
@@ -159,3 +164,9 @@ are not covered by this license. [Third-party notices](THIRD_PARTY_NOTICES.md).
 Use [CITATION.cff](CITATION.cff) to cite the software version. No SoftwareX
 acceptance or software DOI is claimed. Bug reports and tested architecture
 adapters are welcome; read [CONTRIBUTING.md](CONTRIBUTING.md).
+[Software metadata for manuscript preparation](docs/SOFTWARE_METADATA.md) records
+the release scope, dependencies, documentation and support location.
+Software support and reproducible bug reports:
+[GitHub Issues](https://github.com/ntthienphuc/liptrace/issues).
+`Licence.txt` is an identical copy of `LICENSE` supplied for the SoftwareX
+repository convention; distribution checks enforce that they remain synchronized.

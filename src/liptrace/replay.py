@@ -94,7 +94,57 @@ def read_trace(directory):
         if set(data.files) != set(STAGES[:5]):
             raise ValueError('Trace arrays missing stages')
         arrays = {key: data[key] for key in data.files}
+    cfg = doc['profile']['model']
+    frames = arrays['decoded_frames']
+    if frames.ndim != 4 or frames.shape[-1] != 3 or frames.dtype != np.uint8 or not all(frames.shape):
+        raise ValueError('Invalid decoded frame geometry or dtype')
+    shapes = {'sample_indices': ((cfg['max_frames'],), np.dtype('int64')),
+              'tensor': ((1, 1, cfg['max_frames'], cfg['img_size'], cfg['img_size']), np.dtype('float32')),
+              'logits': ((1, cfg['max_frames'], len(doc['profile']['charset']) + 1), np.dtype('float32')),
+              'ctc_path': ((cfg['max_frames'],), np.dtype('int64'))}
+    for key, (shape, dtype) in shapes.items():
+        if arrays[key].shape != shape or arrays[key].dtype != dtype or not np.isfinite(arrays[key]).all():
+            raise ValueError(f'Invalid trace stage shape, dtype or finite values: {key}')
+    if not isinstance(doc.get('transcript'), str):
+        raise ValueError('Invalid trace transcript')
+    if 'metrics' not in doc or (doc['metrics'] is not None and not isinstance(doc['metrics'], dict)):
+        raise ValueError('Invalid trace metrics')
     return doc, arrays
+
+
+def trace_consistency(doc, arrays):
+    """Check derived stages independently of another trace's agreement.
+
+    This validates recorded relationships, not that logits really came from the
+    named model. Trust still requires an externally recorded artifact identity.
+    """
+    profile = doc['profile']
+    tensor, indices = pack_frames(arrays['decoded_frames'], profile['model']['max_frames'],
+                                  profile['model']['img_size'])
+    expected_path = arrays['logits'].argmax(-1)[0].astype(np.int64)
+    checks = [
+        {'stage': 'sample_indices', 'pass': bool(np.array_equal(indices, arrays['sample_indices']))},
+        {'stage': 'tensor', 'pass': bool(np.array_equal(tensor, arrays['tensor']))},
+        {'stage': 'ctc_path', 'pass': bool(np.array_equal(expected_path, arrays['ctc_path']))},
+    ]
+    try:
+        transcript = decode_path(arrays['ctc_path'], profile['charset'], profile['blank_index'])
+    except ValueError:
+        transcript = None
+    checks.append({'stage': 'transcript', 'pass': transcript is not None and transcript == doc['transcript']})
+    metrics = doc['metrics']
+    metrics_ok = metrics is None
+    if metrics is not None:
+        ref = metrics.get('reference')
+        if isinstance(ref, str):
+            normalized = normalize(ref, profile['normalization'])
+            hyp = normalize(doc['transcript'], profile['normalization'])
+            expected = {'reference': normalized, 'hypothesis': hyp, 'cer': cer_score(normalized, hyp),
+                        'wer': wer_score(normalized, hyp), 'exact_match': normalized == hyp,
+                        'aggregation': 'one_sample; not corpus-weighted'}
+            metrics_ok = metrics == expected
+    checks.append({'stage': 'metrics', 'pass': metrics_ok and doc.get('accuracy_evaluation') is (metrics is not None)})
+    return {'pass': all(c['pass'] for c in checks), 'checks': checks}
 
 
 def compare_traces(left, right, atol=1e-5, rtol=1e-4):
@@ -121,6 +171,11 @@ def compare_traces(left, right, atol=1e-5, rtol=1e-4):
             check = {'stage': stage, 'pass': a[stage] == b[stage]}
         checks.append(check)
     failed = next((c['stage'] for c in checks if not c['pass']), None)
+    consistency = {'left': trace_consistency(a, aa), 'right': trace_consistency(b, bb)}
+    if failed is None:
+        failed = next((f'{side}_trace.{check["stage"]}' for side, report in consistency.items()
+                       for check in report['checks'] if not check['pass']), None)
     return {'schema': 'liptrace-comparison-v1', 'pass': failed is None,
-            'first_divergence': failed, 'checks': checks, 'atol': atol, 'rtol': rtol,
-            'scope': 'two recorded executions; discrete path and transcript equality required'}
+            'first_divergence': failed, 'checks': checks, 'trace_consistency': consistency,
+            'atol': atol, 'rtol': rtol,
+            'scope': 'two recorded executions; internal consistency and discrete path/transcript equality required'}

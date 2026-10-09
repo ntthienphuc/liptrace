@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "liptrace"
-version = "0.1.0"
+version = "0.1.1"
 description = "Traceable CTC lip-reading: dataset audits, bound model bundles, and stage-level runtime replay"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
-license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+license-files = ["LICENSE", "Licence.txt", "THIRD_PARTY_NOTICES.md"]
 authors = [{name = "Nguyễn Trần Thiên Phúc"}]
 dependencies = ["torch>=2.6,<2.9", "numpy>=1.23,<3", "opencv-python-headless>=4.7,<5", "pandas>=1.5,<3", "tqdm>=4.64,<5"]
 keywords = ["lipreading", "ctc", "reproducibility", "onnx", "vietnamese"]

@@ -1,5 +1,27 @@
 # Software validation
 
+## Maintenance validation — 2026-10-09
+
+The v0.1.1 candidate passed **57 tests** in Windows/Python 3.11.9 after installing
+the built wheel. Thirteen new regression cases cover inherited normalization,
+ambiguous CSV input, invalid trace geometry and matching but internally stale
+replay records. The existing fault benchmark still detects 14/14 constructed
+faults and accepts its one healthy fixture. These are controlled cases, not
+estimates of field error prevalence or natural-corpus recognition accuracy.
+
+An installed-wheel demo run from outside the checkout passed one synthetic CPU
+training epoch, repeated PyTorch replay, and ONNX replay. All nine cross-trace
+checks and all five within-trace consistency checks passed on each side. Maximum
+logit error was 1.1920928955078125e-7 at atol=1e-5 and rtol=1e-4. `pip check`,
+distribution-content checks and `twine check` passed. Dated machine-readable
+evidence is in [validation_20261009.json](validation_20261009.json).
+
+The source and wheel contain identical `LICENSE` and `Licence.txt` copies. Support
+is through GitHub Issues. The initial v0.1.0 CI run was confirmed green during this
+audit; v0.1.1 CI must be checked against its actual commit/tag before publication.
+
+## Initial v0.1.0 evidence
+
 Initial local check: Windows x64, Python 3.9.13, PyTorch 2.8.0+cpu, NumPy 2.0.2,
 OpenCV 4.14.0. A separate clean Python 3.11 environment and fresh GitHub runners
 are used to verify installability; current run status is visible in Actions.

@@ -1,4 +1,4 @@
-include LICENSE THIRD_PARTY_NOTICES.md CITATION.cff CHANGELOG.md REPRODUCE.md CONTRIBUTING.md
+include LICENSE Licence.txt THIRD_PARTY_NOTICES.md CITATION.cff CHANGELOG.md REPRODUCE.md CONTRIBUTING.md
 include requirements-tested-win311.txt
 recursive-include docs *.md *.svg *.json
 recursive-include scripts *.py

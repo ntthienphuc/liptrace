@@ -4,6 +4,7 @@ import math
 import time
 import random
 import argparse
+from . import __version__
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -493,7 +494,7 @@ def main():
     )
 
     summary = {
-        "software_version": "0.1.0",
+        "software_version": __version__,
         "historical_reproduction": False,
         "charset_source": "training_only",
         "metrics_aggregation": "sample_mean",

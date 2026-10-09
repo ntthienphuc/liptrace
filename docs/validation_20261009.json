@@ -1,0 +1,362 @@
+{
+  "schema": "liptrace-maintenance-validation-v1",
+  "date": "2026-10-09",
+  "version": "0.1.1",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "torch": "2.8.0+cpu",
+  "numpy": "2.4.6",
+  "opencv": "4.14.0",
+  "onnxruntime": "1.30.0",
+  "tests": {
+    "passed": 57,
+    "new_regression_cases": 13,
+    "mode": "installed wheel; all ONNX tests included"
+  },
+  "fault_benchmark": {
+    "schema": "liptrace-fault-benchmark-v1",
+    "cases": [
+      {
+        "case": "healthy",
+        "expected": "accept",
+        "detected": [],
+        "pass": true
+      },
+      {
+        "case": "missing_group",
+        "expected": "missing_group",
+        "detected": [
+          "missing_group"
+        ],
+        "pass": true
+      },
+      {
+        "case": "empty_label",
+        "expected": "empty_label",
+        "detected": [
+          "empty_label"
+        ],
+        "pass": true
+      },
+      {
+        "case": "unseen_char",
+        "expected": "unseen_character",
+        "detected": [
+          "unseen_character"
+        ],
+        "pass": true
+      },
+      {
+        "case": "repeated_ctc_label",
+        "expected": "ctc_infeasible",
+        "detected": [
+          "ctc_infeasible"
+        ],
+        "pass": true
+      },
+      {
+        "case": "negative_timestamp",
+        "expected": "invalid_timestamp",
+        "detected": [
+          "invalid_timestamp"
+        ],
+        "pass": true
+      },
+      {
+        "case": "nonfinite_timestamp",
+        "expected": "invalid_timestamp",
+        "detected": [
+          "invalid_timestamp"
+        ],
+        "pass": true
+      },
+      {
+        "case": "out_of_source_range",
+        "expected": "invalid_timestamp",
+        "detected": [
+          "invalid_timestamp"
+        ],
+        "pass": true
+      },
+      {
+        "case": "missing_video",
+        "expected": "missing_media",
+        "detected": [
+          "missing_media"
+        ],
+        "pass": true
+      },
+      {
+        "case": "group_leakage",
+        "expected": "group_overlap",
+        "detected": [
+          "group_overlap"
+        ],
+        "pass": true
+      },
+      {
+        "case": "renamed_duplicate",
+        "expected": "content_overlap",
+        "detected": [
+          "content_overlap"
+        ],
+        "pass": true
+      },
+      {
+        "case": "corrupt_video",
+        "expected": "invalid_media",
+        "detected": [
+          "invalid_media"
+        ],
+        "pass": true
+      },
+      {
+        "case": "swapped_charset",
+        "expected": "reject",
+        "pass": true
+      },
+      {
+        "case": "modified_weights",
+        "expected": "reject",
+        "pass": true
+      },
+      {
+        "case": "changed_manifest",
+        "expected": "reject",
+        "pass": true
+      }
+    ],
+    "faults_expected": 14,
+    "faults_detected": 14,
+    "healthy_expected": 1,
+    "healthy_accepted": 1,
+    "python": "3.11.9",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.4.6",
+    "opencv": "4.14.0",
+    "scope": "deliberately injected faults and one healthy fixture; not population detection performance"
+  },
+  "installed_demo": {
+    "status": "PASS",
+    "scope": "12 synthetic mouth-like clips; one CPU training epoch; no recognition accuracy claim",
+    "repeat": {
+      "schema": "liptrace-comparison-v1",
+      "pass": true,
+      "first_divergence": null,
+      "checks": [
+        {
+          "stage": "profile",
+          "pass": true
+        },
+        {
+          "stage": "source_video",
+          "pass": true
+        },
+        {
+          "stage": "decoded_frames",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "sample_indices",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "tensor",
+          "pass": true,
+          "same_shape_dtype": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "stage": "logits",
+          "pass": true,
+          "same_shape_dtype": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "stage": "ctc_path",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "transcript",
+          "pass": true
+        },
+        {
+          "stage": "metrics",
+          "pass": true
+        }
+      ],
+      "trace_consistency": {
+        "left": {
+          "pass": true,
+          "checks": [
+            {
+              "stage": "sample_indices",
+              "pass": true
+            },
+            {
+              "stage": "tensor",
+              "pass": true
+            },
+            {
+              "stage": "ctc_path",
+              "pass": true
+            },
+            {
+              "stage": "transcript",
+              "pass": true
+            },
+            {
+              "stage": "metrics",
+              "pass": true
+            }
+          ]
+        },
+        "right": {
+          "pass": true,
+          "checks": [
+            {
+              "stage": "sample_indices",
+              "pass": true
+            },
+            {
+              "stage": "tensor",
+              "pass": true
+            },
+            {
+              "stage": "ctc_path",
+              "pass": true
+            },
+            {
+              "stage": "transcript",
+              "pass": true
+            },
+            {
+              "stage": "metrics",
+              "pass": true
+            }
+          ]
+        }
+      },
+      "atol": 1e-05,
+      "rtol": 0.0001,
+      "scope": "two recorded executions; internal consistency and discrete path/transcript equality required"
+    },
+    "onnx": {
+      "schema": "liptrace-comparison-v1",
+      "pass": true,
+      "first_divergence": null,
+      "checks": [
+        {
+          "stage": "profile",
+          "pass": true
+        },
+        {
+          "stage": "source_video",
+          "pass": true
+        },
+        {
+          "stage": "decoded_frames",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "sample_indices",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "tensor",
+          "pass": true,
+          "same_shape_dtype": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "stage": "logits",
+          "pass": true,
+          "same_shape_dtype": true,
+          "max_abs_error": 1.1920928955078125e-07
+        },
+        {
+          "stage": "ctc_path",
+          "pass": true,
+          "same_shape_dtype": true
+        },
+        {
+          "stage": "transcript",
+          "pass": true
+        },
+        {
+          "stage": "metrics",
+          "pass": true
+        }
+      ],
+      "trace_consistency": {
+        "left": {
+          "pass": true,
+          "checks": [
+            {
+              "stage": "sample_indices",
+              "pass": true
+            },
+            {
+              "stage": "tensor",
+              "pass": true
+            },
+            {
+              "stage": "ctc_path",
+              "pass": true
+            },
+            {
+              "stage": "transcript",
+              "pass": true
+            },
+            {
+              "stage": "metrics",
+              "pass": true
+            }
+          ]
+        },
+        "right": {
+          "pass": true,
+          "checks": [
+            {
+              "stage": "sample_indices",
+              "pass": true
+            },
+            {
+              "stage": "tensor",
+              "pass": true
+            },
+            {
+              "stage": "ctc_path",
+              "pass": true
+            },
+            {
+              "stage": "transcript",
+              "pass": true
+            },
+            {
+              "stage": "metrics",
+              "pass": true
+            }
+          ]
+        }
+      },
+      "atol": 1e-05,
+      "rtol": 0.0001,
+      "scope": "two recorded executions; internal consistency and discrete path/transcript equality required"
+    }
+  },
+  "pip_check": "PASS",
+  "distribution_audit": "PASS",
+  "twine_check": "PASS",
+  "boundaries": [
+    "Synthetic software validation only",
+    "No new natural-corpus CER/WER evaluation",
+    "No Jetson hardware validation",
+    "No independent external-user reuse study"
+  ]
+}

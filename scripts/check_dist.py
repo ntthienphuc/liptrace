@@ -40,8 +40,10 @@ def main():
             credential = rb'\bghp_[A-Za-z0-9]{30,}\b|\bgithub_pat_[A-Za-z0-9_]{40,}\b|-----BEGIN [A-Z ]*PRIVATE KEY-----'
             if re.search(credential, payload):
                 raise RuntimeError(f'Credential marker in {name}')
-        if not any(name.endswith('LICENSE') for name in contents):
-            raise RuntimeError('Missing source license')
+        legal = {Path(name).name: payload for name, payload in contents.items()
+                 if Path(name).name in ('LICENSE', 'Licence.txt')}
+        if set(legal) != {'LICENSE', 'Licence.txt'} or legal['LICENSE'] != legal['Licence.txt']:
+            raise RuntimeError('Missing or inconsistent LICENSE / Licence.txt')
         digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
         reports.append({'file': artifact.name, 'sha256': digest, 'bytes': artifact.stat().st_size,
                         'entries': len(contents), 'status': 'PASS'})

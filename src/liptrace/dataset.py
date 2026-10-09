@@ -10,6 +10,7 @@ from .media import decode_frames
 def audit_dataset(paths, max_frames=32, normalization='legacy-lower-v1', decode=True):
     if len(paths) != 3 or type(max_frames) is not int or max_frames <= 0:
         raise ValueError('Supply three split manifests and positive max_frames')
+    normalize('', normalization)
     roles = ['train', 'val', 'test']
     records, issues, manifests = [], [], []
 
@@ -24,6 +25,9 @@ def audit_dataset(paths, max_frames=32, normalization='legacy-lower-v1', decode=
             fields = reader.fieldnames or []
             label_col = next((c for c in ['text', 'label_ascii', 'label_text'] if c in fields), None)
             group_col = next((c for c in ['group_key', 'speaker_dir', 'stem'] if c in fields), None)
+            if len(set(fields)) != len(fields):
+                issue('manifest_schema', role, None, 'Duplicate CSV column names are ambiguous')
+                continue
             if not label_col or 'clip_path' not in fields or not group_col:
                 issue('manifest_schema', role, None, 'Need clip_path, text and group_key (or speaker_dir/stem)')
                 continue
@@ -31,6 +35,9 @@ def audit_dataset(paths, max_frames=32, normalization='legacy-lower-v1', decode=
         if not rows:
             issue('empty_split', role, None, 'Empty manifest')
         for number, row in enumerate(rows, 2):
+            if None in row or any(value is None for value in row.values()):
+                issue('manifest_row_shape', role, number, 'CSV row width differs from its header')
+                continue
             raw = row.get(label_col) or ''
             text = normalize(raw, normalization)
             clip = (row.get('clip_path') or '').strip()

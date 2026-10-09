@@ -85,6 +85,36 @@ def test_checkpoint_same_shape_swap_rejected_by_bundle_hash(checkpoint, tmp_path
         read_bundle(root)
 
 
+def test_bundle_inherits_and_preserves_training_normalization(checkpoint, tmp_path):
+    ckpt = torch.load(checkpoint, weights_only=True)
+    ckpt['args']['normalization'] = 'nfc-lower-v1'
+    torch.save(ckpt, checkpoint)
+    root = tmp_path / 'bundle'
+    create_bundle(checkpoint, root)
+    doc = read_bundle(root)
+    assert doc['profile']['normalization'] == 'nfc-lower-v1'
+    assert torch.load(root / 'model.pt', weights_only=True)['args']['normalization'] == 'nfc-lower-v1'
+    with pytest.raises(ValueError, match='conflicts'):
+        create_bundle(checkpoint, tmp_path / 'conflict', 'legacy-lower-v1')
+    doc['profile']['normalization'] = 'legacy-lower-v1'
+    doc['provenance']['profile_sha256'] = json_digest(doc['profile'])
+    write_json(root / 'manifest.json', doc)
+    with pytest.raises(ValueError, match='normalization mismatch'):
+        read_bundle(root)
+
+
+def test_old_bundle_without_recorded_normalization_remains_readable(checkpoint, tmp_path):
+    root = tmp_path / 'bundle'
+    create_bundle(checkpoint, root)
+    ckpt = torch.load(root / 'model.pt', weights_only=True)
+    del ckpt['args']['normalization']
+    torch.save(ckpt, root / 'model.pt')
+    doc = json.loads((root / 'manifest.json').read_text())
+    doc['artifacts']['model.pt'] = sha256(root / 'model.pt')
+    write_json(root / 'manifest.json', doc)
+    assert read_bundle(root)['profile']['normalization'] == 'legacy-lower-v1'
+
+
 @pytest.mark.parametrize('field,value', [('blank_index', 0), ('decoder', 'beam'),
     ('normalization', 'unknown'), ('charset', ['a', 'a']), ('charset', ['ab']),
     ('architecture', 'arbitrary-python-plugin')])
@@ -126,6 +156,17 @@ def test_group_overlap_and_corrupt_media(tmp_path):
     (tmp_path / 'test.avi').write_bytes(b'not a video')
     report = audit_dataset(paths, 6)
     assert {'group_overlap', 'invalid_media'} <= codes(report)
+
+
+@pytest.mark.parametrize('csv_text,code', [
+    ('clip_path,text,group_key,text\ntrain.avi,ab,train,ab\n', 'manifest_schema'),
+    ('clip_path,text,group_key\ntrain.avi,ab,train,unexpected\n', 'manifest_row_shape'),
+    ('clip_path,text,group_key\ntrain.avi,ab\n', 'manifest_row_shape')])
+def test_malformed_csv_cannot_silently_discard_values(tmp_path, csv_text, code):
+    paths = manifests(tmp_path)
+    paths[0].write_text(csv_text, encoding='utf-8')
+    report = audit_dataset(paths, 6)
+    assert not report['valid'] and code in codes(report)
 
 
 def test_healthy_split_and_manifest_relative_paths(tmp_path, monkeypatch):
@@ -214,6 +255,44 @@ def test_trace_array_tampering_rejected(tmp_path, checkpoint):
     with (b / 'stages.npz').open('ab') as handle:
         handle.write(b'tamper')
     with pytest.raises(ValueError, match='identity'):
+        compare_traces(a, b)
+
+
+@pytest.mark.parametrize('stage', ['sample_indices', 'tensor', 'ctc_path'])
+def test_identically_inconsistent_traces_cannot_pass(tmp_path, checkpoint, stage):
+    a, b = traces(tmp_path, checkpoint)
+    for root in (a, b):
+        def modify(data):
+            if stage == 'ctc_path':
+                data[stage][0] = (data[stage][0] + 1) % 3
+            else:
+                data[stage].flat[0] += 1
+        rewrite_array(root, modify)
+    result = compare_traces(a, b)
+    assert not result['pass']
+    assert result['first_divergence'] == f'left_trace.{stage}'
+
+
+@pytest.mark.parametrize('stage', ['transcript', 'metrics'])
+def test_stale_json_stages_cannot_pass_by_matching_each_other(tmp_path, checkpoint, stage):
+    a, b = traces(tmp_path, checkpoint)
+    for root in (a, b):
+        doc = json.loads((root / 'trace.json').read_text())
+        if stage == 'transcript':
+            doc[stage] = 'not the CTC decode'
+        else:
+            doc[stage]['cer'] = -1.0
+        write_json(root / 'trace.json', doc)
+    result = compare_traces(a, b)
+    assert not result['pass']
+    assert result['first_divergence'] == f'left_trace.{stage}'
+
+
+@pytest.mark.parametrize('stage', ['tensor', 'logits', 'ctc_path'])
+def test_trace_arrays_must_match_profile_geometry(tmp_path, checkpoint, stage):
+    a, b = traces(tmp_path, checkpoint)
+    rewrite_array(b, lambda data: data.update({stage: data[stage].reshape(-1)[:1]}))
+    with pytest.raises(ValueError, match='shape'):
         compare_traces(a, b)
 
 

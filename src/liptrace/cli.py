@@ -25,7 +25,8 @@ def main():
     b = sub.add_parser('bundle', help='Create a sanitized, hash-bound model bundle')
     b.add_argument('--checkpoint', required=True)
     b.add_argument('--out', required=True)
-    b.add_argument('--normalization', choices=['legacy-lower-v1', 'nfc-lower-v1'], default='legacy-lower-v1')
+    b.add_argument('--normalization', choices=['legacy-lower-v1', 'nfc-lower-v1'],
+                   help='Inherit checkpoint declaration; legacy fallback when absent. Conflicting overrides fail.')
     inspect = sub.add_parser('inspect', help='Validate and inspect every bundle artifact')
     inspect.add_argument('--bundle', required=True)
     inspect.add_argument('--expect-manifest-sha256')

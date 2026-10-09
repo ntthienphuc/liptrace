@@ -31,6 +31,16 @@ paths, retains model state/charset/blank/geometry, and creates a closed profile.
 Unsupported normalization, decoder, architecture or preprocessing is rejected.
 Per-file SHA-256 verifies bytes; checkpoint metadata must also equal the profile.
 
+From v0.1.1, bundle creation inherits `args.normalization` when the checkpoint
+declares it and preserves that field in the sanitized checkpoint. A conflicting
+explicit override fails before writing an output directory. Checkpoints without
+that historical metadata use the explicit choice or `legacy-lower-v1` fallback;
+the tool cannot reconstruct their original label policy from weights alone.
+Existing v0.1.0 bundles omitted this field and remain readable. For those bundles,
+use an externally trusted manifest digest: their normalization declaration cannot
+be cross-checked against the sanitized checkpoint. Rebuilding from the original
+training checkpoint supplies the stronger binding.
+
 ```python
 from liptrace.bundle import create_bundle, read_bundle, export_onnx
 identity = create_bundle('best.pt', 'bundle')
@@ -56,6 +66,9 @@ missing groups, missing/failed media, cross-role group/path/hash overlap, confli
 labels on identical media, unseen validation/test characters, invalid supplied
 timestamps and infeasible CTC labels are errors. All issues are collected.
 Within-role duplicates and many-to-one normalization collisions are warnings.
+Duplicate CSV headers and rows with extra or missing fields are errors. A row
+whose column count is ambiguous is reported and omitted from parsed records;
+its split is invalid regardless of the remaining rows.
 
 Minimum CTC length is the number of characters plus the number of adjacent equal
 characters: `book` needs five output steps. Do not remove repeated characters to
@@ -80,6 +93,17 @@ checks profile and source-video identity, then decoded BGR frames, sample indice
 packed tensor, logits, CTC path, transcript and metrics. It reports all comparisons
 and the first divergent stage. Tiny numeric differences can change an argmax, so
 equal transcripts and paths are checked separately from float tolerance.
+
+Version 0.1.1 also validates array shape, dtype and finite values before comparison,
+then independently derives sample indices/tensors from the saved frames, CTC paths
+from logits, transcripts from paths and metrics from the declared reference. The
+`trace_consistency` result is required for a passing comparison. When matching
+traces contain the same stale derived value, `first_divergence` names e.g.
+`left_trace.ctc_path`. When traces differ, the first cross-trace difference remains
+the primary diagnosis and both consistency reports are retained. This check uses
+the current OpenCV packing implementation; it does not prove that saved logits
+were produced by the named model or authenticate edited JSON. The reference text
+is an input declaration, not independently established ground truth.
 
 Forward timings are one CPU call without warmup, excluding loading, decoding,
 preprocessing, disk writes and UI. They are execution diagnostics, not a latency

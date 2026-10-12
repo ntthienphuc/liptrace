@@ -26,7 +26,7 @@ jobs:
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-      - run: python -m pip install ".[dev]"
+      - run: python -m pip install ".[dev,training]"
       - run: python -m pip check
       - run: python -m pytest -q
       - run: liptrace demo --out demo_run
@@ -51,13 +51,33 @@ jobs:
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-      - run: python -m pip install ".[dev,onnx]"
+      - run: python -m pip install ".[dev,training,onnx]"
       - run: python -m pip check
       - run: python -m pytest -q
       - run: liptrace demo --out demo_run --onnx
+      - run: python examples/migration_demo.py --out migration_run --repetitions 1
+      - run: liptrace export --bundle demo_run/run/bundle --out deploy_run --runtime-only
+      - run: python -m build
+      - run: python -m twine check dist/*
+      - run: python scripts/check_dist.py --dist dist
+      - run: python -m venv lean
+      - run: >
+          lean/bin/python -c "import pathlib, subprocess, sys;
+          wheels = list(pathlib.Path('dist').glob('*.whl')); assert len(wheels) == 1;
+          subprocess.check_call([sys.executable, '-m', 'pip', 'install', str(wheels[0]) + '[runtime]'])"
+      - run: >
+          lean/bin/python -c "import importlib.util, liptrace;
+          assert all(importlib.util.find_spec(name) is None for name in ('torch', 'onnx', 'pandas', 'tqdm'));
+          assert 'site-packages' in liptrace.__file__"
+      - run: lean/bin/liptrace inspect --bundle deploy_run
+      - run: lean/bin/liptrace trace --bundle deploy_run --video demo_run/test_0.avi --runtime onnx --reference a --out lean_trace
+      - run: lean/bin/liptrace compare --left demo_run/torch_trace --right lean_trace --out lean_comparison.json
       - uses: actions/upload-artifact@v4
         with:
           name: onnx-parity
           path: |
             demo_run/receipt.json
             demo_run/onnx_comparison.json
+            migration_run/report/report.json
+            lean_comparison.json
+            dist/SHA256SUMS.txt

@@ -5,39 +5,39 @@ import time
 from pathlib import Path
 import cv2
 import numpy as np
-import torch
 from .bundle import read_bundle
 from .contracts import sha256, json_digest, write_json, normalize
 from .media import decode_frames, pack_frames
-from .runtime import load_recognizer
-from .training import cer_score, wer_score
+from .ctc import decode_path, cer_score, wer_score
+from .deployment import require_training, require_onnxruntime, open_session
 
 STAGES = ('decoded_frames', 'sample_indices', 'tensor', 'logits', 'ctc_path', 'transcript', 'metrics')
 
 
-def decode_path(path, chars, blank):
-    previous, result = None, []
-    for value in path:
-        value = int(value)
-        if value < 0 or value > blank:
-            raise ValueError('CTC path index outside charset')
-        if value != blank and value != previous:
-            result.append(chars[value])
-        previous = value
-    return ''.join(result)
 
-
-def trace_video(bundle, video, out, runtime='torch', reference=None, expected_manifest_sha256=None):
+def trace_video(bundle, video, out, runtime='torch', reference=None, expected_manifest_sha256=None, threads=2):
+    started = time.perf_counter()
+    if runtime not in ('torch', 'onnx'):
+        raise ValueError('Runtime must be torch or onnx')
     doc = read_bundle(bundle, expected_manifest_sha256)
+    validation_ms = (time.perf_counter() - started) * 1000
     profile = doc['profile']
     target = Path(out)
     if target.exists():
         raise ValueError('Trace destination already exists')
+    prep_start = time.perf_counter()
     frames = decode_frames(video)
     tensor, indices = pack_frames(frames, profile['model']['max_frames'], profile['model']['img_size'])
-    runtime_version = torch.__version__
+    preparation_ms = (time.perf_counter() - prep_start) * 1000
+    load_start = time.perf_counter()
     if runtime == 'torch':
+        if 'model.pt' not in doc['artifacts']:
+            raise ValueError('ONNX-only deployment requires runtime="onnx" (CLI: --runtime onnx)')
+        torch = require_training()
+        from .runtime import load_recognizer
+        runtime_version = torch.__version__
         model, _, _ = load_recognizer(Path(bundle) / 'model.pt')
+        loading_ms = (time.perf_counter() - load_start) * 1000
         with torch.inference_mode():
             t0 = time.perf_counter()
             logits = model(torch.from_numpy(tensor)).numpy()
@@ -45,20 +45,21 @@ def trace_video(bundle, video, out, runtime='torch', reference=None, expected_ma
     elif runtime == 'onnx':
         if 'model.onnx' not in doc['artifacts']:
             raise ValueError('Bundle has no ONNX export')
-        import onnxruntime as ort
-        session = ort.InferenceSession(str(Path(bundle) / 'model.onnx'), providers=['CPUExecutionProvider'])
-        if len(session.get_inputs()) != 1 or session.get_inputs()[0].name != 'video':
-            raise ValueError('ONNX input contract mismatch')
+        ort = require_onnxruntime()
+        session = open_session(bundle, doc, threads=threads)
+        loading_ms = (time.perf_counter() - load_start) * 1000
         t0 = time.perf_counter()
         logits = session.run(['logits'], {'video': tensor})[0]
         forward_ms = (time.perf_counter() - t0) * 1000
         runtime_version = ort.__version__
     else:
         raise ValueError('Runtime must be torch or onnx')
-    if logits.shape != (1, profile['model']['max_frames'], len(profile['charset']) + 1) or not np.isfinite(logits).all():
+    if logits.dtype != np.float32 or logits.shape != (1, profile['model']['max_frames'], len(profile['charset']) + 1) or not np.isfinite(logits).all():
         raise ValueError('Output shape or finite-logit contract failed')
+    ctc_start = time.perf_counter()
     path = logits.argmax(-1)[0].astype(np.int64)
     transcript = decode_path(path, profile['charset'], profile['blank_index'])
+    ctc_ms = (time.perf_counter() - ctc_start) * 1000
     metrics = None
     if reference is not None:
         ref = normalize(reference, profile['normalization'])
@@ -77,6 +78,15 @@ def trace_video(bundle, video, out, runtime='torch', reference=None, expected_ma
                              'runtime_version': runtime_version, 'numpy': np.__version__, 'opencv': cv2.__version__},
              'model_forward_ms': forward_ms, 'timing_scope': 'one CPU forward; excludes decoding and loading; no warmup',
              'accuracy_evaluation': reference is not None}
+    trace['artifact_schema'] = doc['schema']
+    trace['verification'] = doc.get('verification', {
+        'scope': 'bundle artifact hashes and checkpoint/profile metadata', 'checkpoint_verified': True})
+    trace['model_identity'] = {'source_checkpoint_sha256': doc['provenance']['source_checkpoint_sha256'],
+                               'artifacts': doc['artifacts']}
+    trace['timings_ms'] = {'validation': validation_ms, 'preparation': preparation_ms,
+                           'loading': loading_ms, 'forward': forward_ms, 'ctc': ctc_ms,
+                           'full_execution': (time.perf_counter() - started) * 1000}
+    trace['timings_scope'] = 'one execution including artifact validation and array persistence; excludes final trace JSON write; no warmup'
     write_json(target / 'trace.json', trace)
     return trace
 

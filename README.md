@@ -2,7 +2,7 @@
 
 # LipTrace
 
-**Traceable CTC lip-reading — from dataset contracts to runtime parity.**
+**Reproducible CTC model migration — from a research checkpoint to a verified runtime.**
 
 [![Checks](https://github.com/ntthienphuc/liptrace/actions/workflows/ci.yml/badge.svg)](https://github.com/ntthienphuc/liptrace/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -10,8 +10,9 @@
 
 LipTrace turns a LipNet-style character-CTC recognizer into a reusable, auditable
 Python workflow. Train on your own pre-cropped mouth clips, bind the resulting
-weights to their ordered charset and preprocessing, and locate the first stage
-that changes when you export the recognizer to ONNX.
+weights to their ordered charset and preprocessing, export a lightweight ONNX
+deployment, and compare the original, packaged and exported pipelines across a
+declared corpus. Every failed input remains visible in the comparison denominator.
 
 **A checkpoint can load successfully and still decode incorrectly.** Swapping two
 charset entries preserves every tensor shape while changing the meaning of the
@@ -27,8 +28,10 @@ floating-point logits are within tolerance.
 | Train a LipNet-style recognizer | Training-only charset, validation-selected checkpoint, final test predictions and sanitized bundle |
 | Register an existing compatible checkpoint | SHA-256-bound weights, ordered charset, blank index, geometry, preprocessing and decoder |
 | Predict a pre-cropped mouth clip | Transcript plus decoded frames, sampled indices, tensor, logits and CTC path |
-| Export and replay in ONNX Runtime | Separate export bundle and a stage-level parity report |
-| Recompute saved predictions | Explicit sample-mean CER, WER and exact match |
+| Export for a runtime-only machine | ONNX artifact with source identities; no PyTorch needed for deployment |
+| Compare a corpus across original/package/export | Hash-bound receipt, per-sample traces, strict/task-output fidelity and failure coverage |
+| Measure loaded-backend host execution | Decode/pack/forward/CTC timings, warmup/repetitions, pooled p50/p95 and serial clips/s |
+| Assess saved predictions | Explicit sample-mean and corpus-weighted CER/WER, S/D/I counts and label-review status |
 
 ```mermaid
 flowchart LR
@@ -54,7 +57,7 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # PowerShell: .\.venv\Scripts\Activate.ps1
 python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-python -m pip install ".[onnx]"
+python -m pip install ".[training,onnx]"
 liptrace demo --out demo_run --onnx
 ```
 
@@ -64,9 +67,28 @@ Inspect `demo_run/receipt.json` and `demo_run/onnx_comparison.json`.
 These fixtures verify software execution; their predictions are not a Vietnamese
 recognition benchmark. No pretrained model or human video is downloaded.
 
-Omit `--onnx` and the optional installation extra for the PyTorch-only demo.
+Omit `--onnx` and install `".[training]"` for the PyTorch-only demo.
 Output directories must be new, so an experiment cannot silently overwrite an
 earlier one. [Reproduction and release verification](REPRODUCE.md).
+
+For a three-clip corpus-migration example with a generated, untrained model:
+
+```bash
+python examples/migration_demo.py --out migration_demo --repetitions 3
+```
+
+Download the wheel from [GitHub Releases](https://github.com/ntthienphuc/liptrace/releases)
+on an inference-only machine, then install the runtime extra:
+
+```bash
+python -m pip install "liptrace-0.2.0-py3-none-any.whl[runtime]"
+```
+
+The package is distributed through GitHub; these instructions do not assume a
+PyPI publication. Run
+`liptrace trace --bundle deployment --runtime onnx --video mouth.mp4 --out trace`.
+Produce that deployment with `liptrace export --bundle my_bundle --out deployment --runtime-only`
+on the training/export machine. See [corpus migration and deployment](docs/MIGRATION.md).
 
 ## Use your own data and model
 
@@ -118,7 +140,7 @@ recognizers. [Contract and API details](docs/CONTRACTS.md).
 ## Research contribution and lineage
 
 The software contribution is the integration of **CTC-aware dataset auditing,
-semantic model bundles, and stage-level replay with discrete decoding checks**
+semantic model bundles, corpus migration, and stage-level replay with discrete decoding checks**
 around a working train/inference/export pipeline. The inherited model is a 3D
 CNN followed by two bidirectional GRUs and a CTC classifier. LipTrace does not
 introduce a new LipNet architecture, loss, or numerical-comparison algorithm.
@@ -140,8 +162,10 @@ before making novelty claims. There is no claim of being the first such toolkit.
 The automated suite exercises healthy inputs and deliberate faults: reordered
 charsets, modified weights, copied media across splits, infeasible repeated CTC
 labels, invalid timestamps, failed decoding, and divergent replay stages. ONNX
-parity uses a generated model and synthetic video; results and the exact commands
-are in [VALIDATION.md](docs/VALIDATION.md).
+parity includes generated fixtures and a local case of two recovered checkpoints
+on 17 natural inputs. Labels for the natural cohort remain unreviewed; the case
+tests migration fidelity, not recognition accuracy. Results, environment and
+commands are in [VALIDATION.md](docs/VALIDATION.md).
 
 - Input is an **already mouth-cropped video**. Face detection, mouth tracking,
   webcam capture and a consumer application are outside this release.
@@ -168,5 +192,5 @@ adapters are welcome; read [CONTRIBUTING.md](CONTRIBUTING.md).
 the release scope, dependencies, documentation and support location.
 Software support and reproducible bug reports:
 [GitHub Issues](https://github.com/ntthienphuc/liptrace/issues).
-`Licence.txt` is an identical copy of `LICENSE` supplied for the SoftwareX
-repository convention; distribution checks enforce that they remain synchronized.
+`LICENSE.txt` and `Licence.txt` are identical copies of `LICENSE` supplied for
+repository/template conventions; distribution checks enforce synchronization.

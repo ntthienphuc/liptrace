@@ -3,11 +3,12 @@
 Use the commands in the README to create a fresh environment. Then:
 
 ```bash
-python -m pip install ".[dev,onnx]"
+python -m pip install ".[dev,training,onnx]"
 python -m pip check
 python -m pytest -q
 liptrace demo --out validation_run --onnx
 python scripts/fault_benchmark.py --out fault_report.json
+python examples/migration_demo.py --out migration_demo --repetitions 3
 python -m build
 python -m twine check dist/*
 python scripts/check_dist.py --dist dist
@@ -33,5 +34,8 @@ environment and run `liptrace demo`. A checksum file distributed with the assets
 detects accidental corruption; obtain its identity from a trusted release source.
 CI repeats the checks from a fresh checkout and uploads validation reports.
 
-These checks do not retrain/evaluate a natural Vietnamese corpus, verify every
-checkpoint from the historical paper, or establish Jetson deployment performance.
+The public demo is synthetic. A separate local natural-input migration case
+compares two historical checkpoints, their original implementation and ONNX.
+It does not retrain the recognizer, reproduce historical test accuracy, verify
+every checkpoint, or establish Jetson deployment performance. See
+[corpus migration](docs/MIGRATION.md) and [validation](docs/VALIDATION.md).

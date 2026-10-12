@@ -41,9 +41,10 @@ def main():
             if re.search(credential, payload):
                 raise RuntimeError(f'Credential marker in {name}')
         legal = {Path(name).name: payload for name, payload in contents.items()
-                 if Path(name).name in ('LICENSE', 'Licence.txt')}
-        if set(legal) != {'LICENSE', 'Licence.txt'} or legal['LICENSE'] != legal['Licence.txt']:
-            raise RuntimeError('Missing or inconsistent LICENSE / Licence.txt')
+                 if Path(name).name in ('LICENSE', 'LICENSE.txt', 'Licence.txt')}
+        if set(legal) != {'LICENSE', 'LICENSE.txt', 'Licence.txt'} or any(
+                payload != legal['LICENSE'] for payload in legal.values()):
+            raise RuntimeError('Missing or inconsistent LICENSE / LICENSE.txt / Licence.txt')
         digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
         reports.append({'file': artifact.name, 'sha256': digest, 'bytes': artifact.stat().st_size,
                         'entries': len(contents), 'status': 'PASS'})

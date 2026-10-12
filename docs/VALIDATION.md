@@ -1,5 +1,50 @@
 # Software validation
 
+## Corpus migration and runtime-only deployment — 2026-10-12
+
+The v0.2.0 implementation passed **90 local tests** on Windows/Python 3.11.9.
+A local natural-input case compares the independently imported original trainer,
+LipTrace package and ONNX Runtime CPU for two recovered checkpoints. Both
+original/package and package/ONNX comparisons passed **17/17** per checkpoint
+at `atol=1e-5, rtol=1e-4`, with no failed or omitted inputs. This is **34 model–clip
+executions on 17 unique clips**, not 34 independent clips or two architecture
+adapters. Numeric tolerance, CTC path, transcript and trace consistency passed.
+
+Sixteen pre-existing 96×96 mouth clips represent distinct source-video IDs; a
+recovered 7-frame clip additionally exercises repeat-last padding. Source-video
+IDs are not verified speaker identities. The 16 labels remain unreviewed, all
+contain characters unseen by these charsets, and 12 need more than 32 CTC steps.
+Their diagnostic CER/WER is retained locally but is not used as an accuracy
+benchmark. No historical test accuracy is re-established.
+
+| Model | Runtime | Mean forward (ms) | Mean pipeline (ms) | p50 pipeline (ms) | p95 pipeline (ms) | Serial clips/s |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| unigram | torch CPU | 230.34 | 258.39 | 254.38 | 302.88 | 3.87 |
+| unigram | onnx CPU | 234.14 | 263.19 | 256.01 | 333.53 | 3.80 |
+| mixed | torch CPU | 225.64 | 251.18 | 245.21 | 305.55 | 3.98 |
+| mixed | onnx CPU | 213.12 | 237.40 | 234.43 | 278.23 | 4.21 |
+
+These measurements use an Intel Core i7-10750H host, two CPU threads, one warmup
+and three measured repetitions per clip/backend (51 measured observations per
+row). Percentiles pool recorded repetitions. Models are reused after loading;
+pipeline includes video decode, packing, forward and CTC decode. Camera, mouth
+extraction, model loading, network, UI and trace persistence are excluded. Runs
+are sequential and unrandomized; small timing differences do not establish a
+backend performance advantage. No Jetson result is reported.
+
+The runtime-only route is tested in an isolated environment without PyTorch,
+ONNX exporter, pandas or tqdm. Deployment metadata records that absent source
+checkpoint contents cannot be verified there. New tests cover same-profile
+wrong-model rejection, missing/hash-mismatched rows, weighted metrics and changed
+CTC paths with preserved output. Public reproduction uses generated data only:
+`python examples/migration_demo.py --out migration_demo --repetitions 3`.
+
+Human videos, pretrained checkpoints and raw traces are not redistributed.
+[Sanitized identities and measurements](validation_20261012.json) retain source
+hashes and counts; exact local recipes/receipts live with the paper evidence.
+The public CI and final wheel status must be checked against the new release
+commit, independently of these local results.
+
 ## Maintenance validation — 2026-10-09
 
 The v0.1.1 candidate passed **57 tests** in Windows/Python 3.11.9 after installing

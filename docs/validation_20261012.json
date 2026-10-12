@@ -1,0 +1,279 @@
+{
+  "schema": "liptrace-public-migration-summary-v1",
+  "date": "2026-10-12",
+  "version": "0.2.0",
+  "models": {
+    "unigram": {
+      "source_checkpoint_sha256": "0d8020ea9cd2b122e627801c74105a38b5f568f27d45c117dd67c2c97879b3d8",
+      "case_sha256": "b52fac1af1b6c6f08a019f4e1eb2b47606b4dfb417f4e605475516c5ef934438",
+      "software_source_sha256": "1b3af01fdfeb24f2be7af4158be3de053f25cef081c003e1bd299bcfaca3c5d0",
+      "bundle_manifest_sha256": "12275bef0b1b047dbd87ce141678f18ef5b13c6deea4697e472a3a5f8945510e",
+      "deployment_manifest_sha256": "f7982a90d710f81ddcee354a813616fde95f1ebe0de76527c8d96c0f968a2b87",
+      "comparisons": {
+        "torch_onnx": {
+          "planned": 17,
+          "evaluated": 17,
+          "missing": 0,
+          "strict_pass": 17,
+          "task_output_pass": 17,
+          "strict_pass_over_all_planned": 1.0,
+          "task_output_pass_over_all_planned": 1.0
+        },
+        "original_torch": {
+          "planned": 17,
+          "evaluated": 17,
+          "missing": 0,
+          "strict_pass": 17,
+          "task_output_pass": 17,
+          "strict_pass_over_all_planned": 1.0,
+          "task_output_pass_over_all_planned": 1.0
+        }
+      },
+      "rows_with_errors": 0,
+      "planned_samples": 17,
+      "source_group_values": 17,
+      "host_timing": {
+        "torch": {
+          "successful_samples": 17,
+          "measured_repetitions": 51,
+          "serial_clips_per_second": 3.87005015084156,
+          "stages": {
+            "decode": {
+              "mean_ms": 26.143727451056417,
+              "p50_ms": 27.479700000185403,
+              "p95_ms": 43.78679999990709
+            },
+            "pack": {
+              "mean_ms": 1.8949607843287772,
+              "p50_ms": 1.8481999995856313,
+              "p95_ms": 2.4892499995985418
+            },
+            "forward": {
+              "mean_ms": 230.33645882347344,
+              "p50_ms": 227.8320999994321,
+              "p95_ms": 274.5138999998744
+            },
+            "ctc_decode": {
+              "mean_ms": 0.01943725487317173,
+              "p50_ms": 0.01849999989644857,
+              "p95_ms": 0.026900000193563756
+            },
+            "pipeline": {
+              "mean_ms": 258.3945843137318,
+              "p50_ms": 254.38180000037391,
+              "p95_ms": 302.8755000000274
+            }
+          },
+          "environment": {
+            "python": "3.11.9",
+            "platform": "Windows-10-10.0.26300-SP0"
+          },
+          "providers": [
+            "torch-cpu"
+          ],
+          "threads": 2,
+          "scope": "host CPU; reused loaded backend; decode+pack+forward+CTC per clip; excludes model loading, ROI extraction, camera, network, UI and trace writes",
+          "aggregation": "pooled repetitions, conditional on completed measurements"
+        },
+        "onnx": {
+          "successful_samples": 17,
+          "measured_repetitions": 51,
+          "serial_clips_per_second": 3.7994962329881585,
+          "stages": {
+            "decode": {
+              "mean_ms": 27.14549607850024,
+              "p50_ms": 27.16879999934463,
+              "p95_ms": 48.320500000045286
+            },
+            "pack": {
+              "mean_ms": 1.8822078431292217,
+              "p50_ms": 1.788400000805268,
+              "p95_ms": 2.627099999699567
+            },
+            "forward": {
+              "mean_ms": 234.14274705887425,
+              "p50_ms": 223.74569999919913,
+              "p95_ms": 301.47930000021006
+            },
+            "ctc_decode": {
+              "mean_ms": 0.022335294096253577,
+              "p50_ms": 0.020399999812070746,
+              "p95_ms": 0.03189999961250578
+            },
+            "pipeline": {
+              "mean_ms": 263.19278627459994,
+              "p50_ms": 256.00979999944684,
+              "p95_ms": 333.52740000054837
+            }
+          },
+          "environment": {
+            "python": "3.11.9",
+            "platform": "Windows-10-10.0.26300-SP0"
+          },
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "threads": 2,
+          "scope": "host CPU; reused loaded backend; decode+pack+forward+CTC per clip; excludes model loading, ROI extraction, camera, network, UI and trace writes",
+          "aggregation": "pooled repetitions, conditional on completed measurements"
+        }
+      },
+      "max_original_package_logit_abs_error": 0.0,
+      "max_torch_onnx_logit_abs_error": 1.33514404296875e-05,
+      "label_diagnostics": {
+        "labeled_unreviewed": 16,
+        "reviewed": 0,
+        "unseen_characters": 16,
+        "ctc_infeasible": 12
+      }
+    },
+    "mixed": {
+      "source_checkpoint_sha256": "d67185aace284ac033ec4daacb42e28527c44a92c1ab93d7681c7b9d558311af",
+      "case_sha256": "7be36bd993421f94cbb0016dc5d17cb52fd207f64f25a506a62b16a0a1b51801",
+      "software_source_sha256": "1b3af01fdfeb24f2be7af4158be3de053f25cef081c003e1bd299bcfaca3c5d0",
+      "bundle_manifest_sha256": "5f00ab810aefbc73fd64cf890de3ead40a64ef011d973e01e44e04c1cd789d8c",
+      "deployment_manifest_sha256": "7624d48e9d67d99bbd431850841a8b75563aaa52226b0ed00fb357975c6df4ef",
+      "comparisons": {
+        "torch_onnx": {
+          "planned": 17,
+          "evaluated": 17,
+          "missing": 0,
+          "strict_pass": 17,
+          "task_output_pass": 17,
+          "strict_pass_over_all_planned": 1.0,
+          "task_output_pass_over_all_planned": 1.0
+        },
+        "original_torch": {
+          "planned": 17,
+          "evaluated": 17,
+          "missing": 0,
+          "strict_pass": 17,
+          "task_output_pass": 17,
+          "strict_pass_over_all_planned": 1.0,
+          "task_output_pass_over_all_planned": 1.0
+        }
+      },
+      "rows_with_errors": 0,
+      "planned_samples": 17,
+      "source_group_values": 17,
+      "host_timing": {
+        "torch": {
+          "successful_samples": 17,
+          "measured_repetitions": 51,
+          "serial_clips_per_second": 3.98123896562654,
+          "stages": {
+            "decode": {
+              "mean_ms": 23.831215686293625,
+              "p50_ms": 24.599700000180746,
+              "p95_ms": 41.39710000026753
+            },
+            "pack": {
+              "mean_ms": 1.6832372548557104,
+              "p50_ms": 1.6333999992639292,
+              "p95_ms": 1.8572999997559236
+            },
+            "forward": {
+              "mean_ms": 225.6434627451217,
+              "p50_ms": 217.84899999966,
+              "p95_ms": 285.10694999977204
+            },
+            "ctc_decode": {
+              "mean_ms": 0.020174509735821345,
+              "p50_ms": 0.01869999960035784,
+              "p95_ms": 0.029199999971751822
+            },
+            "pipeline": {
+              "mean_ms": 251.17809019600685,
+              "p50_ms": 245.20529999972496,
+              "p95_ms": 305.54910000000746
+            }
+          },
+          "environment": {
+            "python": "3.11.9",
+            "platform": "Windows-10-10.0.26300-SP0"
+          },
+          "providers": [
+            "torch-cpu"
+          ],
+          "threads": 2,
+          "scope": "host CPU; reused loaded backend; decode+pack+forward+CTC per clip; excludes model loading, ROI extraction, camera, network, UI and trace writes",
+          "aggregation": "pooled repetitions, conditional on completed measurements"
+        },
+        "onnx": {
+          "successful_samples": 17,
+          "measured_repetitions": 51,
+          "serial_clips_per_second": 4.212251765396147,
+          "stages": {
+            "decode": {
+              "mean_ms": 22.56087450977622,
+              "p50_ms": 24.71259999947506,
+              "p95_ms": 36.98729999996431
+            },
+            "pack": {
+              "mean_ms": 1.7002039215667002,
+              "p50_ms": 1.6490999996676692,
+              "p95_ms": 2.0122500004617905
+            },
+            "forward": {
+              "mean_ms": 213.12072156867063,
+              "p50_ms": 206.5392000004067,
+              "p95_ms": 258.752949999689
+            },
+            "ctc_decode": {
+              "mean_ms": 0.02091372546904798,
+              "p50_ms": 0.020399999812070746,
+              "p95_ms": 0.02365000000281725
+            },
+            "pipeline": {
+              "mean_ms": 237.40271372548258,
+              "p50_ms": 234.42770000019664,
+              "p95_ms": 278.2348999999158
+            }
+          },
+          "environment": {
+            "python": "3.11.9",
+            "platform": "Windows-10-10.0.26300-SP0"
+          },
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "threads": 2,
+          "scope": "host CPU; reused loaded backend; decode+pack+forward+CTC per clip; excludes model loading, ROI extraction, camera, network, UI and trace writes",
+          "aggregation": "pooled repetitions, conditional on completed measurements"
+        }
+      },
+      "max_original_package_logit_abs_error": 0.0,
+      "max_torch_onnx_logit_abs_error": 8.58306884765625e-06,
+      "label_diagnostics": {
+        "labeled_unreviewed": 16,
+        "reviewed": 0,
+        "unseen_characters": 16,
+        "ctc_infeasible": 12
+      }
+    }
+  },
+  "evaluation": {
+    "unique_input_clips": 17,
+    "natural_unreviewed_cohort": 16,
+    "recovered_short_clip": 1,
+    "model_clip_executions": 34,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "warmup_per_clip_backend": 1,
+    "repetitions_per_clip_backend": 3,
+    "threads": 2,
+    "hardware": "Intel Core i7-10750H, 6 cores / 12 logical processors",
+    "scope": "host CPU parity and conditional serial clip replay timings; no useful recognition accuracy, real-time or Jetson claim",
+    "rights": "human inputs, checkpoints and raw traces retained locally; redistribution permission unknown",
+    "evidence_run": "migration_release"
+  },
+  "status": {
+    "tests_passed": 90,
+    "release_wheel": "installed full-extra wheel and isolated runtime wheel verified locally",
+    "runtime_probe": "one natural input strict parity; torch, onnx, pandas and tqdm absent",
+    "generated_migration": "3/3 strict pass",
+    "constructed_faults": "14/14 rejected; 1/1 healthy accepted",
+    "public_ci": "workflow runs expose their commit SHA; verify exact release in GitHub Actions",
+    "public_ci_url": "https://github.com/ntthienphuc/liptrace/actions"
+  }
+}

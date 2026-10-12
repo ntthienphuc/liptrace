@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 — 2026-10-12
+
+- Runtime-only ONNX deployment with fixed I/O, embedded model/profile/source identities and optional dependency roles.
+- Corpus migration CLI: original/package/ONNX comparisons, explicit trusted-reference adapter, all-planned error coverage and pinned receipts.
+- Strict versus task-output fidelity; corpus-weighted and sample-mean CER/WER with deterministic S/D/I counts and reference compatibility diagnostics.
+- Loaded-backend host timing with raw repetitions, warmup and pooled p50/p95; generated public migration demo.
+- Natural-input local migration case; no pretrained weights or human video redistribution, accuracy or Jetson claim.
+- Identical LICENSE.txt added; documentation, packaging and reproducibility updated.
+- UTF-8 CLI output and errors preserve Vietnamese text through Windows pipes.
+
 ## 0.1.1 — 2026-10-09
 
 - Inherit normalization from a checkpoint's training metadata; reject a conflicting override and preserve the declared mode in sanitized checkpoints. Legacy bundles remain readable with their documented trust limitation.

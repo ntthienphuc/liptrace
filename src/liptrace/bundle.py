@@ -2,9 +2,8 @@
 import json
 import shutil
 from pathlib import Path
-import torch
 from .contracts import sha256, json_digest, write_json, validate_profile, profile_from_checkpoint
-from .runtime import load_recognizer
+from .deployment import require_training
 from . import __version__
 
 
@@ -14,6 +13,9 @@ def read_bundle(directory, expected_manifest_sha256=None):
     if expected_manifest_sha256 and sha256(manifest_path) != expected_manifest_sha256:
         raise ValueError('Manifest identity mismatch')
     doc = json.loads(manifest_path.read_text(encoding='utf-8'))
+    from .deployment import SCHEMA, read_deployment
+    if isinstance(doc, dict) and doc.get('schema') == SCHEMA:
+        return read_deployment(root, expected_manifest_sha256)
     if set(doc) != {'schema', 'profile', 'artifacts', 'provenance'} or doc['schema'] != 'liptrace-bundle-v1':
         raise ValueError('Unsupported bundle schema')
     validate_profile(doc['profile'])
@@ -25,6 +27,8 @@ def read_bundle(directory, expected_manifest_sha256=None):
         target = root / name
         if target.is_symlink() or not target.is_file() or sha256(target) != digest:
             raise ValueError(f'Artifact identity mismatch: {name}')
+    require_training()
+    from .runtime import load_recognizer
     _, ckpt, _ = load_recognizer(root / 'model.pt')
     # Legacy bundles omitted this field. New bundles preserve the training
     # declaration in the checkpoint so changing JSON alone cannot relabel it.
@@ -38,6 +42,8 @@ def read_bundle(directory, expected_manifest_sha256=None):
 
 
 def create_bundle(checkpoint, directory, normalization=None):
+    torch = require_training()
+    from .runtime import load_recognizer
     root = Path(directory)
     if root.exists():
         raise ValueError('Bundle destination already exists; choose a new directory')
@@ -62,8 +68,19 @@ def create_bundle(checkpoint, directory, normalization=None):
     return {'manifest_sha256': sha256(root / 'manifest.json'), 'profile_sha256': json_digest(profile)}
 
 
-def export_onnx(directory, destination, expected_manifest_sha256=None):
+def export_onnx(directory, destination, expected_manifest_sha256=None, runtime_only=False):
+    torch = require_training()
+    from .runtime import load_recognizer
+    try:
+        import onnx
+    except ImportError as exc:
+        raise ImportError('ONNX export requires "liptrace[training,onnx]".') from exc
+    if runtime_only:
+        from .deployment import require_onnxruntime
+        require_onnxruntime()
     doc = read_bundle(directory, expected_manifest_sha256)
+    if doc['schema'] != 'liptrace-bundle-v1':
+        raise ValueError('Export requires a checkpoint bundle, not an ONNX-only deployment')
     source, target = Path(directory), Path(destination)
     if target.exists():
         raise ValueError('Export destination already exists')
@@ -72,12 +89,27 @@ def export_onnx(directory, destination, expected_manifest_sha256=None):
     cfg = doc['profile']['model']
     x = torch.zeros(1, 1, cfg['max_frames'], cfg['img_size'], cfg['img_size'])
     target.mkdir(parents=True)
-    shutil.copyfile(source / 'model.pt', target / 'model.pt')
+    if not runtime_only:
+        shutil.copyfile(source / 'model.pt', target / 'model.pt')
     torch.onnx.export(model, x, str(target / 'model.onnx'), input_names=['video'],
                       output_names=['logits'], opset_version=17, dynamo=False)
-    import onnx
-    onnx.checker.check_model(onnx.load(str(target / 'model.onnx')))
+    graph = onnx.load(str(target / 'model.onnx'))
+    if runtime_only:
+        from .deployment import SCHEMA, IDENTITIES, VERIFICATION, expected_io
+        provenance = {key: doc['provenance'][key] for key in
+                      ('source_checkpoint_sha256', 'profile_sha256')}
+        provenance.update(source_bundle_manifest_sha256=sha256(source / 'manifest.json'),
+                          bundled_checkpoint_sha256=doc['artifacts']['model.pt'],
+                          software=f'liptrace-{__version__}')
+        onnx.helper.set_model_props(graph, {'liptrace.schema': SCHEMA,
+            **{f'liptrace.{key}': provenance[key] for key in IDENTITIES}})
+        onnx.save_model(graph, str(target / 'model.onnx'))
+        doc = {'schema': SCHEMA, 'profile': doc['profile'], 'artifacts': {},
+               'provenance': provenance, 'verification': dict(VERIFICATION),
+               'io': expected_io(doc['profile'])}
+    onnx.checker.check_model(graph)
     doc['artifacts']['model.onnx'] = sha256(target / 'model.onnx')
     write_json(target / 'manifest.json', doc)
     read_bundle(target)
-    return {'manifest_sha256': sha256(target / 'manifest.json'), 'verification': 'graph-checked; replay parity still required'}
+    return {'manifest_sha256': sha256(target / 'manifest.json'),
+            'schema': doc['schema'], 'verification': 'graph-checked; replay parity still required'}

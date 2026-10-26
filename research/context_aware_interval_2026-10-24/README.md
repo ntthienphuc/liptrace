@@ -25,6 +25,7 @@ requested-interval WER.
 From this directory, using Python 3.9 or newer:
 
 ```sh
+python verify_release.py
 python reproduce.py
 python -m pip install -r requirements-core.txt
 python -m unittest discover -s code -p "test_*.py"
@@ -41,6 +42,10 @@ token grouping, target ownership, identical-input controls, deferred reference a
 sliding coverage and stitched logits. Their synthetic fixtures test software contracts;
 they are not empirical recognition results.
 
+`verify_release.py` checks each delivered payload against `verification/Content_Manifest.json`.
+The ZIP checksum receipt is external to the archive to avoid a self-reference.
+Run integrity verification before reproduction, which writes a fresh results receipt.
+
 ## Contents
 
 - `code/`: the small inference core, scoring, source-bootstrap analysis and tests.
@@ -49,7 +54,7 @@ they are not empirical recognition results.
 - `engine/`: the preserved model adapters and necessary upstream source files. Historical
   paths are retained inside this directory so code identities remain traceable.
 - `config/Required_Assets.json`: exact checkpoint/tokenizer identities and required paths.
-- `licenses/`: third-party notices and the scope of proposed author licensing.
+- `licenses/`: third-party notices and the scope of the selected author licensing.
 
 There are no credentials, raw LRS2 recordings, complete third-party video collections,
 or model weights in this lightweight package. The image examples are temporal samples for

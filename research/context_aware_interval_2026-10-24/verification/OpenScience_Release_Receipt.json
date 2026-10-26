@@ -1,10 +1,245 @@
 {
   "status": "passed",
   "archive": "Context_Aware_Interval_OpenScience_Release.zip",
-  "archive_sha256": "d9dc2642e2c50cd00890c93d5248fb7ffc7c3d2d040e3bf31351223a5894c8fb",
-  "archive_bytes": 6446716,
-  "entry_count": 296,
+  "archive_sha256": "425f0fd7a4d0e1637d1e657c4ab340dc7ef2053c4be05f5539f36f7ee15d3974",
+  "archive_bytes": 6448410,
+  "entry_count": 298,
   "included_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 85,
+      "sha256": "086a8b888ae793e0228700b0b1a5c1196f53bcafb67227571aab0bdfbb040388"
+    },
+    {
+      "path": "DATA_AND_MODELS.md",
+      "bytes": 5839,
+      "sha256": "56bb9ff3f28214f7baba8c23b4180e905a5cb6b66b97b358ea87a086f3e0de6d"
+    },
+    {
+      "path": "FINAL_STATUS_2026-10-26.md",
+      "bytes": 3191,
+      "sha256": "0a5e8fb5672af23abd051811304b26f0beefd8aa7dbe5102ddc455b3d4d8d2ff"
+    },
+    {
+      "path": "Manuscript/Research_Paper_OpenScience_2026-10-24.pdf",
+      "bytes": 1691362,
+      "sha256": "49532465dd16bba35e115555183a70592b56396f872a952e19851eb19a088452"
+    },
+    {
+      "path": "Manuscript/elsarticle-harv.bst",
+      "bytes": 30002,
+      "sha256": "d85a928515628a9526d1d02f076f723a4da25387286a4f656d8943600880a436"
+    },
+    {
+      "path": "Manuscript/elsarticle.cls",
+      "bytes": 45215,
+      "sha256": "40af0200a8ad6777126f93bf7be6ab3046fa7c3ef1073307f0809703602e59da"
+    },
+    {
+      "path": "Manuscript/fig_Context_Availability.pdf",
+      "bytes": 25854,
+      "sha256": "bb403630f07c1743b479f6f91695084af0df52bb25bde43654d1a2e8d2afbb5e"
+    },
+    {
+      "path": "Manuscript/fig_Corpus_Geometry.pdf",
+      "bytes": 15129,
+      "sha256": "42150f38c87096178ead33c1de092371e2a6edfa48a7773368097b481a653943"
+    },
+    {
+      "path": "Manuscript/fig_Corpus_Geometry.png",
+      "bytes": 55918,
+      "sha256": "564e0580d5dd742da30331459cb8d70587de67bfd2428cf80e9fd42540e72e93"
+    },
+    {
+      "path": "Manuscript/fig_Dataset_Examples.pdf",
+      "bytes": 212522,
+      "sha256": "9cf2bd81da384da6268c8a0fff0de4e612cc96c931bcbbaf2a615d0086c1934f"
+    },
+    {
+      "path": "Manuscript/fig_Dataset_Examples.png",
+      "bytes": 279728,
+      "sha256": "668a2559f885fdbbe7bddba748df26adf56460151ca663755627ee37853275bf"
+    },
+    {
+      "path": "Manuscript/fig_EN_B1_Context_Grid.png",
+      "bytes": 276132,
+      "sha256": "0f9024c010a0de44409ded15dede783faae26495d9816e7e1f8a58e17b53d678"
+    },
+    {
+      "path": "Manuscript/fig_ES_NATIVE_Context_Grid.png",
+      "bytes": 278986,
+      "sha256": "9b4543700250f538b242d69819f707eec1d857709ead0db8c5e6bc9ee21b3de4"
+    },
+    {
+      "path": "Manuscript/fig_Interval_Method.png",
+      "bytes": 153433,
+      "sha256": "6b1ec86f6b409ea32e57afde796fcb2f83fa20ffcbb4d38a5304c9c4ce47462d"
+    },
+    {
+      "path": "Manuscript/fig_VC_NATIVE_Context_Grid.png",
+      "bytes": 277698,
+      "sha256": "8f167b7c09e205019a4832c8b2c03232d8ce434c7e77bc3c68dfdfaa6e2bc7ac"
+    },
+    {
+      "path": "Manuscript/fig_VLR_T0_Context_Grid.png",
+      "bytes": 268451,
+      "sha256": "1ca25f61b4c4868befe06add64540dbcb62c234017bc0fc58a223bdb40c462b0"
+    },
+    {
+      "path": "Manuscript/main.tex",
+      "bytes": 5430,
+      "sha256": "f8ebe8529a22d56bd3e61bc8010561d715f16009d3eaea3e9a1d63f514a751a7"
+    },
+    {
+      "path": "Manuscript/references.bib",
+      "bytes": 16295,
+      "sha256": "7fc519ff733747c78df5104bed94fe14d5e559b51609c3fbb05b167968cb948f"
+    },
+    {
+      "path": "Manuscript/sec_discussion.tex",
+      "bytes": 4450,
+      "sha256": "d8c03cff84503b080b5016c087fcb383b3f3be31a0a68f0edadf413cb06f876d"
+    },
+    {
+      "path": "Manuscript/sec_introduction.tex",
+      "bytes": 3354,
+      "sha256": "4079461028e0e9c8d42790bd7c0188ea5385089e25dfcb6c204640f370b5eb03"
+    },
+    {
+      "path": "Manuscript/sec_method.tex",
+      "bytes": 7019,
+      "sha256": "cc5cf7951392e4da8c914a22af3d5a83f275c02114dea1f946f05df56cebf1a3"
+    },
+    {
+      "path": "Manuscript/sec_protocol.tex",
+      "bytes": 9793,
+      "sha256": "414e199d22a71130e088ecec217d6789a5b3c25103f2fd716f2927d19efad679"
+    },
+    {
+      "path": "Manuscript/sec_related_work.tex",
+      "bytes": 4167,
+      "sha256": "4621161bd146e7f01c7e799bacc043356623e8fd001942f1488cd64ea4681811"
+    },
+    {
+      "path": "Manuscript/sec_results.tex",
+      "bytes": 12317,
+      "sha256": "e0c3678662c51dc1ea9a21d3f9fad53566913c8dda48ac9a57d79b1952ac2b6e"
+    },
+    {
+      "path": "Manuscript/sec_supplement.tex",
+      "bytes": 12141,
+      "sha256": "0ebd6c57f223ac7513f699cd1a1d5d17d9dfba30f28a0cc9db35ffb96a8dd657"
+    },
+    {
+      "path": "Manuscript/tbl_allocation.tex",
+      "bytes": 658,
+      "sha256": "67305c23d76a6075700bf1ebd81d97a015e521cdca8b6537a216f43a9cf22070"
+    },
+    {
+      "path": "Manuscript/tbl_context_availability.tex",
+      "bytes": 1871,
+      "sha256": "445526ce4018219be7b7fcf780258d5752a68cf45e8316fec1cde71adf587da3"
+    },
+    {
+      "path": "Manuscript/tbl_context_controls.tex",
+      "bytes": 1300,
+      "sha256": "3f0240fb4cfd56515902366e83826b705270fe2cf78c92428a5e8fd2239f54e1"
+    },
+    {
+      "path": "Manuscript/tbl_context_intervention.tex",
+      "bytes": 884,
+      "sha256": "1991655fd528d5e483275c8b9c0a58e79b096b7eb075193ff548afebb1134b85"
+    },
+    {
+      "path": "Manuscript/tbl_corpus_inventory.tex",
+      "bytes": 874,
+      "sha256": "3f5f9951d07fba0c0256a22ffd5f928f99c535b8d14f1d62023430f20c3ae18d"
+    },
+    {
+      "path": "Manuscript/tbl_duration_geometry.tex",
+      "bytes": 1148,
+      "sha256": "149201660caed8f586b0b60958ce0bbadf2ca6cc14ae20961902850dc9c40d08"
+    },
+    {
+      "path": "Manuscript/tbl_duration_grid.tex",
+      "bytes": 2877,
+      "sha256": "4c435e10420361efa548875dc6c8b0da7c29c029509cfaac434430f2de47757a"
+    },
+    {
+      "path": "Manuscript/tbl_duration_projection.tex",
+      "bytes": 1338,
+      "sha256": "ccd77c4214fc70f5ba596265f3280ffab25d59103e96cb8bf989d89687065b18"
+    },
+    {
+      "path": "Manuscript/tbl_matched_decoders.tex",
+      "bytes": 1055,
+      "sha256": "6dce5354bd4bda223ea95c6eb7e02c57c042f580510567357d8f41347c03988b"
+    },
+    {
+      "path": "Manuscript/tbl_matched_query_costs.tex",
+      "bytes": 1286,
+      "sha256": "71b61b51694f8f2b05b90db97285bfee800e901ebd13b27deaef5fb82c102c55"
+    },
+    {
+      "path": "Manuscript/tbl_matched_query_resources.tex",
+      "bytes": 986,
+      "sha256": "fc23024c142b81e648e5302958332327c4ea3092f5da11f4493b77dfa09aa7cb"
+    },
+    {
+      "path": "Manuscript/tbl_primary.tex",
+      "bytes": 637,
+      "sha256": "bc02fe49e6ec38740fb7ead5c5960f6a991c3d3d92cceb11337a0158b8b3c1c5"
+    },
+    {
+      "path": "Manuscript/tbl_primary_intervals.tex",
+      "bytes": 810,
+      "sha256": "0c3c2451ae6878f69dafdff879737cae7152e324e1942f6b904b58ede4cdcc56"
+    },
+    {
+      "path": "Manuscript/tbl_query_costs.tex",
+      "bytes": 1106,
+      "sha256": "7c1884464b0cd6d5a906bd1bdb4f1ef8b0eefd331646e2d40543bb44addac950"
+    },
+    {
+      "path": "Manuscript/tbl_source_influence.tex",
+      "bytes": 664,
+      "sha256": "9ce979a16a3aba68f1ce9f6f818a6ce71e07e61842b1a09786c241537fe756f1"
+    },
+    {
+      "path": "Manuscript/tbl_timing_ranges.tex",
+      "bytes": 1034,
+      "sha256": "83735ba76d7640e32ee2393e68348c2a5e049bb2b02774b2717d7802b523e962"
+    },
+    {
+      "path": "Manuscript/tbl_whole_clip.tex",
+      "bytes": 814,
+      "sha256": "bc8d12426fce9e1b05cb97f82b1ca02df00499f501353943581852e55227810b"
+    },
+    {
+      "path": "Manuscript/values.tex",
+      "bytes": 190,
+      "sha256": "92fe81134060af5f909b0daa9da27c88b7a62b5553c643d146e4c3da4a5135d7"
+    },
+    {
+      "path": "PAPER_HANDOFF_2026-10-26.md",
+      "bytes": 5202,
+      "sha256": "ab85fd43b3c79b5f0617ab3d1ff08e409351a7228eab5aad011cf9c958d02fa7"
+    },
+    {
+      "path": "PUBLIC_RELEASE_HANDOFF_2026-10-26.md",
+      "bytes": 3455,
+      "sha256": "4ee5b0ff63179f83af15be4858ce55ab2d9a407b341c8da4d17b585cf23d16f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7025,
+      "sha256": "c29dda2b3d18b27c55956c46be9c6f40cb870e6172dbc93db8bd3dec4679abbb"
+    },
+    {
+      "path": "Reproduced_Results.json",
+      "bytes": 304,
+      "sha256": "3a372e877f12161ff689457564abbad1f336b1036853f04899c794b01d53dcab"
+    },
     {
       "path": "code/confirmation_common.py",
       "bytes": 3706,
@@ -141,9 +376,519 @@
       "sha256": "94e83b478e7a19fea489aa88fcfe552252cbe1eb273386f61595170863601b0d"
     },
     {
-      "path": "DATA_AND_MODELS.md",
-      "bytes": 5839,
-      "sha256": "56bb9ff3f28214f7baba8c23b4180e905a5cb6b66b97b358ea87a086f3e0de6d"
+      "path": "engine/Research_Phase_05_2026-10-13/configs/lrs2.json",
+      "bytes": 1058,
+      "sha256": "9a7326904fb828c79ac839e78ab3a6f2739a359c1e5dc7afec1f509934c7d3c6"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/configs/vlr.json",
+      "bytes": 501,
+      "sha256": "8abced4f71dccb680ee0852068ac86dad62ab81727b5937ffd1c4871247e999e"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/__init__.py",
+      "bytes": 58,
+      "sha256": "b0c1ea4722c336f2f09e1a742cf46076911daf03e35d2a4ca2f6f7c6ae03ac29"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/common.py",
+      "bytes": 2368,
+      "sha256": "07cb9f65b9ff6d70834d8a91d62c67ab57667d35101f87f97e457879158c8740"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/ctc_loss.py",
+      "bytes": 645,
+      "sha256": "5142d2742bdcb0df9621c197ba37c076cf1d5176337a437595bbfa13f6509f52"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/model.py",
+      "bytes": 5871,
+      "sha256": "ba01b82a80686633d0c1136863a73be7535fc01a83093785e643750b4275ec60"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/readout.py",
+      "bytes": 1391,
+      "sha256": "dacc3d41c6c751b847be73bb0123d590cf368bd667fb6b6e464c5657d26cb798"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/spatial_pool.py",
+      "bytes": 989,
+      "sha256": "d2fc6a55f6a2c2ff8e44ed789077c130556e50fde476834dd9d772d6d075c54f"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/text.py",
+      "bytes": 3710,
+      "sha256": "08036faa0479420237a79416ed3dd96ea02535b2d181b280efcbea81235cbabf"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/server_2026-10-14/upstream_decoder_reference.py",
+      "bytes": 7129,
+      "sha256": "b58fd3a8cb45fe08a18d7fed71465a46177cf7c19d539c118bb9bcb409ae9d47"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/LICENSE",
+      "bytes": 11368,
+      "sha256": "cc79c028bb1e288cd290b1b43bbdc0c66c2b159b536120914627956f00560f90"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/batch_beam_search.py",
+      "bytes": 13345,
+      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/beam_search.py",
+      "bytes": 19122,
+      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/ctc_prefix_score.py",
+      "bytes": 13899,
+      "sha256": "c26e5ce6f4884cfbf329e3bd8ac75089a47e4a4e79355db024dc0056b48da6c9"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/e2e_asr_common.py",
+      "bytes": 6856,
+      "sha256": "e24670378092040db8bded6a9383f9d2859fc5d6db5946f7409e4df5b23278ff"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/ctc.py",
+      "bytes": 9342,
+      "sha256": "39c589343af0943663029e8d68e04ef04642e2b38d7499d052b860ddcf2ecee0"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/decoder/transformer_decoder.py",
+      "bytes": 13613,
+      "sha256": "3c9c8745dd33e440ecd34eb3903d559d6f5213e52e89598713d3dad56fc5d762"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_conformer.py",
+      "bytes": 3063,
+      "sha256": "144c68cb2e696eb3735617770f21c9c0fe7e0e359cac77ae05a17dec5c0095b7"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_count.py",
+      "bytes": 4011,
+      "sha256": "60f29683136fe95cb23d352eb941415302e0c3f3121bfeaeabce5ae1dc13eb4b"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_interctc.py",
+      "bytes": 8770,
+      "sha256": "8caaa18dfbf5f2eda364b4d0491980c1cc5ac47810e305ccb52c56087ca067df"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_mdbridge.py",
+      "bytes": 4825,
+      "sha256": "8d00b9edfe75354aaf78e72f10f716f5203cbcc9c81f422ea192a8b182ac75f9"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_signer.py",
+      "bytes": 8700,
+      "sha256": "64e6030889db66b03dfe46ed5d08f0cf23873c23ae5f72bf4948391a5700a52c"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_structured.py",
+      "bytes": 6966,
+      "sha256": "d11027089b85e8d482cadc61411c2a8dc9475c5ab59153ca616644480fc734e1"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_visyll.py",
+      "bytes": 9134,
+      "sha256": "8475db788502b08d065823a4d57d380d5021e951b0485bdea7879b7c9f62ffb2"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_xbridge.py",
+      "bytes": 5193,
+      "sha256": "11f5e72497b179c0567fa3536cf859bb746bcf0c38dec4894d170c1937780382"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/encoder/conformer_encoder.py",
+      "bytes": 11348,
+      "sha256": "ed595f814ebba45b1e2853555c85b0bb197ed2e14e8b730c6b1368b384a8e790"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet.py",
+      "bytes": 7053,
+      "sha256": "4097c6ff8675ec76bcf74e3290d1fe06b5e536f194a2784ccdd4b81029afbbfb"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet1d.py",
+      "bytes": 7274,
+      "sha256": "2b3d1e4cd68ea9ccce5813689234e7e95e6cb327181ca1335c6d63058da13a18"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/nets_utils.py",
+      "bytes": 9904,
+      "sha256": "34f0c4ef9f19f7e9526f0436a508371a0e68b6c4bebb687ca6372cf1d2ab638d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
+      "bytes": 958,
+      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/attention.py",
+      "bytes": 8195,
+      "sha256": "ed4cf0a1bbb9551f66586338ea19d6e5cc12fd897b989fbd51a0d9a11304ed6d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/embedding.py",
+      "bytes": 6860,
+      "sha256": "08157dc9be6e1363653c8689af94ec51f82b56a7acf8cea46711b009ca8c491c"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
+      "bytes": 2164,
+      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/layer_norm.py",
+      "bytes": 874,
+      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/mask.py",
+      "bytes": 1047,
+      "sha256": "dbc6b6d7e1449404c7463ce3a89a193f9c0c9a57e381b32572821af3ba1f9275"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
+      "bytes": 899,
+      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/repeat.py",
+      "bytes": 1219,
+      "sha256": "a441c579cc57d25721ecf59ec357a0ab64e68abddadc4b955bc4fa01f643f0f8"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorer_interface.py",
+      "bytes": 5902,
+      "sha256": "bfb21dd5b99f892fa9880764a47032729735bce3dd3b143d396e13ce1f31fc27"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/ctc.py",
+      "bytes": 4953,
+      "sha256": "556c10c796866c703398bcbc72dcf7d7557fe781431e8efc44f62d69c853a4fe"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/length_bonus.py",
+      "bytes": 1740,
+      "sha256": "8c0aea891ef3aca25387acfafedbbec4210938cd3f9df14323eeb9fd36af9f78"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/word_ngram.py",
+      "bytes": 6724,
+      "sha256": "36e8be8a2993bba3735d61d65403bd6e5284de543c6c4c348e63571888d4a173"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/detector.py",
+      "bytes": 2916,
+      "sha256": "a9296173fd7c63e5e8e8561f68ba53a1c6a859c8c1e6006cbc8fc43f4800bc2d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/video_process.py",
+      "bytes": 7654,
+      "sha256": "986632fbb7f3ec189f4be9ab58e8f6ae4e782274290d3cfa1a7df4d5c99d2060"
+    },
+    {
+      "path": "engine/Research_Search_Horizon_Control_2026-10-15/horizon_search.py",
+      "bytes": 2419,
+      "sha256": "e5b117c1ba5a6521b4aaaec954077ec0dadc8fbec87915c1761c81a1961faa49"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/VC_Model_Registry.json",
+      "bytes": 3136,
+      "sha256": "f623c1c538cdb3f1bd087c41bbfd03980777b4db651bbff5b4fa449445cfbeeb"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/confirmation_common.py",
+      "bytes": 3604,
+      "sha256": "31ba78f051ce21c620b0039cd73e34fe8bf2c193e264c5ad0343e3e7e0a55f6b"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/ctc_decode.py",
+      "bytes": 4871,
+      "sha256": "52cbfd3adcddab206d2835caa18b65b0fa1fcab3ed3f7203cd2e345bfcb4222f"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/data_io.py",
+      "bytes": 5961,
+      "sha256": "f357476c4ba992e914e5af3ab972b569ee78babe59af7b795a4bc9221c582a56"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/geometry.py",
+      "bytes": 8835,
+      "sha256": "f1659e8dd81ff5871515ff23cac27e4dd89f30320d81b78c727ead6fbd10d146"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/inference_core.py",
+      "bytes": 19848,
+      "sha256": "fdfde0f46088b22a4c81486ba7bf7a69b34c2d69419523457a13841ba7c4bb3c"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/model_registry.json",
+      "bytes": 6471,
+      "sha256": "b56a4e627cdf31134405db0c05dec9d57953f5fca938d4423108650acdae7bd1"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/native_runtime.py",
+      "bytes": 22381,
+      "sha256": "8488abeb2584b33fefcaef1e1a45a30a8e894ecc3f17d0cf5e0e1586f3d770df"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/sliding_inference.py",
+      "bytes": 9401,
+      "sha256": "fdf39c9f7e870e5a9bf58ba1b4ff1d1cff8344858534663079201dca09ef77d9"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/vicocktail_runtime.py",
+      "bytes": 15017,
+      "sha256": "13092cab856852d3cb4257337c32e3c5615b45b4082189799c6c77bb7c64d1f0"
+    },
+    {
+      "path": "engine/Research_Span_Projection_2026-10-15/projection.py",
+      "bytes": 4031,
+      "sha256": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/ctc_horizon.py",
+      "bytes": 2635,
+      "sha256": "3f3b18e363dcc1f1ad07e628412ae4c0aac079215510e0c9ee73ed483cef5706"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/Spanish_Forward_Check.json",
+      "bytes": 2017,
+      "sha256": "39419f527d80b3a2c79c5ab9c40b2de586a4eb892636456f0235e49752a1b77f"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/asr/asr_utils.py",
+      "bytes": 33540,
+      "sha256": "380300e458ecd7ba05a47bcc5ad9d34d2e37ebf9f4cf82562820d4cbf31fafc8"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/batch_beam_search.py",
+      "bytes": 13345,
+      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/beam_search.py",
+      "bytes": 19122,
+      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/ctc_prefix_score.py",
+      "bytes": 13950,
+      "sha256": "0e78b6ec8e47726e2688e885591ab9442d62ecf44236738ae4fe447ffef0b235"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/e2e_asr_common.py",
+      "bytes": 8573,
+      "sha256": "7beb8eb98298cad5f6344eb59813fe7761dca82ce1eb1d44ba3373f61d6e506e"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/lm_interface.py",
+      "bytes": 2590,
+      "sha256": "c6b5e6041bfbd9ce4845732d161646442a43b3ccf29e63718e116251a1a0d8e6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv1d_extractor.py",
+      "bytes": 974,
+      "sha256": "143bcac8cdc6471e25d1387d29aac3de33aa3fc0796df81b454bed40ef3e9cd6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv3d_extractor.py",
+      "bytes": 1641,
+      "sha256": "834ba59084b769e86adb001effbf1b8d521f655dc950523e3c7df5120ddd6006"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet.py",
+      "bytes": 5007,
+      "sha256": "7f1aa3f976e69d1ac0c68188c1b97adc058875f50f851987a210f1207d0a85ff"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet1d.py",
+      "bytes": 6177,
+      "sha256": "c4386196e3ecbb8bd114d97025a5cbc8e5fe75717997b2eed5f69cab880786f6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/shufflenetv2.py",
+      "bytes": 5727,
+      "sha256": "07f6370636bda8304c21ca531624626e77f74122531a5b3285ef9cad80577c42"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/ctc.py",
+      "bytes": 14421,
+      "sha256": "8863cc1a9828322cd15b9fb485ded71e8e1f9f0c38d8fd642c55a9d6b8401627"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/decoder.py",
+      "bytes": 14781,
+      "sha256": "216793799df79a8441a3ac46a7dab65b2384b5c0b069a955922483bddc79669a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer.py",
+      "bytes": 5702,
+      "sha256": "b04f8c88ef143a043ad21340bb143913f2809d9452b70f7bdccb6d92c779db2a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_iccv.py",
+      "bytes": 21479,
+      "sha256": "5ed45ddd80c47ff2dd21befd1afe7de44eec0d90420b39d33ad089e76a27c579"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm.py",
+      "bytes": 7505,
+      "sha256": "bcb7873d40f2b89d5901e13ba73dc06c8f7dc2dd013756e08aa7f2e52a169e04"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm_v2.py",
+      "bytes": 7522,
+      "sha256": "3b7d52638cb0efb4125fea64ad36185af14697cd78768c5f2c665334f7355dca"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_qasr_transformer.py",
+      "bytes": 5810,
+      "sha256": "08a8f98891b4e11e23f33608970ef62eae3141c67d1914f96c0e2aefe35c5b1d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/default.py",
+      "bytes": 14561,
+      "sha256": "34b067aa9e6b9165e9556dab5ebe699b89bd083106141c8cf61f441859cad20b"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/seq_rnn.py",
+      "bytes": 5940,
+      "sha256": "5c01c7cee1af194adbc7c17e4071a6677a2943a242dd3f87136cce31f8527d46"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/transformer.py",
+      "bytes": 8410,
+      "sha256": "8d63afb4716a826b8fc09cd015ae58bda562d9ae937f165254cf11ccbc07dced"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/nets_utils.py",
+      "bytes": 17292,
+      "sha256": "203ba66dcf797fe1706e4060b4394c4241e21a2a68fddf4691ae264407d2233d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
+      "bytes": 958,
+      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/attention.py",
+      "bytes": 11939,
+      "sha256": "bfea4fa020b93bcf096ccd960635144ee5eb7f9683a8537ed0f637ed556be645"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/convolution.py",
+      "bytes": 2265,
+      "sha256": "ce9e9f1dc6bf22ff51ac253a1554120181f99f63fea212030ad837f975ebbf7b"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder.py",
+      "bytes": 9542,
+      "sha256": "617ba60aa200759b499b64eb2a0ed0841d1292c143a68246f7adef6e2283fb9a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder_layer.py",
+      "bytes": 4427,
+      "sha256": "4585fd2d515a6576ebef8bf3a18fb122f5c44f82ee7a1e9aee799cd31c6a1ab2"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/embedding.py",
+      "bytes": 7962,
+      "sha256": "719011e7ea3468271eee13bfd338c7e31df466a93ac8d8b86f7eba963cc5ce5f"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder.py",
+      "bytes": 11258,
+      "sha256": "67c5ca58513622e8a23c4fc900763230bf176edd180e4a3805962e9783d1669d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder_layer.py",
+      "bytes": 5229,
+      "sha256": "ed63455edfb479d9b6fe9778da848ced81ed46b4cc504e5ed4470c2ff10cc651"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
+      "bytes": 2164,
+      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/layer_norm.py",
+      "bytes": 874,
+      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/mask.py",
+      "bytes": 1660,
+      "sha256": "98247deea6952704379537e22ece50c956b40257a124359a575b54c7073e763d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/multi_layer_conv.py",
+      "bytes": 3148,
+      "sha256": "00103ea8b18d759dabcc80b846559bd49fe9348308ad46ff41aa34ed0bfbe3fd"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/optimizer.py",
+      "bytes": 2093,
+      "sha256": "f41d4042f1022a84d483b3b965eadca94a75427d0abd57ecb9ce2df6303d926a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/plot.py",
+      "bytes": 4852,
+      "sha256": "0c611e8bdbbdca0a5fa5fbc1c6fefebcbe76e712d79e6f001548ffba4a3b57d1"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
+      "bytes": 899,
+      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/raw_embeddings.py",
+      "bytes": 2511,
+      "sha256": "7a7209417409907b6c80bc704139f2b2cffffe40ac4845a3c413af9b8f3143d1"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/repeat.py",
+      "bytes": 675,
+      "sha256": "88885f45acfb4675fe35db9e1f7ced655281e0b2d2958583f4b7b638e21e7577"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/subsampling.py",
+      "bytes": 1687,
+      "sha256": "29b8008344880c689ca1abf7b195d5e569fc34fc9138e8f74049c484c2577af7"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/original_recipe/lightning.py",
+      "bytes": 8464,
+      "sha256": "4f912d6d59d0a96c04c93643c066bcbbf5e2f96c9cf82c002e73d6599ef14564"
+    },
+    {
+      "path": "engine/Source_SHA256.json",
+      "bytes": 48404,
+      "sha256": "3748f8345ac05884dc9b0f5953567c3a1b467b57e86a58d8e604780c5f0736b9"
     },
     {
       "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/average_checkpoints.py",
@@ -651,521 +1396,6 @@
       "sha256": "cab0ffafb3ee708e64574b94e36621d9d81564e0da72d7f3762311303cd8b4b3"
     },
     {
-      "path": "engine/Research_Phase_05_2026-10-13/configs/lrs2.json",
-      "bytes": 1058,
-      "sha256": "9a7326904fb828c79ac839e78ab3a6f2739a359c1e5dc7afec1f509934c7d3c6"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/configs/vlr.json",
-      "bytes": 501,
-      "sha256": "8abced4f71dccb680ee0852068ac86dad62ab81727b5937ffd1c4871247e999e"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/__init__.py",
-      "bytes": 58,
-      "sha256": "b0c1ea4722c336f2f09e1a742cf46076911daf03e35d2a4ca2f6f7c6ae03ac29"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/common.py",
-      "bytes": 2368,
-      "sha256": "07cb9f65b9ff6d70834d8a91d62c67ab57667d35101f87f97e457879158c8740"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/ctc_loss.py",
-      "bytes": 645,
-      "sha256": "5142d2742bdcb0df9621c197ba37c076cf1d5176337a437595bbfa13f6509f52"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/model.py",
-      "bytes": 5871,
-      "sha256": "ba01b82a80686633d0c1136863a73be7535fc01a83093785e643750b4275ec60"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/readout.py",
-      "bytes": 1391,
-      "sha256": "dacc3d41c6c751b847be73bb0123d590cf368bd667fb6b6e464c5657d26cb798"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/spatial_pool.py",
-      "bytes": 989,
-      "sha256": "d2fc6a55f6a2c2ff8e44ed789077c130556e50fde476834dd9d772d6d075c54f"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/phase5/text.py",
-      "bytes": 3710,
-      "sha256": "08036faa0479420237a79416ed3dd96ea02535b2d181b280efcbea81235cbabf"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/server_2026-10-14/upstream_decoder_reference.py",
-      "bytes": 7129,
-      "sha256": "b58fd3a8cb45fe08a18d7fed71465a46177cf7c19d539c118bb9bcb409ae9d47"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/batch_beam_search.py",
-      "bytes": 13345,
-      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/beam_search.py",
-      "bytes": 19122,
-      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/ctc_prefix_score.py",
-      "bytes": 13899,
-      "sha256": "c26e5ce6f4884cfbf329e3bd8ac75089a47e4a4e79355db024dc0056b48da6c9"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/e2e_asr_common.py",
-      "bytes": 6856,
-      "sha256": "e24670378092040db8bded6a9383f9d2859fc5d6db5946f7409e4df5b23278ff"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/ctc.py",
-      "bytes": 9342,
-      "sha256": "39c589343af0943663029e8d68e04ef04642e2b38d7499d052b860ddcf2ecee0"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/decoder/transformer_decoder.py",
-      "bytes": 13613,
-      "sha256": "3c9c8745dd33e440ecd34eb3903d559d6f5213e52e89598713d3dad56fc5d762"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_conformer.py",
-      "bytes": 3063,
-      "sha256": "144c68cb2e696eb3735617770f21c9c0fe7e0e359cac77ae05a17dec5c0095b7"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_count.py",
-      "bytes": 4011,
-      "sha256": "60f29683136fe95cb23d352eb941415302e0c3f3121bfeaeabce5ae1dc13eb4b"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_interctc.py",
-      "bytes": 8770,
-      "sha256": "8caaa18dfbf5f2eda364b4d0491980c1cc5ac47810e305ccb52c56087ca067df"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_mdbridge.py",
-      "bytes": 4825,
-      "sha256": "8d00b9edfe75354aaf78e72f10f716f5203cbcc9c81f422ea192a8b182ac75f9"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_signer.py",
-      "bytes": 8700,
-      "sha256": "64e6030889db66b03dfe46ed5d08f0cf23873c23ae5f72bf4948391a5700a52c"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_structured.py",
-      "bytes": 6966,
-      "sha256": "d11027089b85e8d482cadc61411c2a8dc9475c5ab59153ca616644480fc734e1"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_visyll.py",
-      "bytes": 9134,
-      "sha256": "8475db788502b08d065823a4d57d380d5021e951b0485bdea7879b7c9f62ffb2"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_xbridge.py",
-      "bytes": 5193,
-      "sha256": "11f5e72497b179c0567fa3536cf859bb746bcf0c38dec4894d170c1937780382"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/encoder/conformer_encoder.py",
-      "bytes": 11348,
-      "sha256": "ed595f814ebba45b1e2853555c85b0bb197ed2e14e8b730c6b1368b384a8e790"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet.py",
-      "bytes": 7053,
-      "sha256": "4097c6ff8675ec76bcf74e3290d1fe06b5e536f194a2784ccdd4b81029afbbfb"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet1d.py",
-      "bytes": 7274,
-      "sha256": "2b3d1e4cd68ea9ccce5813689234e7e95e6cb327181ca1335c6d63058da13a18"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/nets_utils.py",
-      "bytes": 9904,
-      "sha256": "34f0c4ef9f19f7e9526f0436a508371a0e68b6c4bebb687ca6372cf1d2ab638d"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/__init__.py",
-      "bytes": 30,
-      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
-      "bytes": 958,
-      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/attention.py",
-      "bytes": 8195,
-      "sha256": "ed4cf0a1bbb9551f66586338ea19d6e5cc12fd897b989fbd51a0d9a11304ed6d"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/embedding.py",
-      "bytes": 6860,
-      "sha256": "08157dc9be6e1363653c8689af94ec51f82b56a7acf8cea46711b009ca8c491c"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
-      "bytes": 2164,
-      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/layer_norm.py",
-      "bytes": 874,
-      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/mask.py",
-      "bytes": 1047,
-      "sha256": "dbc6b6d7e1449404c7463ce3a89a193f9c0c9a57e381b32572821af3ba1f9275"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
-      "bytes": 899,
-      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/repeat.py",
-      "bytes": 1219,
-      "sha256": "a441c579cc57d25721ecf59ec357a0ab64e68abddadc4b955bc4fa01f643f0f8"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorer_interface.py",
-      "bytes": 5902,
-      "sha256": "bfb21dd5b99f892fa9880764a47032729735bce3dd3b143d396e13ce1f31fc27"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/__init__.py",
-      "bytes": 30,
-      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/ctc.py",
-      "bytes": 4953,
-      "sha256": "556c10c796866c703398bcbc72dcf7d7557fe781431e8efc44f62d69c853a4fe"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/length_bonus.py",
-      "bytes": 1740,
-      "sha256": "8c0aea891ef3aca25387acfafedbbec4210938cd3f9df14323eeb9fd36af9f78"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/word_ngram.py",
-      "bytes": 6724,
-      "sha256": "36e8be8a2993bba3735d61d65403bd6e5284de543c6c4c348e63571888d4a173"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/LICENSE",
-      "bytes": 11368,
-      "sha256": "cc79c028bb1e288cd290b1b43bbdc0c66c2b159b536120914627956f00560f90"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/detector.py",
-      "bytes": 2916,
-      "sha256": "a9296173fd7c63e5e8e8561f68ba53a1c6a859c8c1e6006cbc8fc43f4800bc2d"
-    },
-    {
-      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/video_process.py",
-      "bytes": 7654,
-      "sha256": "986632fbb7f3ec189f4be9ab58e8f6ae4e782274290d3cfa1a7df4d5c99d2060"
-    },
-    {
-      "path": "engine/Research_Search_Horizon_Control_2026-10-15/horizon_search.py",
-      "bytes": 2419,
-      "sha256": "e5b117c1ba5a6521b4aaaec954077ec0dadc8fbec87915c1761c81a1961faa49"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/confirmation_common.py",
-      "bytes": 3604,
-      "sha256": "31ba78f051ce21c620b0039cd73e34fe8bf2c193e264c5ad0343e3e7e0a55f6b"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/ctc_decode.py",
-      "bytes": 4871,
-      "sha256": "52cbfd3adcddab206d2835caa18b65b0fa1fcab3ed3f7203cd2e345bfcb4222f"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/data_io.py",
-      "bytes": 5961,
-      "sha256": "f357476c4ba992e914e5af3ab972b569ee78babe59af7b795a4bc9221c582a56"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/geometry.py",
-      "bytes": 8835,
-      "sha256": "f1659e8dd81ff5871515ff23cac27e4dd89f30320d81b78c727ead6fbd10d146"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/inference_core.py",
-      "bytes": 19848,
-      "sha256": "fdfde0f46088b22a4c81486ba7bf7a69b34c2d69419523457a13841ba7c4bb3c"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/model_registry.json",
-      "bytes": 6471,
-      "sha256": "b56a4e627cdf31134405db0c05dec9d57953f5fca938d4423108650acdae7bd1"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/native_runtime.py",
-      "bytes": 22381,
-      "sha256": "8488abeb2584b33fefcaef1e1a45a30a8e894ecc3f17d0cf5e0e1586f3d770df"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/sliding_inference.py",
-      "bytes": 9401,
-      "sha256": "fdf39c9f7e870e5a9bf58ba1b4ff1d1cff8344858534663079201dca09ef77d9"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/VC_Model_Registry.json",
-      "bytes": 3136,
-      "sha256": "f623c1c538cdb3f1bd087c41bbfd03980777b4db651bbff5b4fa449445cfbeeb"
-    },
-    {
-      "path": "engine/Research_Server_Confirmation_2026-10-19/vicocktail_runtime.py",
-      "bytes": 15017,
-      "sha256": "13092cab856852d3cb4257337c32e3c5615b45b4082189799c6c77bb7c64d1f0"
-    },
-    {
-      "path": "engine/Research_Span_Projection_2026-10-15/projection.py",
-      "bytes": 4031,
-      "sha256": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/ctc_horizon.py",
-      "bytes": 2635,
-      "sha256": "3f3b18e363dcc1f1ad07e628412ae4c0aac079215510e0c9ee73ed483cef5706"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/asr/asr_utils.py",
-      "bytes": 33540,
-      "sha256": "380300e458ecd7ba05a47bcc5ad9d34d2e37ebf9f4cf82562820d4cbf31fafc8"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/batch_beam_search.py",
-      "bytes": 13345,
-      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/beam_search.py",
-      "bytes": 19122,
-      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/ctc_prefix_score.py",
-      "bytes": 13950,
-      "sha256": "0e78b6ec8e47726e2688e885591ab9442d62ecf44236738ae4fe447ffef0b235"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/e2e_asr_common.py",
-      "bytes": 8573,
-      "sha256": "7beb8eb98298cad5f6344eb59813fe7761dca82ce1eb1d44ba3373f61d6e506e"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/lm_interface.py",
-      "bytes": 2590,
-      "sha256": "c6b5e6041bfbd9ce4845732d161646442a43b3ccf29e63718e116251a1a0d8e6"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv1d_extractor.py",
-      "bytes": 974,
-      "sha256": "143bcac8cdc6471e25d1387d29aac3de33aa3fc0796df81b454bed40ef3e9cd6"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv3d_extractor.py",
-      "bytes": 1641,
-      "sha256": "834ba59084b769e86adb001effbf1b8d521f655dc950523e3c7df5120ddd6006"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet.py",
-      "bytes": 5007,
-      "sha256": "7f1aa3f976e69d1ac0c68188c1b97adc058875f50f851987a210f1207d0a85ff"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet1d.py",
-      "bytes": 6177,
-      "sha256": "c4386196e3ecbb8bd114d97025a5cbc8e5fe75717997b2eed5f69cab880786f6"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/shufflenetv2.py",
-      "bytes": 5727,
-      "sha256": "07f6370636bda8304c21ca531624626e77f74122531a5b3285ef9cad80577c42"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/ctc.py",
-      "bytes": 14421,
-      "sha256": "8863cc1a9828322cd15b9fb485ded71e8e1f9f0c38d8fd642c55a9d6b8401627"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/decoder.py",
-      "bytes": 14781,
-      "sha256": "216793799df79a8441a3ac46a7dab65b2384b5c0b069a955922483bddc79669a"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer.py",
-      "bytes": 5702,
-      "sha256": "b04f8c88ef143a043ad21340bb143913f2809d9452b70f7bdccb6d92c779db2a"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_iccv.py",
-      "bytes": 21479,
-      "sha256": "5ed45ddd80c47ff2dd21befd1afe7de44eec0d90420b39d33ad089e76a27c579"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm.py",
-      "bytes": 7505,
-      "sha256": "bcb7873d40f2b89d5901e13ba73dc06c8f7dc2dd013756e08aa7f2e52a169e04"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm_v2.py",
-      "bytes": 7522,
-      "sha256": "3b7d52638cb0efb4125fea64ad36185af14697cd78768c5f2c665334f7355dca"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_qasr_transformer.py",
-      "bytes": 5810,
-      "sha256": "08a8f98891b4e11e23f33608970ef62eae3141c67d1914f96c0e2aefe35c5b1d"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/__init__.py",
-      "bytes": 30,
-      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/default.py",
-      "bytes": 14561,
-      "sha256": "34b067aa9e6b9165e9556dab5ebe699b89bd083106141c8cf61f441859cad20b"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/seq_rnn.py",
-      "bytes": 5940,
-      "sha256": "5c01c7cee1af194adbc7c17e4071a6677a2943a242dd3f87136cce31f8527d46"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/transformer.py",
-      "bytes": 8410,
-      "sha256": "8d63afb4716a826b8fc09cd015ae58bda562d9ae937f165254cf11ccbc07dced"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/nets_utils.py",
-      "bytes": 17292,
-      "sha256": "203ba66dcf797fe1706e4060b4394c4241e21a2a68fddf4691ae264407d2233d"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/__init__.py",
-      "bytes": 30,
-      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
-      "bytes": 958,
-      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/attention.py",
-      "bytes": 11939,
-      "sha256": "bfea4fa020b93bcf096ccd960635144ee5eb7f9683a8537ed0f637ed556be645"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/convolution.py",
-      "bytes": 2265,
-      "sha256": "ce9e9f1dc6bf22ff51ac253a1554120181f99f63fea212030ad837f975ebbf7b"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder.py",
-      "bytes": 9542,
-      "sha256": "617ba60aa200759b499b64eb2a0ed0841d1292c143a68246f7adef6e2283fb9a"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder_layer.py",
-      "bytes": 4427,
-      "sha256": "4585fd2d515a6576ebef8bf3a18fb122f5c44f82ee7a1e9aee799cd31c6a1ab2"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/embedding.py",
-      "bytes": 7962,
-      "sha256": "719011e7ea3468271eee13bfd338c7e31df466a93ac8d8b86f7eba963cc5ce5f"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder.py",
-      "bytes": 11258,
-      "sha256": "67c5ca58513622e8a23c4fc900763230bf176edd180e4a3805962e9783d1669d"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder_layer.py",
-      "bytes": 5229,
-      "sha256": "ed63455edfb479d9b6fe9778da848ced81ed46b4cc504e5ed4470c2ff10cc651"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
-      "bytes": 2164,
-      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/layer_norm.py",
-      "bytes": 874,
-      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/mask.py",
-      "bytes": 1660,
-      "sha256": "98247deea6952704379537e22ece50c956b40257a124359a575b54c7073e763d"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/multi_layer_conv.py",
-      "bytes": 3148,
-      "sha256": "00103ea8b18d759dabcc80b846559bd49fe9348308ad46ff41aa34ed0bfbe3fd"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/optimizer.py",
-      "bytes": 2093,
-      "sha256": "f41d4042f1022a84d483b3b965eadca94a75427d0abd57ecb9ce2df6303d926a"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/plot.py",
-      "bytes": 4852,
-      "sha256": "0c611e8bdbbdca0a5fa5fbc1c6fefebcbe76e712d79e6f001548ffba4a3b57d1"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
-      "bytes": 899,
-      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/raw_embeddings.py",
-      "bytes": 2511,
-      "sha256": "7a7209417409907b6c80bc704139f2b2cffffe40ac4845a3c413af9b8f3143d1"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/repeat.py",
-      "bytes": 675,
-      "sha256": "88885f45acfb4675fe35db9e1f7ced655281e0b2d2958583f4b7b638e21e7577"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/subsampling.py",
-      "bytes": 1687,
-      "sha256": "29b8008344880c689ca1abf7b195d5e569fc34fc9138e8f74049c484c2577af7"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/original_recipe/lightning.py",
-      "bytes": 8464,
-      "sha256": "4f912d6d59d0a96c04c93643c066bcbbf5e2f96c9cf82c002e73d6599ef14564"
-    },
-    {
-      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/Spanish_Forward_Check.json",
-      "bytes": 2017,
-      "sha256": "39419f527d80b3a2c79c5ab9c40b2de586a4eb892636456f0235e49752a1b77f"
-    },
-    {
-      "path": "engine/Source_SHA256.json",
-      "bytes": 48404,
-      "sha256": "3748f8345ac05884dc9b0f5953567c3a1b467b57e86a58d8e604780c5f0736b9"
-    },
-    {
       "path": "examples/Frame_Provenance.json",
       "bytes": 3551,
       "sha256": "1e0071474ffa9364bc02e0fb3e7df4de7e153b7b6d89a2a75ecbb01738f6a843"
@@ -1211,219 +1441,9 @@
       "sha256": "0afca3145596cd005f6f6ed977313ea31928094fc5b4aaabc21bb765ea369d09"
     },
     {
-      "path": "Manuscript/elsarticle-harv.bst",
-      "bytes": 30002,
-      "sha256": "d85a928515628a9526d1d02f076f723a4da25387286a4f656d8943600880a436"
-    },
-    {
-      "path": "Manuscript/elsarticle.cls",
-      "bytes": 45215,
-      "sha256": "40af0200a8ad6777126f93bf7be6ab3046fa7c3ef1073307f0809703602e59da"
-    },
-    {
-      "path": "Manuscript/fig_Context_Availability.pdf",
-      "bytes": 25854,
-      "sha256": "bb403630f07c1743b479f6f91695084af0df52bb25bde43654d1a2e8d2afbb5e"
-    },
-    {
-      "path": "Manuscript/fig_Corpus_Geometry.pdf",
-      "bytes": 15129,
-      "sha256": "42150f38c87096178ead33c1de092371e2a6edfa48a7773368097b481a653943"
-    },
-    {
-      "path": "Manuscript/fig_Corpus_Geometry.png",
-      "bytes": 55918,
-      "sha256": "564e0580d5dd742da30331459cb8d70587de67bfd2428cf80e9fd42540e72e93"
-    },
-    {
-      "path": "Manuscript/fig_Dataset_Examples.pdf",
-      "bytes": 212522,
-      "sha256": "9cf2bd81da384da6268c8a0fff0de4e612cc96c931bcbbaf2a615d0086c1934f"
-    },
-    {
-      "path": "Manuscript/fig_Dataset_Examples.png",
-      "bytes": 279728,
-      "sha256": "668a2559f885fdbbe7bddba748df26adf56460151ca663755627ee37853275bf"
-    },
-    {
-      "path": "Manuscript/fig_EN_B1_Context_Grid.png",
-      "bytes": 276132,
-      "sha256": "0f9024c010a0de44409ded15dede783faae26495d9816e7e1f8a58e17b53d678"
-    },
-    {
-      "path": "Manuscript/fig_ES_NATIVE_Context_Grid.png",
-      "bytes": 278986,
-      "sha256": "9b4543700250f538b242d69819f707eec1d857709ead0db8c5e6bc9ee21b3de4"
-    },
-    {
-      "path": "Manuscript/fig_Interval_Method.png",
-      "bytes": 153433,
-      "sha256": "6b1ec86f6b409ea32e57afde796fcb2f83fa20ffcbb4d38a5304c9c4ce47462d"
-    },
-    {
-      "path": "Manuscript/fig_VC_NATIVE_Context_Grid.png",
-      "bytes": 277698,
-      "sha256": "8f167b7c09e205019a4832c8b2c03232d8ce434c7e77bc3c68dfdfaa6e2bc7ac"
-    },
-    {
-      "path": "Manuscript/fig_VLR_T0_Context_Grid.png",
-      "bytes": 268451,
-      "sha256": "1ca25f61b4c4868befe06add64540dbcb62c234017bc0fc58a223bdb40c462b0"
-    },
-    {
-      "path": "Manuscript/main.tex",
-      "bytes": 5430,
-      "sha256": "f8ebe8529a22d56bd3e61bc8010561d715f16009d3eaea3e9a1d63f514a751a7"
-    },
-    {
-      "path": "Manuscript/references.bib",
-      "bytes": 16295,
-      "sha256": "7fc519ff733747c78df5104bed94fe14d5e559b51609c3fbb05b167968cb948f"
-    },
-    {
-      "path": "Manuscript/Research_Paper_OpenScience_2026-10-24.pdf",
-      "bytes": 1691362,
-      "sha256": "49532465dd16bba35e115555183a70592b56396f872a952e19851eb19a088452"
-    },
-    {
-      "path": "Manuscript/sec_discussion.tex",
-      "bytes": 4450,
-      "sha256": "d8c03cff84503b080b5016c087fcb383b3f3be31a0a68f0edadf413cb06f876d"
-    },
-    {
-      "path": "Manuscript/sec_introduction.tex",
-      "bytes": 3354,
-      "sha256": "4079461028e0e9c8d42790bd7c0188ea5385089e25dfcb6c204640f370b5eb03"
-    },
-    {
-      "path": "Manuscript/sec_method.tex",
-      "bytes": 7019,
-      "sha256": "cc5cf7951392e4da8c914a22af3d5a83f275c02114dea1f946f05df56cebf1a3"
-    },
-    {
-      "path": "Manuscript/sec_protocol.tex",
-      "bytes": 9793,
-      "sha256": "414e199d22a71130e088ecec217d6789a5b3c25103f2fd716f2927d19efad679"
-    },
-    {
-      "path": "Manuscript/sec_related_work.tex",
-      "bytes": 4167,
-      "sha256": "4621161bd146e7f01c7e799bacc043356623e8fd001942f1488cd64ea4681811"
-    },
-    {
-      "path": "Manuscript/sec_results.tex",
-      "bytes": 12317,
-      "sha256": "e0c3678662c51dc1ea9a21d3f9fad53566913c8dda48ac9a57d79b1952ac2b6e"
-    },
-    {
-      "path": "Manuscript/sec_supplement.tex",
-      "bytes": 12141,
-      "sha256": "0ebd6c57f223ac7513f699cd1a1d5d17d9dfba30f28a0cc9db35ffb96a8dd657"
-    },
-    {
-      "path": "Manuscript/tbl_allocation.tex",
-      "bytes": 658,
-      "sha256": "67305c23d76a6075700bf1ebd81d97a015e521cdca8b6537a216f43a9cf22070"
-    },
-    {
-      "path": "Manuscript/tbl_context_availability.tex",
-      "bytes": 1871,
-      "sha256": "445526ce4018219be7b7fcf780258d5752a68cf45e8316fec1cde71adf587da3"
-    },
-    {
-      "path": "Manuscript/tbl_context_controls.tex",
-      "bytes": 1300,
-      "sha256": "3f0240fb4cfd56515902366e83826b705270fe2cf78c92428a5e8fd2239f54e1"
-    },
-    {
-      "path": "Manuscript/tbl_context_intervention.tex",
-      "bytes": 884,
-      "sha256": "1991655fd528d5e483275c8b9c0a58e79b096b7eb075193ff548afebb1134b85"
-    },
-    {
-      "path": "Manuscript/tbl_corpus_inventory.tex",
-      "bytes": 874,
-      "sha256": "3f5f9951d07fba0c0256a22ffd5f928f99c535b8d14f1d62023430f20c3ae18d"
-    },
-    {
-      "path": "Manuscript/tbl_duration_geometry.tex",
-      "bytes": 1148,
-      "sha256": "149201660caed8f586b0b60958ce0bbadf2ca6cc14ae20961902850dc9c40d08"
-    },
-    {
-      "path": "Manuscript/tbl_duration_grid.tex",
-      "bytes": 2877,
-      "sha256": "4c435e10420361efa548875dc6c8b0da7c29c029509cfaac434430f2de47757a"
-    },
-    {
-      "path": "Manuscript/tbl_duration_projection.tex",
-      "bytes": 1338,
-      "sha256": "ccd77c4214fc70f5ba596265f3280ffab25d59103e96cb8bf989d89687065b18"
-    },
-    {
-      "path": "Manuscript/tbl_matched_decoders.tex",
-      "bytes": 1055,
-      "sha256": "6dce5354bd4bda223ea95c6eb7e02c57c042f580510567357d8f41347c03988b"
-    },
-    {
-      "path": "Manuscript/tbl_matched_query_costs.tex",
-      "bytes": 1286,
-      "sha256": "71b61b51694f8f2b05b90db97285bfee800e901ebd13b27deaef5fb82c102c55"
-    },
-    {
-      "path": "Manuscript/tbl_matched_query_resources.tex",
-      "bytes": 986,
-      "sha256": "fc23024c142b81e648e5302958332327c4ea3092f5da11f4493b77dfa09aa7cb"
-    },
-    {
-      "path": "Manuscript/tbl_primary.tex",
-      "bytes": 637,
-      "sha256": "bc02fe49e6ec38740fb7ead5c5960f6a991c3d3d92cceb11337a0158b8b3c1c5"
-    },
-    {
-      "path": "Manuscript/tbl_primary_intervals.tex",
-      "bytes": 810,
-      "sha256": "0c3c2451ae6878f69dafdff879737cae7152e324e1942f6b904b58ede4cdcc56"
-    },
-    {
-      "path": "Manuscript/tbl_query_costs.tex",
-      "bytes": 1106,
-      "sha256": "7c1884464b0cd6d5a906bd1bdb4f1ef8b0eefd331646e2d40543bb44addac950"
-    },
-    {
-      "path": "Manuscript/tbl_source_influence.tex",
-      "bytes": 664,
-      "sha256": "9ce979a16a3aba68f1ce9f6f818a6ce71e07e61842b1a09786c241537fe756f1"
-    },
-    {
-      "path": "Manuscript/tbl_timing_ranges.tex",
-      "bytes": 1034,
-      "sha256": "83735ba76d7640e32ee2393e68348c2a5e049bb2b02774b2717d7802b523e962"
-    },
-    {
-      "path": "Manuscript/tbl_whole_clip.tex",
-      "bytes": 814,
-      "sha256": "bc8d12426fce9e1b05cb97f82b1ca02df00499f501353943581852e55227810b"
-    },
-    {
-      "path": "Manuscript/values.tex",
-      "bytes": 190,
-      "sha256": "92fe81134060af5f909b0daa9da27c88b7a62b5553c643d146e4c3da4a5135d7"
-    },
-    {
-      "path": "README.md",
-      "bytes": 6623,
-      "sha256": "d52a1bc4a8b9c33063b698e2278992fb39264957d1953951b43ef66ee826256e"
-    },
-    {
       "path": "reproduce.py",
       "bytes": 4196,
       "sha256": "80705e03dd38a9aa0731370c794f85c0c74f9fb69d22c1ed6226bd61f5ac1625"
-    },
-    {
-      "path": "Reproduced_Results.json",
-      "bytes": 304,
-      "sha256": "3a372e877f12161ff689457564abbad1f336b1036853f04899c794b01d53dcab"
     },
     {
       "path": "requirements-core.txt",
@@ -1436,19 +1456,19 @@
       "sha256": "e7a2f9041afa0782c7372629aa2899f0441fcc4d0debe5caafa16e2c0e0e13ee"
     },
     {
-      "path": "verification/Real_Inference_Replay.json",
-      "bytes": 446,
-      "sha256": "5db17b2af781ab3d9e0ecd6fdc5f638c86d5817892ce0cd132071af7bb822cd8"
-    },
-    {
-      "path": "verification/OpenScience_Release_Receipt.json",
-      "bytes": 67943,
-      "sha256": "99f5e0727affc73153d873a21717c73878a81eca5cf3b15a41c155a2cfe3bc76"
+      "path": "verification/Content_Manifest.json",
+      "bytes": 66355,
+      "sha256": "6cad9777e477a88d7d26e34d8b06a0d9a9f7624deb8c2ccfb961c001bac73e06"
     },
     {
       "path": "verification/Paper_Revision_Receipt.json",
       "bytes": 902,
       "sha256": "bd9e73f39240535001eae4bf774ca1e624a9516d85587e11fa3f14c977672689"
+    },
+    {
+      "path": "verification/Real_Inference_Replay.json",
+      "bytes": 446,
+      "sha256": "5db17b2af781ab3d9e0ecd6fdc5f638c86d5817892ce0cd132071af7bb822cd8"
     },
     {
       "path": "verification/Research_Data_Export.json",
@@ -1471,21 +1491,14 @@
       "sha256": "90b026663e5c764663bc03c550fb7cbb34b38308e4af0ce3314af20877c44cd9"
     },
     {
-      "path": "FINAL_STATUS_2026-10-26.md",
-      "bytes": 3086,
-      "sha256": "5961c3348d06a0fef3bd9406ea3e111ad9ea0738993e2ed89be56d4fd19c6636"
-    },
-    {
-      "path": "PAPER_HANDOFF_2026-10-26.md",
-      "bytes": 3653,
-      "sha256": "f0531d609920efe9eb0e5ad7768bb835e6c31d806f3693936d7801be9d268fdb"
-    },
-    {
-      "path": "PUBLIC_RELEASE_HANDOFF_2026-10-26.md",
-      "bytes": 3195,
-      "sha256": "f08642f24e7ee6b610c9ed3925db82c7162014fc9539d3975c5d4fe69da3a6f8"
+      "path": "verify_release.py",
+      "bytes": 1162,
+      "sha256": "44a0375c5914ad597bd39607dc7b03f07af024b7cf1094158fe3b3d774261b36"
     }
   ],
   "crc_test": "passed",
+  "duplicate_entries": 0,
+  "internal_manifest": "verification/Content_Manifest.json",
+  "archive_receipt_location": "External only; never embedded in the archive it describes",
   "weights_and_raw_media": "excluded from lightweight package"
 }

@@ -27,9 +27,9 @@ prediction-aligned readout controls.
 The recent prefix-recovery, independent-readout, and partial/incomplete recognition
 branches do not provide a completed, independent improvement to the paper's primary
 question. They remain in their original phase folders and are not silently folded into
-the manuscript. The current CPU retry is still running an `upper_teacher_count/17` arm;
-its scores are not part of this revision until a complete receipt and independent check
-exist.
+the manuscript. The `upper_teacher_count/17` CPU retry completed 512 updates and passed an independent
+1,280-row replay. It is exposed-development control evidence, without a held-out result,
+and does not change the manuscript claims or primary tables.
 
 ## Release boundary
 
@@ -49,7 +49,3 @@ paper claim is already supported by the frozen four-corpus analysis; the increme
 projection gain is modest and decoder-dependent, while contextual direct explains most of
 the improvement. A future method run should be opened only if it answers a named limitation
 with a locked comparator and held-out confirmation.
-
-
-
-

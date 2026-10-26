@@ -1,7 +1,7 @@
 # GitHub release and existing Zenodo dataset handoff
 
 The reviewable package is published in the `research/context_aware_interval_2026-10-24`
-subtree of the public GitHub repository [`ntthienphuc/liptrace`](https://github.com/ntthienphuc/liptrace/tree/f4537c446da12e65d985d708da7198de02aa92b0/research/context_aware_interval_2026-10-24).
+subtree of the public GitHub repository [`ntthienphuc/liptrace`](https://github.com/ntthienphuc/liptrace/tree/5f72387a68e447da7b67766087cf7c1537048008/research/context_aware_interval_2026-10-24).
 The dataset citation uses the existing VLR v2 Zenodo record; this handoff does not create
 a duplicate dataset record or upload VLR recordings. No separate software DOI has been
 created yet.
@@ -22,7 +22,7 @@ restricted metadata, checkpoints or third-party code; their own notices remain u
 
 ## Reproduction and provenance
 
-The published commit is `f4537c446da12e65d985d708da7198de02aa92b0`. From the research
+The release-content commit is `5f72387a68e447da7b67766087cf7c1537048008`. From the research
 subtree, run `python reproduce.py` followed by
 `python -m unittest discover -s code -p "test_*.py"`. The clean extraction check completed
 with 41/41 tests passing and the recorded reproduction reproduced 14,650 clips,
@@ -44,8 +44,8 @@ is separate from the existing VLR dataset record and is not claimed here.
 
 ## Current verified identity
 
-- Published GitHub commit: `f4537c446da12e65d985d708da7198de02aa92b0`
-- PDF SHA-256: `3b222b53f7fb326057a43603519fba4c98344b3c12d8bea2e7207f26e3b0d7a9`
+- Release-content GitHub commit: `5f72387a68e447da7b67766087cf7c1537048008`
+- PDF SHA-256: `49532465dd16bba35e115555183a70592b56396f872a952e19851eb19a088452`
 - Archive checksum: see `verification/OpenScience_Release_Receipt.json`
 - Numerical scope: 14,650 clips and 307,650 observations
 - Release tests: 41/41 pass from a clean extraction
@@ -55,3 +55,4 @@ The manuscript still contains author and correspondence placeholders that must b
 replaced before submission. The public release is a code-and-derived-results handoff;
 it does not claim that the manuscript has been submitted or that a separate software DOI
 already exists.
+

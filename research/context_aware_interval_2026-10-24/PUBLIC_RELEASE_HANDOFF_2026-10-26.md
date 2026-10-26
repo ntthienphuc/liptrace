@@ -1,56 +1,57 @@
 # GitHub release and existing Zenodo dataset handoff
 
-The reviewable package is ready for a GitHub source release. The dataset citation uses
-the existing VLR v2 Zenodo record; this handoff does not create a duplicate dataset record
-or upload VLR recordings. No external repository or new software DOI has been created by
-this handoff.
+The reviewable package is published in the `research/context_aware_interval_2026-10-24`
+subtree of the public GitHub repository [`ntthienphuc/liptrace`](https://github.com/ntthienphuc/liptrace/tree/f4537c446da12e65d985d708da7198de02aa92b0/research/context_aware_interval_2026-10-24).
+The dataset citation uses the existing VLR v2 Zenodo record; this handoff does not create
+a duplicate dataset record or upload VLR recordings. No separate software DOI has been
+created yet.
 
-## Proposed public layout
+## Public layout
 
-Use the contents of `Context_Aware_Interval_OpenScience_Release.zip` as the release
-root. Keep the following visible at the repository root:
+The subtree contains the reviewable code, configuration, derived tables, examples,
+provenance receipts, manuscript source and compiled PDF. The lightweight release excludes
+raw recordings, restricted LRS2 material, complete third-party video collections,
+credentials and model weights. Those files remain outside the public release unless their
+owners' terms explicitly allow redistribution.
 
-- `README.md`, `DATA_AND_MODELS.md`, `FINAL_STATUS_2026-10-26.md` and this handoff;
-- `LICENSE-MIT.txt` for original code and `LICENSE-DATA-CC-BY-4.0.txt` for derived
-  numerical tables;
-- `code/`, `config/`, `data/`, `examples/`, `engine/`, `licenses/`, `Manuscript/`
-  and `verification/`.
+The original study code is covered by the MIT notice in `licenses/LICENSE-MIT.txt`.
+Derived numerical tables are covered by the CC BY 4.0 notice in
+`licenses/LICENSE-DATA-CC-BY-4.0.txt`. These notices do not relicense source recordings,
+restricted metadata, checkpoints or third-party code; their own notices remain under
+`licenses/`.
 
-The lightweight archive excludes raw recordings, restricted LRS2 material, complete
-third-party video collections, credentials and model weights. Do not add those files
-to the public repository unless their owners' terms explicitly allow it.
+## Reproduction and provenance
 
-## GitHub preparation
-
-1. Create a repository with the final author-approved name and add the archive contents.
-2. Replace `[Author names to be inserted]`, the manuscript author placeholders and the
-   correspondence address before the first public commit.
-3. Keep the MIT notice for original code and the CC BY 4.0 notice limited to derived
-   tables. Preserve every third-party notice under `licenses/`.
-4. Run `python reproduce.py` and `python -m unittest discover -s code -p "test_*.py"`
-   from the repository root after the upload.
-5. Tag the exact commit used for the Zenodo archive and record the commit hash in the
-   paper and Zenodo metadata.
+The published commit is `f4537c446da12e65d985d708da7198de02aa92b0`. From the research
+subtree, run `python reproduce.py` followed by
+`python -m unittest discover -s code -p "test_*.py"`. The clean extraction check completed
+with 41/41 tests passing and the recorded reproduction reproduced 14,650 clips,
+307,650 numerical observations, 84 principal aggregate rows and 8 primary comparisons.
+The included verification receipts record the source inventory, hashes, real-frame replay,
+data export and paper build.
 
 ## Zenodo and dataset citation
 
-Use the existing [VLR v2 Zenodo record](https://zenodo.org/records/19705466) for the
-VLR dataset citation and its current access/license metadata. Do not upload VLR media,
-LRS2 recordings, MuAViC/mTEDx material, ViCocktail recordings or local checkpoints from
-this package. State explicitly that LRS2, MuAViC/mTEDx, ViCocktail and local checkpoints
-retain their source access conditions.
+Use the existing [VLR v2 Zenodo record](https://zenodo.org/records/19705466) for the VLR
+dataset citation and its current access/license metadata. Do not upload VLR media, LRS2
+recordings, MuAViC/mTEDx material, ViCocktail recordings or local checkpoints from this
+package. LRS2, MuAViC/mTEDx, ViCocktail and local checkpoints retain their source access
+conditions.
 
-If the authors later want a separate software DOI, create a new versioned archive from
-the tagged GitHub commit and record that DOI in the manuscript. That future action is
-separate from the existing VLR dataset record and is not claimed here.
+If the authors later want a software DOI, create a new versioned archive from an
+explicitly tagged GitHub commit and record that DOI in the manuscript. That future action
+is separate from the existing VLR dataset record and is not claimed here.
 
 ## Current verified identity
 
-- PDF SHA-256: `92f40f8df5864ee597506424e9f8eb2b4b1587f0952ef63c4d3605d3556da22b`
+- Published GitHub commit: `f4537c446da12e65d985d708da7198de02aa92b0`
+- PDF SHA-256: `3b222b53f7fb326057a43603519fba4c98344b3c12d8bea2e7207f26e3b0d7a9`
 - Archive checksum: see `verification/OpenScience_Release_Receipt.json`
 - Numerical scope: 14,650 clips and 307,650 observations
 - Release tests: 41/41 pass from a clean extraction
 - Paper figures: real VLR prepared frames and cohort geometry with provenance
 
-The handoff is a preparation artifact. It is not evidence that GitHub or Zenodo
-publication has already occurred.
+The manuscript still contains author and correspondence placeholders that must be
+replaced before submission. The public release is a code-and-derived-results handoff;
+it does not claim that the manuscript has been submitted or that a separate software DOI
+already exists.

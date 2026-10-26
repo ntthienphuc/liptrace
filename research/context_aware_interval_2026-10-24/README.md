@@ -1,7 +1,7 @@
 # Context-aware interval transcription
 
 Research companion for **Context-Aware Interval Transcription for Visual Speech Recognition**.
-Release candidate, 24 October 2026. A public repository and archival DOI have not yet been assigned.
+Public research release, 26 October 2026. The files are published in the `research/context_aware_interval_2026-10-24` subtree of [ntthienphuc/liptrace](https://github.com/ntthienphuc/liptrace/tree/c86f104b9e5a0c784df54024d717d7234da6ad31/research/context_aware_interval_2026-10-24). The existing VLR v2 Zenodo record is used for dataset citation; no separate software DOI has been created.
 
 The task is to transcribe a requested time interval while allowing a bounded amount of real
 neighboring video. The recognizer is frozen. The comparison separates:
@@ -46,10 +46,8 @@ they are not empirical recognition results.
 - `code/`: the small inference core, scoring, source-bootstrap analysis and tests.
 - `data/`: twelve paper CSVs, source counts and compressed per-clip numerical observations.
 - `examples/`: 27 actual prepared VLR frames with frame indices, hashes and attribution.
-- `engine/`: the preserved model adapters and necessary upstream source files. The GitHub
-  tree omits one historical archive-source subtree with Windows-incompatible long paths;
-  that subtree remains in the local/Zenodo-ready release archive and its source hashes are
-  retained in the manifests.
+- `engine/`: the preserved model adapters and necessary upstream source files. Historical
+  paths are retained inside this directory so code identities remain traceable.
 - `config/Required_Assets.json`: exact checkpoint/tokenizer identities and required paths.
 - `licenses/`: third-party notices and the scope of proposed author licensing.
 
@@ -105,4 +103,8 @@ placeholder before publication. Third-party code retains its own license, and CC
 components are not covered by the MIT core-code license.
 The VLR image attribution is in `examples/Frame_Provenance.json`.
 Use the paper's bibliography for the original datasets, Auto-AVSR and vsr-low. The final
-paper citation, authors, public repository and archival DOI will be inserted when assigned.
+paper citation and author metadata will be inserted before submission. The existing VLR v2 Zenodo record remains the dataset citation; the software release is identified by the GitHub commit above.
+
+
+
+

@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "pdf": "Manuscript/Research_Paper_OpenScience_2026-10-24.pdf",
-  "sha256": "3b222b53f7fb326057a43603519fba4c98344b3c12d8bea2e7207f26e3b0d7a9",
-  "bytes": 1691116,
+  "sha256": "49532465dd16bba35e115555183a70592b56396f872a952e19851eb19a088452",
+  "bytes": 1691362,
   "pages": 53,
   "latex_log": "Verification/Build/main.log",
   "latex_exit": 0,
@@ -21,6 +21,6 @@
   "source_figures_verified": true,
   "original_submission_preserved": "PatternRecognition_Submission_Draft_2026-10-22",
   "license_update": "MIT original code; CC BY 4.0 derived numerical tables",
-  "publication_target": "GitHub source release plus linked Zenodo archive",
+  "publication_target": "GitHub source release plus existing VLR v2 Zenodo dataset record",
   "scope": "Revision of the existing manuscript; no new neural training result added"
 }

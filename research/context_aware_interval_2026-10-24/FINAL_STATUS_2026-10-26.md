@@ -33,13 +33,14 @@ exist.
 
 ## Release boundary
 
-`Context_Aware_Interval_OpenScience_Release.zip` is a compact, reviewable candidate. It
+`Context_Aware_Interval_OpenScience_Release.zip` is a compact, reviewable release. It
 contains source code, derived numerical tables, tests, manifests, the revised manuscript,
 and license/access notes. It excludes raw recordings, credentials and checkpoint weights.
 The selected release licenses are MIT for original code and CC BY 4.0 for derived numerical
-tables. The archive is not yet a public repository or DOI deposit; final author metadata,
-copyright placeholder replacement and the permanent public destination still need to be
-added before publication.
+tables. The release is published in the `research/context_aware_interval_2026-10-24`
+subtree of `ntthienphuc/liptrace` at commit `c86f104`; author metadata and the copyright
+placeholder still need replacement before submission, and the existing VLR Zenodo record
+remains the dataset citation.
 
 ## Scientific decision
 
@@ -48,3 +49,6 @@ paper claim is already supported by the frozen four-corpus analysis; the increme
 projection gain is modest and decoder-dependent, while contextual direct explains most of
 the improvement. A future method run should be opened only if it answers a named limitation
 with a locked comparator and held-out confirmation.
+
+
+

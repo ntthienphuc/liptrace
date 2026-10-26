@@ -2,8 +2,8 @@
 
 This directory records the terms that were checked for the current release candidate.
 It does not grant permission to redistribute a third-party corpus, checkpoint, or source
-archive. A public repository or archival deposit must carry the final author-approved
-license files before publication.
+archive. The public GitHub subtree carries the current license files; the final author-approved
+copyright holder and author metadata must replace the placeholder before submission.
 
 ## Study code and derived numerical data
 
@@ -29,7 +29,10 @@ anonymized source aliases; they do not contain transcripts, raw recordings, or m
 
 ## Publication checklist
 
-Before making this package public, replace the author placeholder, add final citation
-metadata and repository/archive URLs, and preserve all third-party notices. Do not describe
+Before submission, replace the author placeholder and add final citation metadata while
+preserving all third-party notices. Describe only the code and derived tables as public; do not describe
 the entire package as open data while LRS2, local checkpoints, or ViCocktail media remain
 access-controlled.
+
+
+

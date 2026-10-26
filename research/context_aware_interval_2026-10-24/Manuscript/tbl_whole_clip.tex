@@ -1,0 +1,17 @@
+\begin{table}[tb]
+\centering\small
+\caption{Whole-transcript WER (\%) under matched pure CTC, 512 clips per corpus. The shared sliding schedule partitions each clip into balanced targets of at most two seconds with 0.64 s context per side. Full-clip output uses the same reference transcript. Intervals are pointwise source-bootstrap intervals.}
+\label{tab:whole}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrl}
+\toprule
+Corpus & Direct sliding & Projected sliding & Full clip & C--F (pp) \\
+\midrule
+VLR & 48.667 & 48.452 & 42.877 & +5.575 [+4.641, +6.491] \\
+LRS2 & 28.936 & 28.186 & 27.286 & +0.900 [+0.158, +1.631] \\
+Spanish & 78.866 & 77.353 & 74.558 & +2.795 [+1.622, +4.239] \\
+ViCocktail & 47.723 & 47.691 & 43.756 & +3.935 [+3.066, +4.743] \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

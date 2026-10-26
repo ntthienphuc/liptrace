@@ -1,0 +1,21 @@
+\begin{table}[tb]
+\centering\small
+\caption{Complete context interventions: requested-interval WER (\%) on the same clips with outside context within each corpus (VLR 254, LRS2 48, Spanish 202, ViCocktail 254). Targets are centered and at most two seconds. Real, repeat and reverse preserve input length; left/right retain only that margin and therefore change length. Selected A/C use greedy for VLR and hybrid10 otherwise; pure CTC is matched throughout.}
+\label{tab:context-controls}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrr}
+\toprule
+Corpus & Regime & Crop A & Real C & Left C & Right C & Repeat C & Reverse C \\
+\midrule
+VLR & Selected & 60.021 & 50.211 & 51.741 & 57.806 & 54.430 & 55.538 \\
+VLR & Pure CTC & 60.549 & 49.947 & 51.688 & 57.753 & 54.378 & 55.643 \\
+LRS2 & Selected & 27.508 & 18.123 & 23.948 & 24.272 & 25.890 & 22.330 \\
+LRS2 & Pure CTC & 33.333 & 23.625 & 28.479 & 28.479 & 31.068 & 26.861 \\
+Spanish & Selected & 84.686 & 70.690 & 76.775 & 81.947 & 80.325 & 78.803 \\
+Spanish & Pure CTC & 80.832 & 75.963 & 77.688 & 79.615 & 79.006 & 79.716 \\
+ViCocktail & Selected & 57.116 & 50.537 & 54.876 & 54.130 & 59.823 & 60.616 \\
+ViCocktail & Pure CTC & 60.429 & 54.550 & 57.210 & 57.163 & 60.616 & 61.223 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

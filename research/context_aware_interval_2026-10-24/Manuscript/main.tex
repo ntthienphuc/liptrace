@@ -1,0 +1,106 @@
+\documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+% Pattern Recognition working submission draft.
+% The review option supplies the single-column, double-spaced reading layout.
+% Replace author, affiliation, funding, and disclosure placeholders before submission.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,longtable}
+\usepackage{graphicx,microtype,xcolor}
+\usepackage[colorlinks=true,hypertexnames=false,linkcolor=blue!45!black,
+  citecolor=blue!45!black,urlcolor=blue!45!black,breaklinks=true]{hyperref}
+
+\journal{Pattern Recognition}
+\graphicspath{{./}}
+\input{values}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Context-Aware Interval Transcription for Visual Speech Recognition}
+
+\author[inst1]{Author information to be inserted}
+\ead{corresponding.author@example.org}
+\address[inst1]{Affiliation to be inserted, City, Country}
+
+\begin{abstract}
+Transcribing a selected video passage requires controlling the returned text while retaining
+useful neighboring visual evidence. We formulate context-aware interval transcription by separating
+the requested text interval from the permitted observation interval. A training-free implementation,
+prediction-aligned projection, recognizes the available context, aligns its predicted tokens using
+native visual CTC scores, and returns complete words assigned to the request. We evaluate this
+procedure together with crop-first recognition, contextual direct decoding, identical-transcript
+allocation controls, and reusable full-clip lookup. Across \PrimaryClips{} clips from four corpora
+in three languages, development-selected projection reduces requested-interval error by
+\PrimaryGainMin{}--\PrimaryGainMax{} percentage points relative to crop-first recognition.
+Matched-decoder comparisons distinguish the benefit of contextual encoding from the additional,
+decoder-dependent effect of transcript projection. Real neighboring video also outperforms
+equal-length repeated-boundary padding. A 4,006-clip duration study relates these effects to the
+context actually available around a request: one-second LRS2 targets improve from
+\EnglishOneNoContext{}\% to \EnglishOneContext{}\% WER with up to 0.64 seconds per side.
+Repeated-query measurements identify a complementary workload distinction: bounded recognition
+can reduce first-query work, while full-clip transcription benefits from reuse and remains stronger
+for complete transcripts. The resulting framework connects recognition context, output selection,
+and computational reuse for passage-level visual transcription.
+\end{abstract}
+
+\begin{highlights}
+\item Context admission and requested-output ownership are formulated as separate decisions.
+\item Prediction-aligned projection uses a frozen VSR model and native visual CTC scores.
+\item Matched decoding separates contextual encoding gains from transcript readout gains.
+\item Context availability and query reuse determine the accuracy--workload trade-off.
+\end{highlights}
+
+\begin{keyword}
+visual speech recognition \sep interval transcription \sep visual context
+\sep CTC alignment \sep inference \sep multilingual evaluation
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sec_introduction}
+\input{sec_related_work}
+\input{sec_method}
+\input{sec_protocol}
+\input{sec_results}
+\input{sec_discussion}
+
+\begingroup
+\small
+\bibliographystyle{elsarticle-harv}
+\bibliography{references}
+\endgroup
+
+\clearpage
+\appendix
+\input{sec_supplement}
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships
+that could have appeared to influence the work reported in this paper.
+
+\section*{Data availability}
+The accompanying reproducibility package contains numerical results, source-level
+edit counts, evaluation settings and checkpoint identities. VLR is available from
+its versioned Zenodo record \citep{vlr2026dataset}. LRS2 is obtained under the
+Oxford--BBC data-sharing agreement; MuAViC/mTEDx and ViCocktail are obtained from
+their original releases \citep{afouras2022deep,anwar2023muavic,nguyen2025vicocktail}.
+Original media and third-party checkpoints retain their respective access terms.
+The derived numerical tables in the companion release are prepared for CC BY 4.0;
+this does not relicense any source recording, restricted metadata, or checkpoint.
+The package records the provenance of the VLR image examples separately.
+
+\section*{Code availability}
+The accompanying package provides the interval geometry, CTC decoding,
+prediction alignment, word allocation and sliding controls, together with tests
+and scripts for reproducing the principal numerical comparisons. Model-specific
+code and asset requirements are documented separately from the lightweight
+analysis workflow. Original study code is prepared for MIT licensing and the
+derived numerical tables for CC BY 4.0, pending insertion of the final author
+metadata. The GitHub repository and Zenodo identifier will be added before
+submission; this draft does not claim that publication has already occurred.
+
+\end{document}

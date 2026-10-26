@@ -1,0 +1,97 @@
+{
+  "unique_clips": 14650,
+  "numerical_records": 307650,
+  "payload_sha256": "c4c999129607aa4c1cd0e7a3b7762a40923b79655e3f8ebc9b346583fac31b31",
+  "input_files": [
+    {
+      "sha256": "33331ee394306e97c3e18fc9c2951b84da692177661176832d2d971b81ab947d",
+      "bytes": 72893032
+    },
+    {
+      "sha256": "95a8208070abe84e31aa5d83c1562dfa615ea5aa1446ac54584a76fc19f827ed",
+      "bytes": 72894154
+    },
+    {
+      "sha256": "3141e805ed0e3767d12cfbe26ae6629225d23412924e7af3269581c6769ca230",
+      "bytes": 72890804
+    },
+    {
+      "sha256": "15dd330dd6b4084e0140cbaf424c6795031c546f93a7a9e070f8a6e1c019da8e",
+      "bytes": 72866504
+    },
+    {
+      "sha256": "c96cda61214412d46ea52278ff95ebe9d09b0a72ada440abb96edc0d71e27bb3",
+      "bytes": 72693714
+    },
+    {
+      "sha256": "4a99735cab95e324d08b11353704d29562f3d93d54ae13379a10b993fe899e0d",
+      "bytes": 72902225
+    },
+    {
+      "sha256": "ddb5bf9beb3b5989edace9cc2011db77a817fcc3a0d7c2065d7d6cd941b3a969",
+      "bytes": 72683235
+    },
+    {
+      "sha256": "bcc32121204c4d715729a3ce6bce956a1035993531248fc3463542d5ae0f420f",
+      "bytes": 72753094
+    },
+    {
+      "sha256": "1d47fbb30985abb554adb1f0b8769fdc6a2854ebcac5329c0396ccf42a77bbb5",
+      "bytes": 13371896
+    },
+    {
+      "sha256": "a57842eaadce48482debd6dfe07679f3b6515b52f48dab729ea252e43fe8f241",
+      "bytes": 13384142
+    },
+    {
+      "sha256": "763fc3c03bf89801d8219eba730dcd945d46fba0023d79cc39d9298e227a8881",
+      "bytes": 13276738
+    },
+    {
+      "sha256": "be11797ae2f3127cba25884eeb81a0cfb0712f736de378f77a26c5183ce278fa",
+      "bytes": 13338714
+    },
+    {
+      "sha256": "e4655d2a738424146897829f9b85aac75ce90c5f839965393cc47d8559b7e56e",
+      "bytes": 10538637
+    },
+    {
+      "sha256": "4bf9c1af1c8bd019d695882bae56bdd1b12115fd8ee54d194eb917e6f0b3e5d1",
+      "bytes": 10468935
+    },
+    {
+      "sha256": "9ecb1abacdda81643ad5ea3168daad9700c66191989f243eed16593d72c81bed",
+      "bytes": 10362641
+    },
+    {
+      "sha256": "d8b24247af86ef34399a93b6cc506a50f49b17edbd4ae7ed9300040ba8f4fe38",
+      "bytes": 10522122
+    },
+    {
+      "sha256": "89a82ed5b06a704e7875aa911cf652e2bcb1009483e94b4d9e2ec7d135c2ad54",
+      "bytes": 15494276
+    },
+    {
+      "sha256": "3e3dad58387437c421b9442d126975356db486d7f2c39f1fee9b49c8c3bf6ba0",
+      "bytes": 15440818
+    },
+    {
+      "sha256": "732255b44a29874b860d28a00f938a34d227fa0c78f9670e3f198ab677e8f72b",
+      "bytes": 15446969
+    },
+    {
+      "sha256": "df442d49547e6e3e6e20b8fb88af7cb7e149430becc474fd448c1e8245c6f791",
+      "bytes": 15469588
+    }
+  ],
+  "source_aliases": "Rank in original sorted source list, preserving bootstrap sample order",
+  "clip_keys": "SHA256 of UTF-8 model_id:original_clip_id",
+  "excluded": [
+    "reference text",
+    "hypothesis text",
+    "audio",
+    "restricted video",
+    "credentials"
+  ],
+  "scope": "Count export from previously independently rescored frozen predictions; no new recognition"
+}

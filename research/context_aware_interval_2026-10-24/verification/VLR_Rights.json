@@ -1,0 +1,309 @@
+{
+  "source_url": "https://api.datacite.org/dois/10.5281/zenodo.19705466",
+  "checked_date": "2026-10-24",
+  "rights": [
+    {
+      "rights": "Creative Commons Attribution 4.0 International",
+      "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "schemeUri": "https://spdx.org/licenses/",
+      "rightsIdentifier": "cc-by-4.0",
+      "rightsIdentifierScheme": "SPDX"
+    }
+  ],
+  "doi": "10.5281/zenodo.19705466",
+  "metadata": {
+    "data": {
+      "id": "10.5281/zenodo.19705466",
+      "type": "dois",
+      "attributes": {
+        "doi": "10.5281/zenodo.19705466",
+        "prefix": "10.5281",
+        "suffix": "zenodo.19705466",
+        "identifiers": [
+          {
+            "identifier": "oai:zenodo.org:19705466",
+            "identifierType": "oai"
+          }
+        ],
+        "alternateIdentifiers": [
+          {
+            "alternateIdentifierType": "oai",
+            "alternateIdentifier": "oai:zenodo.org:19705466"
+          }
+        ],
+        "creators": [
+          {
+            "name": "Nguyen Quoc, Trung",
+            "nameType": "Personal",
+            "givenName": "Trung",
+            "familyName": "Nguyen Quoc",
+            "affiliation": [
+              "VSB - Technical University of Ostrava",
+              "FPT University"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0002-5500-3554",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Pham Thi Thao Nguyen",
+            "nameType": "Personal",
+            "familyName": "Pham Thi Thao Nguyen",
+            "affiliation": [
+              "FPT University"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0002-9206-5284",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Nguyen Ngoc Gia, Ninh",
+            "nameType": "Personal",
+            "givenName": "Ninh",
+            "familyName": "Nguyen Ngoc Gia",
+            "affiliation": [
+              "FPT University"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0002-9447-3599",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Dam Nguyen Quynh, Hoa",
+            "nameType": "Personal",
+            "givenName": "Hoa",
+            "familyName": "Dam Nguyen Quynh",
+            "affiliation": [
+              "FPT University"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0003-7966-7165",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Sindelar, Matej",
+            "nameType": "Personal",
+            "givenName": "Matej",
+            "familyName": "Sindelar",
+            "affiliation": [
+              "VSB - Technical University of Ostrava"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0006-0556-507X",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Stefansky, Jakub",
+            "nameType": "Personal",
+            "givenName": "Jakub",
+            "familyName": "Stefansky",
+            "affiliation": [
+              "VSB - Technical University of Ostrava"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0001-4773-5288",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Truong Hoang, Vinh",
+            "nameType": "Personal",
+            "givenName": "Vinh",
+            "familyName": "Truong Hoang",
+            "affiliation": [
+              "Ho Chi Minh City Open University"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0002-3464-3894",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Petr, Bilik",
+            "nameType": "Personal",
+            "givenName": "Bilik",
+            "familyName": "Petr",
+            "affiliation": [
+              "VSB - Technical University of Ostrava"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0001-8655-778X",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Simon, Bilik",
+            "nameType": "Personal",
+            "givenName": "Bilik",
+            "familyName": "Simon",
+            "affiliation": [
+              "VSB - Technical University of Ostrava"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0001-8797-7700",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "name": "Martinek, Radek",
+            "nameType": "Personal",
+            "givenName": "Radek",
+            "familyName": "Martinek",
+            "affiliation": [
+              "VSB - Technical University of Ostrava"
+            ],
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0003-2054-143X",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ]
+          }
+        ],
+        "titles": [
+          {
+            "title": "A Large-Scale Vietnamese Lip-Reading Dataset for Visual Speech Recognition"
+          }
+        ],
+        "publisher": "Zenodo",
+        "container": {},
+        "publicationYear": 2026,
+        "subjects": [],
+        "contributors": [],
+        "dates": [
+          {
+            "date": "2026-04-23",
+            "dateType": "Issued"
+          }
+        ],
+        "language": null,
+        "types": {
+          "ris": "DATA",
+          "bibtex": "misc",
+          "citeproc": "dataset",
+          "schemaOrg": "Dataset",
+          "resourceType": "",
+          "resourceTypeGeneral": "Dataset"
+        },
+        "relatedIdentifiers": [
+          {
+            "relationType": "IsVersionOf",
+            "relatedIdentifier": "10.5281/zenodo.15899221",
+            "relatedIdentifierType": "DOI"
+          }
+        ],
+        "relatedItems": [],
+        "sizes": [],
+        "formats": [],
+        "version": null,
+        "rightsList": [
+          {
+            "rights": "Creative Commons Attribution 4.0 International",
+            "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+            "schemeUri": "https://spdx.org/licenses/",
+            "rightsIdentifier": "cc-by-4.0",
+            "rightsIdentifierScheme": "SPDX"
+          }
+        ],
+        "descriptions": [
+          {
+            "description": "The Vietnamese Lip Reading (VLR) dataset is a large-scale audiovisual corpus created to support word-level visual speech recognition in Vietnamese. It consists of segmented video clips paired with time-aligned transcriptions at the word level. The video content was collected from publicly available Vietnamese YouTube videos, selected for clear frontal face visibility and natural speaking conditions.\n\nTo ensure consistency and visual clarity, each video was automatically processed to center the speaker’s face within the frame. The accompanying transcriptions were generated using automated speech recognition and provide precise timing information for each word spoken. These aligned video-text pairs were drawn from a diverse set of speakers and recording scenarios, capturing the natural variability of Vietnamese spoken language in uncontrolled, real-world environments.\n\nThe final dataset includes approximately 116,000 segmented video–transcript pairs. Its scale captures the complexity of Vietnamese visual speech and provides a structured resource suitable for various modeling and analysis tasks.",
+            "descriptionType": "Abstract"
+          }
+        ],
+        "geoLocations": [],
+        "fundingReferences": [],
+        "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS9aRU5PRE8uMTk3MDU0NjY8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk5ndXllbiBRdW9jLCBUcnVuZzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+VHJ1bmc8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+Tmd1eWVuIFF1b2M8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDAwLTAwMDItNTUwMC0zNTU0PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA1eDhtY2I3NSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiPlZTQiAtIFRlY2huaWNhbCBVbml2ZXJzaXR5IG9mIE9zdHJhdmE8L2FmZmlsaWF0aW9uPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDNlc2o0Zzk3IiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+RlBUIFVuaXZlcnNpdHk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlBoYW0gVGhpIFRoYW8gTmd1eWVuPC9jcmVhdG9yTmFtZT4KICAgICAgPGZhbWlseU5hbWU+UGhhbSBUaGkgVGhhbyBOZ3V5ZW48L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDA5LTAwMDItOTIwNi01Mjg0PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAzZXNqNGc5NyIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiPkZQVCBVbml2ZXJzaXR5PC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5OZ3V5ZW4gTmdvYyBHaWEsIE5pbmg8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPk5pbmg8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+Tmd1eWVuIE5nb2MgR2lhPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwOS0wMDAyLTk0NDctMzU5OTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wM2VzajRnOTciIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIj5GUFQgVW5pdmVyc2l0eTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RGFtIE5ndXllbiBRdXluaCwgSG9hPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5Ib2E8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RGFtIE5ndXllbiBRdXluaDwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDktMDAwMy03OTY2LTcxNjU8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDNlc2o0Zzk3IiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+RlBUIFVuaXZlcnNpdHk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNpbmRlbGFyLCBNYXRlajwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWF0ZWo8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+U2luZGVsYXI8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDA5LTAwMDYtMDU1Ni01MDdYPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzA1eDhtY2I3NSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiPlZTQiAtIFRlY2huaWNhbCBVbml2ZXJzaXR5IG9mIE9zdHJhdmE8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlN0ZWZhbnNreSwgSmFrdWI8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpha3ViPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlN0ZWZhbnNreTwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDktMDAwMS00NzczLTUyODg8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDV4OG1jYjc1IiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+VlNCIC0gVGVjaG5pY2FsIFVuaXZlcnNpdHkgb2YgT3N0cmF2YTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+VHJ1b25nIEhvYW5nLCBWaW5oPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5WaW5oPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlRydW9uZyBIb2FuZzwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSIiPjAwMDAtMDAwMi0zNDY0LTM4OTQ8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDB0ZWFuNTMzIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+SG8gQ2hpIE1pbmggQ2l0eSBPcGVuIFVuaXZlcnNpdHk8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlBldHIsIEJpbGlrPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5CaWxpazwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5QZXRyPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAxLTg2NTUtNzc4WDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNXg4bWNiNzUiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIj5WU0IgLSBUZWNobmljYWwgVW5pdmVyc2l0eSBvZiBPc3RyYXZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TaW1vbiwgQmlsaWs8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkJpbGlrPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlNpbW9uPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAxLTg3OTctNzcwMDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNXg4bWNiNzUiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIj5WU0IgLSBUZWNobmljYWwgVW5pdmVyc2l0eSBvZiBPc3RyYXZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5NYXJ0aW5laywgUmFkZWs8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPlJhZGVrPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPk1hcnRpbmVrPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9IiI+MDAwMC0wMDAzLTIwNTQtMTQzWDwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNXg4bWNiNzUiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIj5WU0IgLSBUZWNobmljYWwgVW5pdmVyc2l0eSBvZiBPc3RyYXZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+QSBMYXJnZS1TY2FsZSBWaWV0bmFtZXNlIExpcC1SZWFkaW5nIERhdGFzZXQgZm9yIFZpc3VhbCBTcGVlY2ggUmVjb2duaXRpb248L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+WmVub2RvPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDI2PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ii8+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAyNi0wNC0yMzwvZGF0ZT4KICA8L2RhdGVzPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJvYWkiPm9haTp6ZW5vZG8ub3JnOjE5NzA1NDY2PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuNTI4MS96ZW5vZG8uMTU4OTkyMjE8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxzaXplcy8+CiAgPGZvcm1hdHMvPgogIDx2ZXJzaW9uLz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wL2xlZ2FsY29kZSIgcmlnaHRzSWRlbnRpZmllcj0iY2MtYnktNC4wIiByaWdodHNJZGVudGlmaWVyU2NoZW1lPSJzcGR4Ij5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDQuMCBJbnRlcm5hdGlvbmFsPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+VGhlIFZpZXRuYW1lc2UgTGlwIFJlYWRpbmcgKFZMUikgZGF0YXNldCBpcyBhIGxhcmdlLXNjYWxlIGF1ZGlvdmlzdWFsIGNvcnB1cyBjcmVhdGVkIHRvIHN1cHBvcnQgd29yZC1sZXZlbCB2aXN1YWwgc3BlZWNoIHJlY29nbml0aW9uIGluIFZpZXRuYW1lc2UuIEl0IGNvbnNpc3RzIG9mIHNlZ21lbnRlZCB2aWRlbyBjbGlwcyBwYWlyZWQgd2l0aCB0aW1lLWFsaWduZWQgdHJhbnNjcmlwdGlvbnMgYXQgdGhlIHdvcmQgbGV2ZWwuIFRoZSB2aWRlbyBjb250ZW50IHdhcyBjb2xsZWN0ZWQgZnJvbSBwdWJsaWNseSBhdmFpbGFibGUgVmlldG5hbWVzZSBZb3VUdWJlIHZpZGVvcywgc2VsZWN0ZWQgZm9yIGNsZWFyIGZyb250YWwgZmFjZSB2aXNpYmlsaXR5IGFuZCBuYXR1cmFsIHNwZWFraW5nIGNvbmRpdGlvbnMuCgpUbyBlbnN1cmUgY29uc2lzdGVuY3kgYW5kIHZpc3VhbCBjbGFyaXR5LCBlYWNoIHZpZGVvIHdhcyBhdXRvbWF0aWNhbGx5IHByb2Nlc3NlZCB0byBjZW50ZXIgdGhlIHNwZWFrZXLigJlzIGZhY2Ugd2l0aGluIHRoZSBmcmFtZS4gVGhlIGFjY29tcGFueWluZyB0cmFuc2NyaXB0aW9ucyB3ZXJlIGdlbmVyYXRlZCB1c2luZyBhdXRvbWF0ZWQgc3BlZWNoIHJlY29nbml0aW9uIGFuZCBwcm92aWRlIHByZWNpc2UgdGltaW5nIGluZm9ybWF0aW9uIGZvciBlYWNoIHdvcmQgc3Bva2VuLiBUaGVzZSBhbGlnbmVkIHZpZGVvLXRleHQgcGFpcnMgd2VyZSBkcmF3biBmcm9tIGEgZGl2ZXJzZSBzZXQgb2Ygc3BlYWtlcnMgYW5kIHJlY29yZGluZyBzY2VuYXJpb3MsIGNhcHR1cmluZyB0aGUgbmF0dXJhbCB2YXJpYWJpbGl0eSBvZiBWaWV0bmFtZXNlIHNwb2tlbiBsYW5ndWFnZSBpbiB1bmNvbnRyb2xsZWQsIHJlYWwtd29ybGQgZW52aXJvbm1lbnRzLgoKVGhlIGZpbmFsIGRhdGFzZXQgaW5jbHVkZXMgYXBwcm94aW1hdGVseSAxMTYsMDAwIHNlZ21lbnRlZCB2aWRlb+KAk3RyYW5zY3JpcHQgcGFpcnMuIEl0cyBzY2FsZSBjYXB0dXJlcyB0aGUgY29tcGxleGl0eSBvZiBWaWV0bmFtZXNlIHZpc3VhbCBzcGVlY2ggYW5kIHByb3ZpZGVzIGEgc3RydWN0dXJlZCByZXNvdXJjZSBzdWl0YWJsZSBmb3IgdmFyaW91cyBtb2RlbGluZyBhbmQgYW5hbHlzaXMgdGFza3MuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K",
+        "url": "https://zenodo.org/doi/10.5281/zenodo.19705466",
+        "contentUrl": null,
+        "metadataVersion": 0,
+        "schemaVersion": "http://datacite.org/schema/kernel-4",
+        "source": "api",
+        "isActive": true,
+        "state": "findable",
+        "reason": null,
+        "viewCount": 0,
+        "viewsOverTime": [],
+        "downloadCount": 0,
+        "downloadsOverTime": [],
+        "referenceCount": 0,
+        "citationCount": 0,
+        "citationsOverTime": [],
+        "partCount": 0,
+        "partOfCount": 0,
+        "versionCount": 0,
+        "versionOfCount": 1,
+        "created": "2026-04-23T13:27:52.000Z",
+        "registered": "2026-04-23T13:27:52.000Z",
+        "published": "2026",
+        "updated": "2026-08-18T03:58:51.000Z"
+      },
+      "relationships": {
+        "client": {
+          "data": {
+            "id": "cern.zenodo",
+            "type": "clients"
+          }
+        },
+        "provider": {
+          "data": {
+            "id": "cern",
+            "type": "providers"
+          }
+        },
+        "media": {
+          "data": {
+            "id": "10.5281/zenodo.19705466",
+            "type": "media"
+          }
+        },
+        "references": {
+          "data": []
+        },
+        "citations": {
+          "data": []
+        },
+        "parts": {
+          "data": []
+        },
+        "partOf": {
+          "data": []
+        },
+        "versions": {
+          "data": []
+        },
+        "versionOf": {
+          "data": [
+            {
+              "id": "10.5281/zenodo.15899221",
+              "type": "dois"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

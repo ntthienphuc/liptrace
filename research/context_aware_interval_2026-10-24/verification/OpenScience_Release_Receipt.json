@@ -1,0 +1,1496 @@
+{
+  "status": "passed",
+  "archive": "Context_Aware_Interval_OpenScience_Release.zip",
+  "archive_sha256": "f1187c5cc3496406446f630a4f5c0cd1cfbcda614198553222ae39659aaf28ac",
+  "archive_bytes": 7759843,
+  "entry_count": 297,
+  "included_files": [
+    {
+      "path": "code/confirmation_common.py",
+      "bytes": 3706,
+      "sha256": "7244e5d788b259d97b45ad7b5d40770c9fda355485d187cf885f6aa67953b5ed"
+    },
+    {
+      "path": "code/ctc_decode.py",
+      "bytes": 4871,
+      "sha256": "52cbfd3adcddab206d2835caa18b65b0fa1fcab3ed3f7203cd2e345bfcb4222f"
+    },
+    {
+      "path": "code/data_io.py",
+      "bytes": 5961,
+      "sha256": "f357476c4ba992e914e5af3ab972b569ee78babe59af7b795a4bc9221c582a56"
+    },
+    {
+      "path": "code/family_statistics.py",
+      "bytes": 5091,
+      "sha256": "02dbb5176355b6949a407e7b76903202b3fd55b45de49eac6b399c791434e796"
+    },
+    {
+      "path": "code/geometry.py",
+      "bytes": 8835,
+      "sha256": "f1659e8dd81ff5871515ff23cac27e4dd89f30320d81b78c727ead6fbd10d146"
+    },
+    {
+      "path": "code/inference_core.py",
+      "bytes": 19848,
+      "sha256": "fdfde0f46088b22a4c81486ba7bf7a69b34c2d69419523457a13841ba7c4bb3c"
+    },
+    {
+      "path": "code/projection.py",
+      "bytes": 4031,
+      "sha256": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957"
+    },
+    {
+      "path": "code/sliding_inference.py",
+      "bytes": 9401,
+      "sha256": "fdf39c9f7e870e5a9bf58ba1b4ff1d1cff8344858534663079201dca09ef77d9"
+    },
+    {
+      "path": "code/test_geometry_ctc.py",
+      "bytes": 12481,
+      "sha256": "9760f855844e5933109d9f17d2fe79790f5050c6ec5bdab691313ca33319d925"
+    },
+    {
+      "path": "code/test_inference_core.py",
+      "bytes": 11166,
+      "sha256": "cb55a94fea92aaed19f3826834810a12b38f5d932abf625aa6f7812b85b073aa"
+    },
+    {
+      "path": "code/test_sliding_inference.py",
+      "bytes": 15736,
+      "sha256": "154e027160c440ded42674e5a5ff439a59907084cccf9be594bdb0f3a22468a6"
+    },
+    {
+      "path": "config/Required_Assets.json",
+      "bytes": 4497,
+      "sha256": "8c21a0af00b34d2330e4ecf23cf8080fa37b4debfe86bfaa5670d174add8d2f8"
+    },
+    {
+      "path": "data/Context_Availability.csv",
+      "bytes": 8364,
+      "sha256": "686f2eb07d41130294b79fd9419ee610078412cde0a8872746abbf17f4ed4d5d"
+    },
+    {
+      "path": "data/Context_Interventions.csv",
+      "bytes": 6538,
+      "sha256": "9fdfd0d2e7b48efd29947b5287682559f615e067a43960e5dcb0d4a76b0d7d1a"
+    },
+    {
+      "path": "data/Corpus_Profile.csv",
+      "bytes": 2176,
+      "sha256": "8b59d6babade0a70fa14627b5107beac297a771e48d1cbeddd429ffd72e04e24"
+    },
+    {
+      "path": "data/Decoder_Sensitivity.csv",
+      "bytes": 11301,
+      "sha256": "9ec044379fc385a49e2e2c1135a48b27f7d11369bb051b754926caaa3bff85ef"
+    },
+    {
+      "path": "data/Duration_Study.csv",
+      "bytes": 38511,
+      "sha256": "b8ab767cb0734f103802d9934f09f5cd7c8772328f12ffed89d20c6c47078d83"
+    },
+    {
+      "path": "data/Main_Comparisons.csv",
+      "bytes": 1528,
+      "sha256": "b85f1699e4b7a6c92c7f4ebfb5edcff9259c366332a4c6dd90dab807e4a02e59"
+    },
+    {
+      "path": "data/Main_Results.csv",
+      "bytes": 9056,
+      "sha256": "8201f857ba6bd0929d04c487977f46b57f1de8508b8f1cf39cec9305b85a51f6"
+    },
+    {
+      "path": "data/Matched_Decoder_Intervals.csv",
+      "bytes": 2494,
+      "sha256": "5eef8f9f24c154ebc21586573d2ac4ee97f25ca785d81459365882d1e117ee49"
+    },
+    {
+      "path": "data/Model_Registry.csv",
+      "bytes": 2239,
+      "sha256": "51618d2f6c35b7b73d4523115ebb15b82709a25474bacf37d2af89eccd34d55b"
+    },
+    {
+      "path": "data/Primary_Source_Counts.json",
+      "bytes": 77507,
+      "sha256": "db077036a4e816e5b743368b4f95dc05089889fb3d8a5c449f9b5e22b3d838f5"
+    },
+    {
+      "path": "data/Principal_Per_Clip.csv.gz",
+      "bytes": 2434705,
+      "sha256": "c4c999129607aa4c1cd0e7a3b7762a40923b79655e3f8ebc9b346583fac31b31"
+    },
+    {
+      "path": "data/Query_Costs.csv",
+      "bytes": 11494,
+      "sha256": "045fb7eff34f29ed1fd734fe1e55cc5126363e88931add89c701608f081a16af"
+    },
+    {
+      "path": "data/Source_Counts.json",
+      "bytes": 453093,
+      "sha256": "07fe263b59c3e43cca2904eb2a16e00ebab4a856e25155e40736069abc60230b"
+    },
+    {
+      "path": "data/Timing_Sensitivity.csv",
+      "bytes": 33957,
+      "sha256": "3c32d8720db3212a3fc38f3c77a9d022c79bfc30c57b9c42aba8ea55a20eae2f"
+    },
+    {
+      "path": "data/Whole_Transcript.csv",
+      "bytes": 8233,
+      "sha256": "94e83b478e7a19fea489aa88fcfe552252cbe1eb273386f61595170863601b0d"
+    },
+    {
+      "path": "DATA_AND_MODELS.md",
+      "bytes": 5766,
+      "sha256": "45ae3d7d80292db8a11fa4f6cc438f1e5f1403ed37fdadf50dc40d7379a52ac3"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/average_checkpoints.py",
+      "bytes": 980,
+      "sha256": "5f6a5d1e12dabc706456d477ba4e91d7ba5aa029b9b42b974e1805f636967f88"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/cosine.py",
+      "bytes": 922,
+      "sha256": "50bd9f5eb01f62b2ce0758dc7eea276f75708cadee5f44c282ef9bdfa33818cb"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/datamodule/av_dataset.py",
+      "bytes": 7253,
+      "sha256": "4a5bc37329ff1d9aeeeb076db80aae282b9b04fd0b4dda6230d96ca0e80bff17"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/datamodule/data_module.py",
+      "bytes": 11970,
+      "sha256": "d84e612413081c02992b0b97b5381010efb84cf7068a09686ca38c6fd5797a7f"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/datamodule/transforms.py",
+      "bytes": 6304,
+      "sha256": "0e650726bf39e391231d5d77920e46f2b9c6298bed9cb34b9136bb65f444090d"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/batch_beam_search.py",
+      "bytes": 13345,
+      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/beam_search.py",
+      "bytes": 19122,
+      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/ctc_prefix_score.py",
+      "bytes": 13899,
+      "sha256": "c26e5ce6f4884cfbf329e3bd8ac75089a47e4a4e79355db024dc0056b48da6c9"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/e2e_asr_common.py",
+      "bytes": 6856,
+      "sha256": "e24670378092040db8bded6a9383f9d2859fc5d6db5946f7409e4df5b23278ff"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/ctc.py",
+      "bytes": 9342,
+      "sha256": "39c589343af0943663029e8d68e04ef04642e2b38d7499d052b860ddcf2ecee0"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/decoder/transformer_decoder.py",
+      "bytes": 13613,
+      "sha256": "3c9c8745dd33e440ecd34eb3903d559d6f5213e52e89598713d3dad56fc5d762"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_conformer.py",
+      "bytes": 3063,
+      "sha256": "144c68cb2e696eb3735617770f21c9c0fe7e0e359cac77ae05a17dec5c0095b7"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_count.py",
+      "bytes": 4011,
+      "sha256": "60f29683136fe95cb23d352eb941415302e0c3f3121bfeaeabce5ae1dc13eb4b"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_interctc.py",
+      "bytes": 8770,
+      "sha256": "8caaa18dfbf5f2eda364b4d0491980c1cc5ac47810e305ccb52c56087ca067df"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_mdbridge.py",
+      "bytes": 4825,
+      "sha256": "8d00b9edfe75354aaf78e72f10f716f5203cbcc9c81f422ea192a8b182ac75f9"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_pavir.py",
+      "bytes": 8435,
+      "sha256": "ab61a7cd53fa174e21acab4847b22469e799b6681a82c06b058f80cde77c284f"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_signer.py",
+      "bytes": 8700,
+      "sha256": "64e6030889db66b03dfe46ed5d08f0cf23873c23ae5f72bf4948391a5700a52c"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_structured.py",
+      "bytes": 6966,
+      "sha256": "d11027089b85e8d482cadc61411c2a8dc9475c5ab59153ca616644480fc734e1"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_visyll.py",
+      "bytes": 9134,
+      "sha256": "8475db788502b08d065823a4d57d380d5021e951b0485bdea7879b7c9f62ffb2"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_xbridge.py",
+      "bytes": 5193,
+      "sha256": "11f5e72497b179c0567fa3536cf859bb746bcf0c38dec4894d170c1937780382"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/encoder/conformer_encoder.py",
+      "bytes": 11348,
+      "sha256": "ed595f814ebba45b1e2853555c85b0bb197ed2e14e8b730c6b1368b384a8e790"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet.py",
+      "bytes": 7053,
+      "sha256": "4097c6ff8675ec76bcf74e3290d1fe06b5e536f194a2784ccdd4b81029afbbfb"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet1d.py",
+      "bytes": 7274,
+      "sha256": "2b3d1e4cd68ea9ccce5813689234e7e95e6cb327181ca1335c6d63058da13a18"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/nets_utils.py",
+      "bytes": 9904,
+      "sha256": "34f0c4ef9f19f7e9526f0436a508371a0e68b6c4bebb687ca6372cf1d2ab638d"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
+      "bytes": 958,
+      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/attention.py",
+      "bytes": 8195,
+      "sha256": "ed4cf0a1bbb9551f66586338ea19d6e5cc12fd897b989fbd51a0d9a11304ed6d"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/embedding.py",
+      "bytes": 6860,
+      "sha256": "08157dc9be6e1363653c8689af94ec51f82b56a7acf8cea46711b009ca8c491c"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
+      "bytes": 2164,
+      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/layer_norm.py",
+      "bytes": 874,
+      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/mask.py",
+      "bytes": 1047,
+      "sha256": "dbc6b6d7e1449404c7463ce3a89a193f9c0c9a57e381b32572821af3ba1f9275"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
+      "bytes": 899,
+      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/pytorch_backend/transformer/repeat.py",
+      "bytes": 1219,
+      "sha256": "a441c579cc57d25721ecf59ec357a0ab64e68abddadc4b955bc4fa01f643f0f8"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/scorer_interface.py",
+      "bytes": 5902,
+      "sha256": "bfb21dd5b99f892fa9880764a47032729735bce3dd3b143d396e13ce1f31fc27"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/scorers/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/scorers/ctc.py",
+      "bytes": 4953,
+      "sha256": "556c10c796866c703398bcbc72dcf7d7557fe781431e8efc44f62d69c853a4fe"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/scorers/length_bonus.py",
+      "bytes": 1740,
+      "sha256": "8c0aea891ef3aca25387acfafedbbec4210938cd3f9df14323eeb9fd36af9f78"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/espnet/nets/scorers/word_ngram.py",
+      "bytes": 6724,
+      "sha256": "36e8be8a2993bba3735d61d65403bd6e5284de543c6c4c348e63571888d4a173"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/eval.py",
+      "bytes": 8244,
+      "sha256": "763e554eeb4562087526512f2697bbcc8c99f69e98cc07f5b9723521a26b6503"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/lightning.py",
+      "bytes": 42524,
+      "sha256": "5f7b89c79e98ac0505890a5c75d14e8768e6c5be70a871f583a524b35278f753"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/__init__.py",
+      "bytes": 614,
+      "sha256": "f6bb85aaf04831e47b9398abf16d57fdfbe0383e8f413b0372bca2cdfbdbe47c"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/artifacts.py",
+      "bytes": 31417,
+      "sha256": "8bb71e275e6fcea02c974de4cf3178b18adee9dc06e5155babc81f57dc3bffce"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/campaign.py",
+      "bytes": 69480,
+      "sha256": "ade02c6e747b1c8837fb9dd4c16472ec01d2844b321695373c7f3bbc9f894454"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/ctc_posterior.py",
+      "bytes": 10662,
+      "sha256": "13df7b1d5aa656ee956963fd0683ea4ed385ecf3996c77f017044edc4cd68301"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/deterministic_pool.py",
+      "bytes": 7721,
+      "sha256": "95844cc4097647e22534b17edf65bd42ab71289c3b8fdf22c943066ad4d1b00e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/event_derangement.py",
+      "bytes": 5606,
+      "sha256": "7d7ebe82aa5d71dcabf11b90da95e71ca8e07bb989468bc04f7be65f9cf74337"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/identifiability.py",
+      "bytes": 6032,
+      "sha256": "a875df7316fa38edb85c885a432b52047f2f8d14ef31987aef1379a5fb38c4a1"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/mincost_derangement.py",
+      "bytes": 12795,
+      "sha256": "7837e594d472dc1fc76175b64464db6fe2cdcc537bedab95d0e7af0c08bcf8be"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/offline.py",
+      "bytes": 7473,
+      "sha256": "b8ff80b53ff89f6ec690270a9c710253170af8d8680acb9d1592184355448b94"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3.py",
+      "bytes": 44260,
+      "sha256": "eaa62faf0ff1137015d75cabd1a80b186a59b8f86b3188da8ccfefa9744b9c75"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_activation.py",
+      "bytes": 46783,
+      "sha256": "56ec51ae754e6d53373775fe8098c51e4386d9d640b34d0e62a7598f593b901e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_g2.py",
+      "bytes": 41218,
+      "sha256": "ef1fa5c0cc5270566833cfe9cc93618ae812c2a59359bd6f84bbe5ccf0918f06"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_g2_activity.py",
+      "bytes": 29016,
+      "sha256": "90d4a7da1777d3f892d3ff420d99640a6b717fffee010a1ce318111ce9472911"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_g2_prototypes.py",
+      "bytes": 30910,
+      "sha256": "ed0d442592ca1a068e4bb0e0293e378081cff53bd1b3fe519796d94c8e076381"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_g3.py",
+      "bytes": 18358,
+      "sha256": "ed6423ea4a2f53b681a5553988fa450b099bf0bb1740d77bf8c4b5d690d283e0"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_io.py",
+      "bytes": 25616,
+      "sha256": "4e270eaf9fb351a61a01320518f9d778ce4772a1ff6801f53ef0f7f50890c5e8"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/route_confirm_v3_runner.py",
+      "bytes": 69499,
+      "sha256": "7c44777ba3e28a9fe6c9fd4915baa8c073cb55d45c9761883e115a31200e342f"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/routing.py",
+      "bytes": 14616,
+      "sha256": "1d38b6b0db2797265333f019a7fd4940eb5c9c60d215bfffcc4238851222454b"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/stratified_derangement.py",
+      "bytes": 24743,
+      "sha256": "87218ccb1211a48157c79c5daa31012393e711725dd90510d781574b2a0453df"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_artifacts.py",
+      "bytes": 7560,
+      "sha256": "dc4ffedeeb229547ada1cac00e264c63c20bf0a33be783b65f7d700f3f4b9b8e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_batching_contract.py",
+      "bytes": 658,
+      "sha256": "7b22c9ba3386ac2096154c6d704e33d965b632a64cb6232b1e74248ee9e8f832"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_campaign.py",
+      "bytes": 13643,
+      "sha256": "ea722fe7b24416ac7103501333d3b5a62e41f6dc6e14e81dcaed000c87afd9f3"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_ctc_posterior.py",
+      "bytes": 5750,
+      "sha256": "af9b1de42cbe9a9a2052fd91ae943ccea2595ea280feeb2302cafed909708de9"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_deterministic_pool.py",
+      "bytes": 4766,
+      "sha256": "7dbc4dd11a2de3bc216ae066f56923c8ed584ce209973dc265fa2c504945a6a7"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_event_derangement.py",
+      "bytes": 9319,
+      "sha256": "cb8e100396cfd41ec194b378e154054648ffdae49029468be3e00d7fdec51440"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_extract_artifacts.py",
+      "bytes": 10175,
+      "sha256": "c43d117e401bc570f9abeabde1e6110464c1adc4fe06d2777c29acc1dea2adba"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_freeze_config.py",
+      "bytes": 5886,
+      "sha256": "3d1407ea80dd0500a7c67a557393d7219b82a6577632f317a5e7c88969384822"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_gradient_calibration_math.py",
+      "bytes": 1247,
+      "sha256": "a49b0d814a183e7153a65549dd302b9f0d03ee2c8351fc98618621d5d8cee7fe"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_identifiability.py",
+      "bytes": 1595,
+      "sha256": "d84921e34fd236a00adff5498edce06728c1edf528d02fd2bfdfcbf924f5c34e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_mincost_derangement.py",
+      "bytes": 4389,
+      "sha256": "8a4e7413be08494f74e421626796cf52bb94e46b798e284547d158dec02877d5"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_model_contract.py",
+      "bytes": 5658,
+      "sha256": "31233c7224346dd2bdf3c0be8c6886a9c1cac4f22d26d5622dbc92944beaf1fc"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_offline.py",
+      "bytes": 1641,
+      "sha256": "aff4cf6a5c8dd972fe01b0f411ac2a11fc345f90678bf0ee11a5c8c57ea88115"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_offline_token_spans.py",
+      "bytes": 1149,
+      "sha256": "ee57aab20b2e771832d354099befb689d0f8d4086218920e186924f24e0e54bb"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3.py",
+      "bytes": 22014,
+      "sha256": "080f7ceca52140eed0602082033d9e79dc76a5c5a570e00a0cad3b9127b8bbe9"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_activation.py",
+      "bytes": 16204,
+      "sha256": "20352923285762639b463eb6dd2c4fcfc9657e802ed7cc498ffca989a906c5c0"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_g2.py",
+      "bytes": 13841,
+      "sha256": "c4b823bd97bcb26133748cac39c4f0a829d012a1e4649c4ee8debb6cb166b9d0"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_g2_activity.py",
+      "bytes": 8509,
+      "sha256": "eebaa1e5e15c9252be5d5acabefa3c5ba6fd52bbfd87941e99a31eb7816746ee"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_g2_prototypes.py",
+      "bytes": 14864,
+      "sha256": "79a586815d6a1a746166fe541a89960877c2036b2b967badffa3604a52f5fc5f"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_g3.py",
+      "bytes": 6520,
+      "sha256": "689861e17ad6d9030e1bb549e88e9dae658ab0d09abd21416ae8e996c711bfab"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_io.py",
+      "bytes": 7195,
+      "sha256": "0f022d81b1e7d140857848d11afacad8df0d380ae070efc4399306727c841440"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_route_confirm_v3_runner.py",
+      "bytes": 7697,
+      "sha256": "969265411441ed8dc13a809ac6456deee203885128a24789c990013f2ed5e960"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_routing.py",
+      "bytes": 5067,
+      "sha256": "a54d07b2b239d1571f9282a41e510ac9b8d55b920d6a46cfe83fdb3eac8666a0"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_spatial_stability_alignment.py",
+      "bytes": 736,
+      "sha256": "19af61a52dcd9be6efaf06720a871477f9b89acc605f2d36c83f1082bfe468e7"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_utility.py",
+      "bytes": 7561,
+      "sha256": "fa52e776c2829a228b10555a70e8e15105a29b88210cc1fa5b778b239a6a5b09"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/tests/test_video_views.py",
+      "bytes": 599,
+      "sha256": "06c0f65bb1f9934f5b9a58d88e28d9674d3f5072affa13bb3215bee4a1a85a9d"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/pavir/utility.py",
+      "bytes": 24935,
+      "sha256": "46fdffcdc1dbe438eae5d1add37a2cfc794586902837593369fbcc14169e0345"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/asr_infer.py",
+      "bytes": 3427,
+      "sha256": "6300b41638b6587d7d0219c6b4734ae8f413075373391f4059a2df3e58a6ea82"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/data/data_module.py",
+      "bytes": 2343,
+      "sha256": "8434aa197d56bb7c8fff5ffaa88f887d0d87001f37198dca06c8bc8ab293ff07"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/detectors/mediapipe/detector.py",
+      "bytes": 2916,
+      "sha256": "a9296173fd7c63e5e8e8561f68ba53a1c6a859c8c1e6006cbc8fc43f4800bc2d"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/detectors/mediapipe/video_process.py",
+      "bytes": 7654,
+      "sha256": "986632fbb7f3ec189f4be9ab58e8f6ae4e782274290d3cfa1a7df4d5c99d2060"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/detectors/retinaface/detector.py",
+      "bytes": 1354,
+      "sha256": "efad479c4f56da915646bea1d087ddae4dc5d7f8f91082ade60a0e2355002b97"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/detectors/retinaface/video_process.py",
+      "bytes": 7593,
+      "sha256": "d3bbd6ac32ac5985d9e46484e2232449085f0dbeb204b2a96657b41018a577b2"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/limit_length.py",
+      "bytes": 1189,
+      "sha256": "2d85707ac21e2a178c51d5925f4795d8dfded779cc8c6a0e7ce849c66a0110ed"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/merge.py",
+      "bytes": 2220,
+      "sha256": "8c939f4f026a83f676098592a8a295d593e8a821bc284459647156d4254ab25a"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/preprocess_lrs2lrs3.py",
+      "bytes": 10105,
+      "sha256": "57a874d62b17514bd83e677176f3fc5c84d7c7464cbc026a95f929b6e911b753"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/preprocess_vox2.py",
+      "bytes": 4803,
+      "sha256": "f427067873e71b4398d2728a878d18210bd5caa29aa9a78493b0a86c57869cfa"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/transforms.py",
+      "bytes": 5453,
+      "sha256": "98fd83bd33ab450e3672354b6ce3089ca1d3c91b34be2328d3139289bc239036"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/preparation/utils.py",
+      "bytes": 2703,
+      "sha256": "60159deee2648184417e8a59733de473c489ac85b3504bef7bdd1d598ef4322e"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/spm/spm_encode.py",
+      "bytes": 3328,
+      "sha256": "368d21f11c00d78f50c297f1f5e0f93a1af7e689b10e254223fedf1bc2b506b9"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/spm/spm_train.py",
+      "bytes": 346,
+      "sha256": "497c1712d7498ffd98ab73faee0a8f200703712f787be229869663774a74a0da"
+    },
+    {
+      "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/train.py",
+      "bytes": 60839,
+      "sha256": "cab0ffafb3ee708e64574b94e36621d9d81564e0da72d7f3762311303cd8b4b3"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/configs/lrs2.json",
+      "bytes": 1058,
+      "sha256": "9a7326904fb828c79ac839e78ab3a6f2739a359c1e5dc7afec1f509934c7d3c6"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/configs/vlr.json",
+      "bytes": 501,
+      "sha256": "8abced4f71dccb680ee0852068ac86dad62ab81727b5937ffd1c4871247e999e"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/__init__.py",
+      "bytes": 58,
+      "sha256": "b0c1ea4722c336f2f09e1a742cf46076911daf03e35d2a4ca2f6f7c6ae03ac29"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/common.py",
+      "bytes": 2368,
+      "sha256": "07cb9f65b9ff6d70834d8a91d62c67ab57667d35101f87f97e457879158c8740"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/ctc_loss.py",
+      "bytes": 645,
+      "sha256": "5142d2742bdcb0df9621c197ba37c076cf1d5176337a437595bbfa13f6509f52"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/model.py",
+      "bytes": 5871,
+      "sha256": "ba01b82a80686633d0c1136863a73be7535fc01a83093785e643750b4275ec60"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/readout.py",
+      "bytes": 1391,
+      "sha256": "dacc3d41c6c751b847be73bb0123d590cf368bd667fb6b6e464c5657d26cb798"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/spatial_pool.py",
+      "bytes": 989,
+      "sha256": "d2fc6a55f6a2c2ff8e44ed789077c130556e50fde476834dd9d772d6d075c54f"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/phase5/text.py",
+      "bytes": 3710,
+      "sha256": "08036faa0479420237a79416ed3dd96ea02535b2d181b280efcbea81235cbabf"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/server_2026-10-14/upstream_decoder_reference.py",
+      "bytes": 7129,
+      "sha256": "b58fd3a8cb45fe08a18d7fed71465a46177cf7c19d539c118bb9bcb409ae9d47"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/batch_beam_search.py",
+      "bytes": 13345,
+      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/beam_search.py",
+      "bytes": 19122,
+      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/ctc_prefix_score.py",
+      "bytes": 13899,
+      "sha256": "c26e5ce6f4884cfbf329e3bd8ac75089a47e4a4e79355db024dc0056b48da6c9"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/e2e_asr_common.py",
+      "bytes": 6856,
+      "sha256": "e24670378092040db8bded6a9383f9d2859fc5d6db5946f7409e4df5b23278ff"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/ctc.py",
+      "bytes": 9342,
+      "sha256": "39c589343af0943663029e8d68e04ef04642e2b38d7499d052b860ddcf2ecee0"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/decoder/transformer_decoder.py",
+      "bytes": 13613,
+      "sha256": "3c9c8745dd33e440ecd34eb3903d559d6f5213e52e89598713d3dad56fc5d762"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_conformer.py",
+      "bytes": 3063,
+      "sha256": "144c68cb2e696eb3735617770f21c9c0fe7e0e359cac77ae05a17dec5c0095b7"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_count.py",
+      "bytes": 4011,
+      "sha256": "60f29683136fe95cb23d352eb941415302e0c3f3121bfeaeabce5ae1dc13eb4b"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_interctc.py",
+      "bytes": 8770,
+      "sha256": "8caaa18dfbf5f2eda364b4d0491980c1cc5ac47810e305ccb52c56087ca067df"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_mdbridge.py",
+      "bytes": 4825,
+      "sha256": "8d00b9edfe75354aaf78e72f10f716f5203cbcc9c81f422ea192a8b182ac75f9"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_signer.py",
+      "bytes": 8700,
+      "sha256": "64e6030889db66b03dfe46ed5d08f0cf23873c23ae5f72bf4948391a5700a52c"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_structured.py",
+      "bytes": 6966,
+      "sha256": "d11027089b85e8d482cadc61411c2a8dc9475c5ab59153ca616644480fc734e1"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_visyll.py",
+      "bytes": 9134,
+      "sha256": "8475db788502b08d065823a4d57d380d5021e951b0485bdea7879b7c9f62ffb2"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/e2e_asr_xbridge.py",
+      "bytes": 5193,
+      "sha256": "11f5e72497b179c0567fa3536cf859bb746bcf0c38dec4894d170c1937780382"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/encoder/conformer_encoder.py",
+      "bytes": 11348,
+      "sha256": "ed595f814ebba45b1e2853555c85b0bb197ed2e14e8b730c6b1368b384a8e790"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet.py",
+      "bytes": 7053,
+      "sha256": "4097c6ff8675ec76bcf74e3290d1fe06b5e536f194a2784ccdd4b81029afbbfb"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/frontend/resnet1d.py",
+      "bytes": 7274,
+      "sha256": "2b3d1e4cd68ea9ccce5813689234e7e95e6cb327181ca1335c6d63058da13a18"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/nets_utils.py",
+      "bytes": 9904,
+      "sha256": "34f0c4ef9f19f7e9526f0436a508371a0e68b6c4bebb687ca6372cf1d2ab638d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
+      "bytes": 958,
+      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/attention.py",
+      "bytes": 8195,
+      "sha256": "ed4cf0a1bbb9551f66586338ea19d6e5cc12fd897b989fbd51a0d9a11304ed6d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/embedding.py",
+      "bytes": 6860,
+      "sha256": "08157dc9be6e1363653c8689af94ec51f82b56a7acf8cea46711b009ca8c491c"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
+      "bytes": 2164,
+      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/layer_norm.py",
+      "bytes": 874,
+      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/mask.py",
+      "bytes": 1047,
+      "sha256": "dbc6b6d7e1449404c7463ce3a89a193f9c0c9a57e381b32572821af3ba1f9275"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
+      "bytes": 899,
+      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/pytorch_backend/transformer/repeat.py",
+      "bytes": 1219,
+      "sha256": "a441c579cc57d25721ecf59ec357a0ab64e68abddadc4b955bc4fa01f643f0f8"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorer_interface.py",
+      "bytes": 5902,
+      "sha256": "bfb21dd5b99f892fa9880764a47032729735bce3dd3b143d396e13ce1f31fc27"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/ctc.py",
+      "bytes": 4953,
+      "sha256": "556c10c796866c703398bcbc72dcf7d7557fe781431e8efc44f62d69c853a4fe"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/length_bonus.py",
+      "bytes": 1740,
+      "sha256": "8c0aea891ef3aca25387acfafedbbec4210938cd3f9df14323eeb9fd36af9f78"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/espnet/nets/scorers/word_ngram.py",
+      "bytes": 6724,
+      "sha256": "36e8be8a2993bba3735d61d65403bd6e5284de543c6c4c348e63571888d4a173"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/LICENSE",
+      "bytes": 11368,
+      "sha256": "cc79c028bb1e288cd290b1b43bbdc0c66c2b159b536120914627956f00560f90"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/detector.py",
+      "bytes": 2916,
+      "sha256": "a9296173fd7c63e5e8e8561f68ba53a1c6a859c8c1e6006cbc8fc43f4800bc2d"
+    },
+    {
+      "path": "engine/Research_Phase_05_2026-10-13/vendor/auto_avsr/preparation/detectors/mediapipe/video_process.py",
+      "bytes": 7654,
+      "sha256": "986632fbb7f3ec189f4be9ab58e8f6ae4e782274290d3cfa1a7df4d5c99d2060"
+    },
+    {
+      "path": "engine/Research_Search_Horizon_Control_2026-10-15/horizon_search.py",
+      "bytes": 2419,
+      "sha256": "e5b117c1ba5a6521b4aaaec954077ec0dadc8fbec87915c1761c81a1961faa49"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/confirmation_common.py",
+      "bytes": 3604,
+      "sha256": "31ba78f051ce21c620b0039cd73e34fe8bf2c193e264c5ad0343e3e7e0a55f6b"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/ctc_decode.py",
+      "bytes": 4871,
+      "sha256": "52cbfd3adcddab206d2835caa18b65b0fa1fcab3ed3f7203cd2e345bfcb4222f"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/data_io.py",
+      "bytes": 5961,
+      "sha256": "f357476c4ba992e914e5af3ab972b569ee78babe59af7b795a4bc9221c582a56"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/geometry.py",
+      "bytes": 8835,
+      "sha256": "f1659e8dd81ff5871515ff23cac27e4dd89f30320d81b78c727ead6fbd10d146"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/inference_core.py",
+      "bytes": 19848,
+      "sha256": "fdfde0f46088b22a4c81486ba7bf7a69b34c2d69419523457a13841ba7c4bb3c"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/model_registry.json",
+      "bytes": 6471,
+      "sha256": "b56a4e627cdf31134405db0c05dec9d57953f5fca938d4423108650acdae7bd1"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/native_runtime.py",
+      "bytes": 22381,
+      "sha256": "8488abeb2584b33fefcaef1e1a45a30a8e894ecc3f17d0cf5e0e1586f3d770df"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/sliding_inference.py",
+      "bytes": 9401,
+      "sha256": "fdf39c9f7e870e5a9bf58ba1b4ff1d1cff8344858534663079201dca09ef77d9"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/VC_Model_Registry.json",
+      "bytes": 3136,
+      "sha256": "f623c1c538cdb3f1bd087c41bbfd03980777b4db651bbff5b4fa449445cfbeeb"
+    },
+    {
+      "path": "engine/Research_Server_Confirmation_2026-10-19/vicocktail_runtime.py",
+      "bytes": 15017,
+      "sha256": "13092cab856852d3cb4257337c32e3c5615b45b4082189799c6c77bb7c64d1f0"
+    },
+    {
+      "path": "engine/Research_Span_Projection_2026-10-15/projection.py",
+      "bytes": 4031,
+      "sha256": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/ctc_horizon.py",
+      "bytes": 2635,
+      "sha256": "3f3b18e363dcc1f1ad07e628412ae4c0aac079215510e0c9ee73ed483cef5706"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/asr/asr_utils.py",
+      "bytes": 33540,
+      "sha256": "380300e458ecd7ba05a47bcc5ad9d34d2e37ebf9f4cf82562820d4cbf31fafc8"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/batch_beam_search.py",
+      "bytes": 13345,
+      "sha256": "4d319866d432a94f68969cb46a3569f7b9f99abd9c6df9eb1d53f68a1467ff6e"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/beam_search.py",
+      "bytes": 19122,
+      "sha256": "600a9434bdcf44312de002ac509e55ca936ede6df270b49f2887299cc29df2df"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/ctc_prefix_score.py",
+      "bytes": 13950,
+      "sha256": "0e78b6ec8e47726e2688e885591ab9442d62ecf44236738ae4fe447ffef0b235"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/e2e_asr_common.py",
+      "bytes": 8573,
+      "sha256": "7beb8eb98298cad5f6344eb59813fe7761dca82ce1eb1d44ba3373f61d6e506e"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/lm_interface.py",
+      "bytes": 2590,
+      "sha256": "c6b5e6041bfbd9ce4845732d161646442a43b3ccf29e63718e116251a1a0d8e6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv1d_extractor.py",
+      "bytes": 974,
+      "sha256": "143bcac8cdc6471e25d1387d29aac3de33aa3fc0796df81b454bed40ef3e9cd6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/conv3d_extractor.py",
+      "bytes": 1641,
+      "sha256": "834ba59084b769e86adb001effbf1b8d521f655dc950523e3c7df5120ddd6006"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet.py",
+      "bytes": 5007,
+      "sha256": "7f1aa3f976e69d1ac0c68188c1b97adc058875f50f851987a210f1207d0a85ff"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/resnet1d.py",
+      "bytes": 6177,
+      "sha256": "c4386196e3ecbb8bd114d97025a5cbc8e5fe75717997b2eed5f69cab880786f6"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/backbones/modules/shufflenetv2.py",
+      "bytes": 5727,
+      "sha256": "07f6370636bda8304c21ca531624626e77f74122531a5b3285ef9cad80577c42"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/ctc.py",
+      "bytes": 14421,
+      "sha256": "8863cc1a9828322cd15b9fb485ded71e8e1f9f0c38d8fd642c55a9d6b8401627"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/decoder.py",
+      "bytes": 14781,
+      "sha256": "216793799df79a8441a3ac46a7dab65b2384b5c0b069a955922483bddc79669a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer.py",
+      "bytes": 5702,
+      "sha256": "b04f8c88ef143a043ad21340bb143913f2809d9452b70f7bdccb6d92c779db2a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_iccv.py",
+      "bytes": 21479,
+      "sha256": "5ed45ddd80c47ff2dd21befd1afe7de44eec0d90420b39d33ad089e76a27c579"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm.py",
+      "bytes": 7505,
+      "sha256": "bcb7873d40f2b89d5901e13ba73dc06c8f7dc2dd013756e08aa7f2e52a169e04"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_asr_transformer_tmm_v2.py",
+      "bytes": 7522,
+      "sha256": "3b7d52638cb0efb4125fea64ad36185af14697cd78768c5f2c665334f7355dca"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/e2e_qasr_transformer.py",
+      "bytes": 5810,
+      "sha256": "08a8f98891b4e11e23f33608970ef62eae3141c67d1914f96c0e2aefe35c5b1d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/default.py",
+      "bytes": 14561,
+      "sha256": "34b067aa9e6b9165e9556dab5ebe699b89bd083106141c8cf61f441859cad20b"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/seq_rnn.py",
+      "bytes": 5940,
+      "sha256": "5c01c7cee1af194adbc7c17e4071a6677a2943a242dd3f87136cce31f8527d46"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/lm/transformer.py",
+      "bytes": 8410,
+      "sha256": "8d63afb4716a826b8fc09cd015ae58bda562d9ae937f165254cf11ccbc07dced"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/nets_utils.py",
+      "bytes": 17292,
+      "sha256": "203ba66dcf797fe1706e4060b4394c4241e21a2a68fddf4691ae264407d2233d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/__init__.py",
+      "bytes": 30,
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/add_sos_eos.py",
+      "bytes": 958,
+      "sha256": "e73c11b60af9a67467bde1e53b031d43ccd00cd55e5f85813c4e6d757114c7ce"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/attention.py",
+      "bytes": 11939,
+      "sha256": "bfea4fa020b93bcf096ccd960635144ee5eb7f9683a8537ed0f637ed556be645"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/convolution.py",
+      "bytes": 2265,
+      "sha256": "ce9e9f1dc6bf22ff51ac253a1554120181f99f63fea212030ad837f975ebbf7b"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder.py",
+      "bytes": 9542,
+      "sha256": "617ba60aa200759b499b64eb2a0ed0841d1292c143a68246f7adef6e2283fb9a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/decoder_layer.py",
+      "bytes": 4427,
+      "sha256": "4585fd2d515a6576ebef8bf3a18fb122f5c44f82ee7a1e9aee799cd31c6a1ab2"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/embedding.py",
+      "bytes": 7962,
+      "sha256": "719011e7ea3468271eee13bfd338c7e31df466a93ac8d8b86f7eba963cc5ce5f"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder.py",
+      "bytes": 11258,
+      "sha256": "67c5ca58513622e8a23c4fc900763230bf176edd180e4a3805962e9783d1669d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/encoder_layer.py",
+      "bytes": 5229,
+      "sha256": "ed63455edfb479d9b6fe9778da848ced81ed46b4cc504e5ed4470c2ff10cc651"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/label_smoothing_loss.py",
+      "bytes": 2164,
+      "sha256": "70f6a14a1f8749c1dfa39a96469d9633246856572d2140cddd0378857598e265"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/layer_norm.py",
+      "bytes": 874,
+      "sha256": "9685ea76896c4624ebd0db5afc2e7b7b77a1f467ae33ca0bd8876c802d46beb3"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/mask.py",
+      "bytes": 1660,
+      "sha256": "98247deea6952704379537e22ece50c956b40257a124359a575b54c7073e763d"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/multi_layer_conv.py",
+      "bytes": 3148,
+      "sha256": "00103ea8b18d759dabcc80b846559bd49fe9348308ad46ff41aa34ed0bfbe3fd"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/optimizer.py",
+      "bytes": 2093,
+      "sha256": "f41d4042f1022a84d483b3b965eadca94a75427d0abd57ecb9ce2df6303d926a"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/plot.py",
+      "bytes": 4852,
+      "sha256": "0c611e8bdbbdca0a5fa5fbc1c6fefebcbe76e712d79e6f001548ffba4a3b57d1"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py",
+      "bytes": 899,
+      "sha256": "c4db61e228ba3c55158d20ce53a1d5ec13e87a34148d38164230d4ac93d506b2"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/raw_embeddings.py",
+      "bytes": 2511,
+      "sha256": "7a7209417409907b6c80bc704139f2b2cffffe40ac4845a3c413af9b8f3143d1"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/repeat.py",
+      "bytes": 675,
+      "sha256": "88885f45acfb4675fe35db9e1f7ced655281e0b2d2958583f4b7b638e21e7577"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/graph_source_0114f5f/espnet/nets/pytorch_backend/transformer/subsampling.py",
+      "bytes": 1687,
+      "sha256": "29b8008344880c689ca1abf7b195d5e569fc34fc9138e8f74049c484c2577af7"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/original_recipe/lightning.py",
+      "bytes": 8464,
+      "sha256": "4f912d6d59d0a96c04c93643c066bcbbf5e2f96c9cf82c002e73d6599ef14564"
+    },
+    {
+      "path": "engine/Research_Spanish_Readout_2026-10-15/native_assets/Spanish_Forward_Check.json",
+      "bytes": 2017,
+      "sha256": "39419f527d80b3a2c79c5ab9c40b2de586a4eb892636456f0235e49752a1b77f"
+    },
+    {
+      "path": "engine/Source_SHA256.json",
+      "bytes": 48404,
+      "sha256": "3748f8345ac05884dc9b0f5953567c3a1b467b57e86a58d8e604780c5f0736b9"
+    },
+    {
+      "path": "examples/Frame_Provenance.json",
+      "bytes": 3551,
+      "sha256": "1e0071474ffa9364bc02e0fb3e7df4de7e153b7b6d89a2a75ecbb01738f6a843"
+    },
+    {
+      "path": "examples/vlr_frames_1.npz",
+      "bytes": 54613,
+      "sha256": "be5fc4ae6703cebda2e612a87621939e0bf5fe307fe5901af202e45774eeadb6"
+    },
+    {
+      "path": "examples/vlr_frames_2.npz",
+      "bytes": 52475,
+      "sha256": "1bab559ec3c410ee30596b1aed5539dc2f42393f3532c01e5a2cee355d6ca071"
+    },
+    {
+      "path": "examples/vlr_frames_3.npz",
+      "bytes": 56180,
+      "sha256": "ba7e9a465002be1a435feef1651b8e8f09e6222ddfd437ed6b5fc1f11848f1f7"
+    },
+    {
+      "path": "infer.py",
+      "bytes": 3183,
+      "sha256": "95f20898918a73830164c73f5fd756fc1be6173a2e5683af5f58cc3f5432f0df"
+    },
+    {
+      "path": "licenses/LICENSE-DATA-CC-BY-4.0.txt",
+      "bytes": 684,
+      "sha256": "628ce915a7c007705763287712e607d8a7dec2c4487edbd298301b79f63947b5"
+    },
+    {
+      "path": "licenses/LICENSE-MIT.txt",
+      "bytes": 1086,
+      "sha256": "45a7b7b9681b6bbbffe4fbe6b75f18364505a2b1782afe7589c7442df7db6ca4"
+    },
+    {
+      "path": "licenses/README.md",
+      "bytes": 1937,
+      "sha256": "9d298c4fdfbb9f9acba72e919abd3bf048b5a9016214cdf65d3e8344c2577b88"
+    },
+    {
+      "path": "licenses/vsr_low_LICENSE",
+      "bytes": 19342,
+      "sha256": "0afca3145596cd005f6f6ed977313ea31928094fc5b4aaabc21bb765ea369d09"
+    },
+    {
+      "path": "Manuscript/elsarticle-harv.bst",
+      "bytes": 30002,
+      "sha256": "d85a928515628a9526d1d02f076f723a4da25387286a4f656d8943600880a436"
+    },
+    {
+      "path": "Manuscript/elsarticle.cls",
+      "bytes": 45215,
+      "sha256": "40af0200a8ad6777126f93bf7be6ab3046fa7c3ef1073307f0809703602e59da"
+    },
+    {
+      "path": "Manuscript/fig_Context_Availability.pdf",
+      "bytes": 25854,
+      "sha256": "bb403630f07c1743b479f6f91695084af0df52bb25bde43654d1a2e8d2afbb5e"
+    },
+    {
+      "path": "Manuscript/fig_Corpus_Geometry.pdf",
+      "bytes": 15129,
+      "sha256": "42150f38c87096178ead33c1de092371e2a6edfa48a7773368097b481a653943"
+    },
+    {
+      "path": "Manuscript/fig_Corpus_Geometry.png",
+      "bytes": 55918,
+      "sha256": "564e0580d5dd742da30331459cb8d70587de67bfd2428cf80e9fd42540e72e93"
+    },
+    {
+      "path": "Manuscript/fig_Dataset_Examples.pdf",
+      "bytes": 212522,
+      "sha256": "9cf2bd81da384da6268c8a0fff0de4e612cc96c931bcbbaf2a615d0086c1934f"
+    },
+    {
+      "path": "Manuscript/fig_Dataset_Examples.png",
+      "bytes": 279728,
+      "sha256": "668a2559f885fdbbe7bddba748df26adf56460151ca663755627ee37853275bf"
+    },
+    {
+      "path": "Manuscript/fig_EN_B1_Context_Grid.png",
+      "bytes": 276132,
+      "sha256": "0f9024c010a0de44409ded15dede783faae26495d9816e7e1f8a58e17b53d678"
+    },
+    {
+      "path": "Manuscript/fig_ES_NATIVE_Context_Grid.png",
+      "bytes": 278986,
+      "sha256": "9b4543700250f538b242d69819f707eec1d857709ead0db8c5e6bc9ee21b3de4"
+    },
+    {
+      "path": "Manuscript/fig_Interval_Method.png",
+      "bytes": 153433,
+      "sha256": "6b1ec86f6b409ea32e57afde796fcb2f83fa20ffcbb4d38a5304c9c4ce47462d"
+    },
+    {
+      "path": "Manuscript/fig_VC_NATIVE_Context_Grid.png",
+      "bytes": 277698,
+      "sha256": "8f167b7c09e205019a4832c8b2c03232d8ce434c7e77bc3c68dfdfaa6e2bc7ac"
+    },
+    {
+      "path": "Manuscript/fig_VLR_T0_Context_Grid.png",
+      "bytes": 268451,
+      "sha256": "1ca25f61b4c4868befe06add64540dbcb62c234017bc0fc58a223bdb40c462b0"
+    },
+    {
+      "path": "Manuscript/main.pdf",
+      "bytes": 1447007,
+      "sha256": "9024cac67ad18be6679940e604433a75ac18840046f1752e950f2ba0415a3856"
+    },
+    {
+      "path": "Manuscript/main.tex",
+      "bytes": 5128,
+      "sha256": "e93a5f2fad713c1d1457ec1a13e3638421c8924fa6d6f1932417b17ad0c266af"
+    },
+    {
+      "path": "Manuscript/references.bib",
+      "bytes": 16295,
+      "sha256": "7fc519ff733747c78df5104bed94fe14d5e559b51609c3fbb05b167968cb948f"
+    },
+    {
+      "path": "Manuscript/Research_Paper_OpenScience_2026-10-24.pdf",
+      "bytes": 1691116,
+      "sha256": "3b222b53f7fb326057a43603519fba4c98344b3c12d8bea2e7207f26e3b0d7a9"
+    },
+    {
+      "path": "Manuscript/sec_discussion.tex",
+      "bytes": 4450,
+      "sha256": "d8c03cff84503b080b5016c087fcb383b3f3be31a0a68f0edadf413cb06f876d"
+    },
+    {
+      "path": "Manuscript/sec_introduction.tex",
+      "bytes": 3354,
+      "sha256": "4079461028e0e9c8d42790bd7c0188ea5385089e25dfcb6c204640f370b5eb03"
+    },
+    {
+      "path": "Manuscript/sec_method.tex",
+      "bytes": 7019,
+      "sha256": "cc5cf7951392e4da8c914a22af3d5a83f275c02114dea1f946f05df56cebf1a3"
+    },
+    {
+      "path": "Manuscript/sec_protocol.tex",
+      "bytes": 9793,
+      "sha256": "414e199d22a71130e088ecec217d6789a5b3c25103f2fd716f2927d19efad679"
+    },
+    {
+      "path": "Manuscript/sec_related_work.tex",
+      "bytes": 4167,
+      "sha256": "4621161bd146e7f01c7e799bacc043356623e8fd001942f1488cd64ea4681811"
+    },
+    {
+      "path": "Manuscript/sec_results.tex",
+      "bytes": 12317,
+      "sha256": "e0c3678662c51dc1ea9a21d3f9fad53566913c8dda48ac9a57d79b1952ac2b6e"
+    },
+    {
+      "path": "Manuscript/sec_supplement.tex",
+      "bytes": 12141,
+      "sha256": "0ebd6c57f223ac7513f699cd1a1d5d17d9dfba30f28a0cc9db35ffb96a8dd657"
+    },
+    {
+      "path": "Manuscript/tbl_allocation.tex",
+      "bytes": 658,
+      "sha256": "67305c23d76a6075700bf1ebd81d97a015e521cdca8b6537a216f43a9cf22070"
+    },
+    {
+      "path": "Manuscript/tbl_context_availability.tex",
+      "bytes": 1871,
+      "sha256": "445526ce4018219be7b7fcf780258d5752a68cf45e8316fec1cde71adf587da3"
+    },
+    {
+      "path": "Manuscript/tbl_context_controls.tex",
+      "bytes": 1300,
+      "sha256": "3f0240fb4cfd56515902366e83826b705270fe2cf78c92428a5e8fd2239f54e1"
+    },
+    {
+      "path": "Manuscript/tbl_context_intervention.tex",
+      "bytes": 884,
+      "sha256": "1991655fd528d5e483275c8b9c0a58e79b096b7eb075193ff548afebb1134b85"
+    },
+    {
+      "path": "Manuscript/tbl_corpus_inventory.tex",
+      "bytes": 874,
+      "sha256": "3f5f9951d07fba0c0256a22ffd5f928f99c535b8d14f1d62023430f20c3ae18d"
+    },
+    {
+      "path": "Manuscript/tbl_duration_geometry.tex",
+      "bytes": 1148,
+      "sha256": "149201660caed8f586b0b60958ce0bbadf2ca6cc14ae20961902850dc9c40d08"
+    },
+    {
+      "path": "Manuscript/tbl_duration_grid.tex",
+      "bytes": 2877,
+      "sha256": "4c435e10420361efa548875dc6c8b0da7c29c029509cfaac434430f2de47757a"
+    },
+    {
+      "path": "Manuscript/tbl_duration_projection.tex",
+      "bytes": 1338,
+      "sha256": "ccd77c4214fc70f5ba596265f3280ffab25d59103e96cb8bf989d89687065b18"
+    },
+    {
+      "path": "Manuscript/tbl_matched_decoders.tex",
+      "bytes": 1055,
+      "sha256": "6dce5354bd4bda223ea95c6eb7e02c57c042f580510567357d8f41347c03988b"
+    },
+    {
+      "path": "Manuscript/tbl_matched_query_costs.tex",
+      "bytes": 1286,
+      "sha256": "71b61b51694f8f2b05b90db97285bfee800e901ebd13b27deaef5fb82c102c55"
+    },
+    {
+      "path": "Manuscript/tbl_matched_query_resources.tex",
+      "bytes": 986,
+      "sha256": "fc23024c142b81e648e5302958332327c4ea3092f5da11f4493b77dfa09aa7cb"
+    },
+    {
+      "path": "Manuscript/tbl_primary.tex",
+      "bytes": 637,
+      "sha256": "bc02fe49e6ec38740fb7ead5c5960f6a991c3d3d92cceb11337a0158b8b3c1c5"
+    },
+    {
+      "path": "Manuscript/tbl_primary_intervals.tex",
+      "bytes": 810,
+      "sha256": "0c3c2451ae6878f69dafdff879737cae7152e324e1942f6b904b58ede4cdcc56"
+    },
+    {
+      "path": "Manuscript/tbl_query_costs.tex",
+      "bytes": 1106,
+      "sha256": "7c1884464b0cd6d5a906bd1bdb4f1ef8b0eefd331646e2d40543bb44addac950"
+    },
+    {
+      "path": "Manuscript/tbl_source_influence.tex",
+      "bytes": 664,
+      "sha256": "9ce979a16a3aba68f1ce9f6f818a6ce71e07e61842b1a09786c241537fe756f1"
+    },
+    {
+      "path": "Manuscript/tbl_timing_ranges.tex",
+      "bytes": 1034,
+      "sha256": "83735ba76d7640e32ee2393e68348c2a5e049bb2b02774b2717d7802b523e962"
+    },
+    {
+      "path": "Manuscript/tbl_whole_clip.tex",
+      "bytes": 814,
+      "sha256": "bc8d12426fce9e1b05cb97f82b1ca02df00499f501353943581852e55227810b"
+    },
+    {
+      "path": "Manuscript/values.tex",
+      "bytes": 190,
+      "sha256": "92fe81134060af5f909b0daa9da27c88b7a62b5553c643d146e4c3da4a5135d7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6254,
+      "sha256": "d2c4d7c6a67637aab71056aff23833862c2dc4b1f0e8c9e65b6bf2db311e74f7"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 4196,
+      "sha256": "80705e03dd38a9aa0731370c794f85c0c74f9fb69d22c1ed6226bd61f5ac1625"
+    },
+    {
+      "path": "Reproduced_Results.json",
+      "bytes": 304,
+      "sha256": "3a372e877f12161ff689457564abbad1f336b1036853f04899c794b01d53dcab"
+    },
+    {
+      "path": "requirements-core.txt",
+      "bytes": 13,
+      "sha256": "5e7cb66d2a3374454132a5ff73596f40061357a52fe40d3f100840077d8cc547"
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "bytes": 58,
+      "sha256": "e7a2f9041afa0782c7372629aa2899f0441fcc4d0debe5caafa16e2c0e0e13ee"
+    },
+    {
+      "path": "verification/Real_Inference_Replay.json",
+      "bytes": 446,
+      "sha256": "5db17b2af781ab3d9e0ecd6fdc5f638c86d5817892ce0cd132071af7bb822cd8"
+    },
+    {
+      "path": "verification/OpenScience_Release_Receipt.json",
+      "bytes": 68105,
+      "sha256": "2cee00237e4e44ae4d095049a73ead236c3238f540e6bca334c59024bebc6687"
+    },
+    {
+      "path": "verification/Paper_Revision_Receipt.json",
+      "bytes": 886,
+      "sha256": "82e36b6f090a54bbe115405700487519f500c680a499e376ad529c22d152ce19"
+    },
+    {
+      "path": "verification/Research_Data_Export.json",
+      "bytes": 3067,
+      "sha256": "8e2a0a19c17cbe4f3d2522321651ce3c084456e7916a34093cc62023bfb5e5b1"
+    },
+    {
+      "path": "verification/Runtime_Source_Collection.json",
+      "bytes": 283,
+      "sha256": "8af248df06ce91eb46fa7ebe3d38d8fd8fee94cfb22f6ec252a3ae5a65284640"
+    },
+    {
+      "path": "verification/Source_Inventory.json",
+      "bytes": 14894,
+      "sha256": "a5024c10fd31d33d36ec820c14ecfe5aaa38828138bda5cfa1694309ee471793"
+    },
+    {
+      "path": "verification/VLR_Rights.json",
+      "bytes": 19236,
+      "sha256": "90b026663e5c764663bc03c550fb7cbb34b38308e4af0ce3314af20877c44cd9"
+    },
+    {
+      "path": "FINAL_STATUS_2026-10-26.md",
+      "bytes": 2983,
+      "sha256": "4d71db9bbd114c3b18037284e99e56f307db658fef566eb3c26e3b7331a77e12"
+    },
+    {
+      "path": "PAPER_HANDOFF_2026-10-26.md",
+      "bytes": 3653,
+      "sha256": "f0531d609920efe9eb0e5ad7768bb835e6c31d806f3693936d7801be9d268fdb"
+    },
+    {
+      "path": "PUBLIC_RELEASE_HANDOFF_2026-10-26.md",
+      "bytes": 2524,
+      "sha256": "3f7270eb9b3b2e0d8ded6789bf603589450de3a77e35686014593c16393f7f8e"
+    }
+  ],
+  "crc_test": "passed",
+  "weights_and_raw_media": "excluded from lightweight package"
+}

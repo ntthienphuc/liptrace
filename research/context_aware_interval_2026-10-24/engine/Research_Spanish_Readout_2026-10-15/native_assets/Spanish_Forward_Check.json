@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "time_utc": "2026-10-14T04:34:30.082487+00:00",
+  "source_commit": "0114f5f1248a55507c551ed88a69bb978ec9f126",
+  "source_sha256": "7c0a86be31e339f61a3abfe3607da2316e3604ba931f557b82199d9b9df5b94f",
+  "native_config": {
+    "adim": 768,
+    "aheads": 12,
+    "eunits": 3072,
+    "elayers": 12,
+    "transformer_input_layer": "conv3d",
+    "dropout_rate": 0.1,
+    "transformer_attn_dropout_rate": 0.1,
+    "transformer_encoder_attn_layer_type": "rel_mha",
+    "macaron_style": true,
+    "use_cnn_module": true,
+    "cnn_module_kernel": 31,
+    "zero_triu": false,
+    "a_upsample_ratio": 1,
+    "relu_type": "swish",
+    "ddim": 768,
+    "dheads": 12,
+    "dunits": 3072,
+    "dlayers": 6,
+    "lsm_weight": 0.1,
+    "transformer_length_normalized_loss": false,
+    "mtlalpha": 0.1,
+    "ctc_type": "builtin",
+    "rel_pos_type": "latest"
+  },
+  "strict_checkpoint_load": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "device": "cpu",
+  "cpu_threads": 1,
+  "input_kind": "synthetic tensor, not a prepared dataset clip",
+  "input_shape": [
+    1,
+    50,
+    1,
+    88,
+    88
+  ],
+  "encoded_shape": [
+    1,
+    50,
+    768
+  ],
+  "ctc_shape": [
+    1,
+    50,
+    1006
+  ],
+  "finite_forward_loss": true,
+  "dataset_preprocessing_validated": false,
+  "cross_language_training_started": false,
+  "framework_interface_dependencies": {
+    "espnet.nets.scorer_interface": {
+      "file": "/root/lip_phase05_20261014/vendor/auto_avsr/espnet/nets/scorer_interface.py",
+      "sha256": "bfb21dd5b99f892fa9880764a47032729735bce3dd3b143d396e13ce1f31fc27"
+    },
+    "espnet.nets.scorers": {
+      "file": "/root/lip_phase05_20261014/vendor/auto_avsr/espnet/nets/scorers/__init__.py",
+      "sha256": "aba1b9ff25a1b69d8a6905e7ed877205b5b8af6f3d1d9e82bb28b8aaed9aaeee"
+    },
+    "espnet.nets.scorers.ctc": {
+      "file": "/root/lip_phase05_20261014/vendor/auto_avsr/espnet/nets/scorers/ctc.py",
+      "sha256": "556c10c796866c703398bcbc72dcf7d7557fe781431e8efc44f62d69c853a4fe"
+    }
+  }
+}

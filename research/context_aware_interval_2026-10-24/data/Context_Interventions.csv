@@ -1,0 +1,49 @@
+﻿model,corpus,regime,stratum,arm,context,decoder,source_clusters,clips,units,substitutions,deletions,insertions,errors,WER_percent,real_C_minus_this_C_pp,difference_ci95_low_pp,difference_ci95_high_pp
+VLR_T0,VLR,development_selected,added_context,C,left,greedy,61,254,1896,657,236,88,981,51.74050632911393,,,
+VLR_T0,VLR,development_selected,added_context,A,real,greedy,61,254,1896,762,135,241,1138,60.0210970464135,,,
+VLR_T0,VLR,development_selected,added_context,C,real,greedy,61,254,1896,621,207,124,952,50.21097046413502,,,
+VLR_T0,VLR,development_selected,added_context,C,repeat,greedy,61,254,1896,691,220,121,1032,54.43037974683544,-4.219409282700422,-5.904907467236609,-2.604997341839447
+VLR_T0,VLR,development_selected,added_context,C,reverse,greedy,61,254,1896,713,184,156,1053,55.537974683544306,-5.327004219409282,-7.2479186118892,-3.3368616877806003
+VLR_T0,VLR,development_selected,added_context,C,right,greedy,61,254,1896,730,106,260,1096,57.80590717299578,,,
+VLR_T0,VLR,matched_ctc40,added_context,C,left,ctc40,61,254,1896,663,226,91,980,51.687763713080166,,,
+VLR_T0,VLR,matched_ctc40,added_context,A,real,ctc40,61,254,1896,764,131,253,1148,60.54852320675106,,,
+VLR_T0,VLR,matched_ctc40,added_context,C,real,ctc40,61,254,1896,617,199,131,947,49.947257383966246,,,
+VLR_T0,VLR,matched_ctc40,added_context,C,repeat,ctc40,61,254,1896,692,210,129,1031,54.37763713080169,-4.430379746835443,-6.026071108922553,-2.9130722761549044
+VLR_T0,VLR,matched_ctc40,added_context,C,reverse,ctc40,61,254,1896,714,180,161,1055,55.643459915611814,-5.69620253164557,-7.546171101960542,-3.798751941744461
+VLR_T0,VLR,matched_ctc40,added_context,C,right,ctc40,61,254,1896,722,102,271,1095,57.75316455696203,,,
+EN_B1,LRS2,development_selected,added_context,C,left,hybrid10,48,48,309,51,14,9,74,23.948220064724918,,,
+EN_B1,LRS2,development_selected,added_context,A,real,hybrid10,48,48,309,62,17,6,85,27.508090614886733,,,
+EN_B1,LRS2,development_selected,added_context,C,real,hybrid10,48,48,309,35,7,14,56,18.12297734627832,,,
+EN_B1,LRS2,development_selected,added_context,C,repeat,hybrid10,48,48,309,58,10,12,80,25.889967637540455,-7.766990291262136,-14.285714285714286,-2.2222222222222223
+EN_B1,LRS2,development_selected,added_context,C,reverse,hybrid10,48,48,309,44,11,14,69,22.33009708737864,-4.207119741100324,-9.473770209838321,0.6472491909385113
+EN_B1,LRS2,development_selected,added_context,C,right,hybrid10,48,48,309,53,10,12,75,24.271844660194176,,,
+EN_B1,LRS2,matched_ctc40,added_context,C,left,ctc40,48,48,309,56,23,9,88,28.478964401294498,,,
+EN_B1,LRS2,matched_ctc40,added_context,A,real,ctc40,48,48,309,68,28,7,103,33.333333333333336,,,
+EN_B1,LRS2,matched_ctc40,added_context,C,real,ctc40,48,48,309,50,11,12,73,23.624595469255663,,,
+EN_B1,LRS2,matched_ctc40,added_context,C,repeat,ctc40,48,48,309,68,20,8,96,31.067961165048544,-7.44336569579288,-12.333333333333334,-2.857142857142857
+EN_B1,LRS2,matched_ctc40,added_context,C,reverse,ctc40,48,48,309,54,15,14,83,26.86084142394822,-3.236245954692557,-8.333333333333334,1.9607843137254901
+EN_B1,LRS2,matched_ctc40,added_context,C,right,ctc40,48,48,309,59,17,12,88,28.478964401294498,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,C,left,hybrid10,12,202,986,418,271,68,757,76.77484787018255,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,A,real,hybrid10,12,202,986,501,214,120,835,84.68559837728195,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,C,real,hybrid10,12,202,986,362,271,64,697,70.6896551724138,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,C,repeat,hybrid10,12,202,986,383,337,72,792,80.32454361054766,-9.634888438133874,-11.979239571668533,-7.156163136346921
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,C,reverse,hybrid10,12,202,986,409,294,74,777,78.80324543610547,-8.113590263691684,-11.200807265388496,-5.15140374331551
+ES_NATIVE,Spanish MuAViC/mTEDx,development_selected,added_context,C,right,hybrid10,12,202,986,505,161,142,808,81.947261663286,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,C,left,ctc40,12,202,986,273,461,32,766,77.68762677484787,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,A,real,ctc40,12,202,986,332,429,36,797,80.8316430020284,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,C,real,ctc40,12,202,986,281,422,46,749,75.9634888438134,,,
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,C,repeat,ctc40,12,202,986,312,429,38,779,79.00608519269777,-3.0425963488843815,-4.699513084674387,-1.2298862385036524
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,C,reverse,ctc40,12,202,986,300,447,39,786,79.71602434077079,-3.7525354969574036,-5.728311617276474,-1.9567028378197449
+ES_NATIVE,Spanish MuAViC/mTEDx,matched_ctc40,added_context,C,right,ctc40,12,202,986,344,384,57,785,79.61460446247465,,,
+VC_NATIVE,ViCocktail,development_selected,added_context,C,left,hybrid10,20,254,2143,780,286,110,1176,54.87634157722818,,,
+VC_NATIVE,ViCocktail,development_selected,added_context,A,real,hybrid10,20,254,2143,803,311,110,1224,57.116192253849746,,,
+VC_NATIVE,ViCocktail,development_selected,added_context,C,real,hybrid10,20,254,2143,739,214,130,1083,50.536630891273916,,,
+VC_NATIVE,ViCocktail,development_selected,added_context,C,repeat,hybrid10,20,254,2143,890,257,135,1282,59.82267848810079,-9.286047596826878,-11.456421557775457,-7.325643886756883
+VC_NATIVE,ViCocktail,development_selected,added_context,C,reverse,hybrid10,20,254,2143,904,226,169,1299,60.61595893607093,-10.079328044797014,-12.522537093470552,-7.7364548729705716
+VC_NATIVE,ViCocktail,development_selected,added_context,C,right,hybrid10,20,254,2143,783,231,146,1160,54.129724685020996,,,
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,C,left,ctc40,20,254,2143,761,371,94,1226,57.20951936537564,,,
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,A,real,ctc40,20,254,2143,804,404,87,1295,60.429304713019135,,,
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,C,real,ctc40,20,254,2143,766,293,110,1169,54.54969668688754,,,
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,C,repeat,ctc40,20,254,2143,861,343,95,1299,60.61595893607093,-6.066262249183388,-8.193059371746015,-4.103249477990142
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,C,reverse,ctc40,20,254,2143,833,358,121,1312,61.22258516098927,-6.672888474101726,-8.440120078117237,-5.122065056217819
+VC_NATIVE,ViCocktail,matched_ctc40,added_context,C,right,ctc40,20,254,2143,799,308,118,1225,57.162855809612694,,,

@@ -1,0 +1,15 @@
+{
+  "dataset": "vlr",
+  "language": "vi",
+  "source": "vendor/auto_avsr",
+  "tokenizer": "assets/tokenizers/vi.model",
+  "units": "assets/tokenizers/vi_units.txt",
+  "checkpoint": "assets/checkpoints/vlr_offline.pt",
+  "checkpoint_sha256": "b38177ae98f1f3cbea1a4c183c2bca804cf0a576e99abd23aab85ae56f413280",
+  "state_field": "raw",
+  "data_root": "data/vlr/cloud_dataset_signer_split",
+  "prepared": "prepared/vlr",
+  "core_frames": 50,
+  "frame_cache_format": "npz",
+  "cache_full_training": false
+}

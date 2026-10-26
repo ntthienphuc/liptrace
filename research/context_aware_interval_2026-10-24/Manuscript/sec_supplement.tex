@@ -1,0 +1,209 @@
+\section{Corpus geometry and source weighting}
+\label{app:corpus}
+\input{tbl_corpus_inventory}
+\input{tbl_source_influence}
+The duration statistics in Table~\ref{tab:corpus-inventory} describe the exact
+principal assessment cohorts, measured from prepared frames at 25 fps. They
+are not estimates of the complete source datasets. The interval in the median
+column gives the 25th and 75th percentiles. For the two-second request, 79.3\%
+of LRS2 clips already fit inside the target, compared with 0.2\% on VLR,
+23.2\% on Spanish, and 0.9\% on ViCocktail. The principal hash-based start,
+center and end placements further limit which margin is available. Mean
+observed context is therefore smaller than the maximum 1.28 seconds across
+both sides, even in corpora with substantially longer clips.
+
+Recording sources also have different weights. The largest Spanish source
+contributes 24.9\% of the target reference units, compared with 4.8\% for VLR,
+3.2\% for LRS2 and 13.4\% for ViCocktail. Both principal point differences
+remain favorable to projection after omitting any single source
+(Table~\ref{tab:source-influence}). These descriptive ranges address the
+influence of one recording; they do not imply significance or replace the
+source-bootstrap intervals. In particular, the adjusted Spanish C--B
+interval still includes zero. Duration, recording composition and checkpoint
+history should consequently accompany any interpretation across corpora.
+
+\subsection{Recognition by actual context availability}
+\label{app:availability}
+\input{tbl_context_availability}
+Table~\ref{tab:context-availability} separates the principal assessment by
+whether the recorded input adds left, right, both, or no context to the target.
+It uses matched pure CTC throughout. With no outside context, A/B/C return
+identical predictions on all 27 VLR, 986 LRS2, 217 Spanish, and 11 ViCocktail
+clips. The whole-cohort difference therefore combines an identity subset with
+clips on which contextual inference can change the result.
+
+The three LRS2 outside-context groups show C--B reductions of 1.020--1.434
+points. VLR's corresponding reductions are 0.158--0.183 points, and Spanish's
+are 0.794--1.883 points. ViCocktail shows smaller differences, with the interval
+for its both-context group including zero. This decomposition complements the
+duration experiment without excluding short clips from the principal endpoint.
+The groups differ in target position and clip duration; comparisons across
+groups are descriptive rather than controlled left-versus-right interventions.
+
+\section{Primary comparison uncertainty}
+\input{tbl_primary_intervals}
+Table~\ref{tab:primary-intervals} reports the complete primary family. Source
+resampling preserves paired arm predictions within each sampled recording.
+It addresses within-source dependence more directly than treating every
+clip as independent, but it cannot account for unobserved dependence between
+recordings or repair prior exposure to the assessment corpus. In particular,
+the Spanish C--B interval includes zero after the family adjustment.
+
+\section{Complete duration grids and actual context}
+\label{app:duration}
+\input{tbl_duration_grid}
+\input{tbl_duration_geometry}
+\input{tbl_duration_projection}
+\begin{figure}[tb]
+ \centering
+ \includegraphics[width=\linewidth]{fig_VLR_T0_Context_Grid.png}
+ \caption{VLR duration grid on the complete 1,024-clip cohort. Contextual
+ direct and projection are close under the same greedy or pure-CTC decoder.
+ The selected full-clip lookup uses a hybrid decoder, so its separation from
+ the selected greedy systems includes a decoder difference.}
+ \label{fig:vlr-context}
+\end{figure}
+\begin{figure}[tb]
+ \centering
+ \includegraphics[width=\linewidth]{fig_ES_NATIVE_Context_Grid.png}
+ \caption{Spanish duration grid on all 934 eligible clips. Native hybrid
+ decoding and pure CTC have different error levels, but both support examining
+ context within a fixed target. The same decoder is retained across context
+ budgets within each arm. Absolute error remains high on this evaluation cohort.}
+ \label{fig:spanish-context}
+\end{figure}
+\begin{figure}[tb]
+ \centering
+ \includegraphics[width=\linewidth]{fig_VC_NATIVE_Context_Grid.png}
+ \caption{ViCocktail duration grid on 1,024 clips. Context improves target
+ recognition, while matched pure-CTC direct and projected readout remain close.
+ The additional selected-system projection gain includes the difference
+ between development-selected hybrid weights.}
+ \label{fig:vicocktail-context}
+\end{figure}
+The nominal target and context lengths are converted to 25, 50, or 75 target
+frames and 0, 8, or 16 context frames per side. All duration cells use centered
+targets, while the principal two-second assessment includes deterministic
+start, center, and end placements. Consequently, the duration grid is not an
+exact repeat of the principal table even where the nominal lengths coincide.
+
+At zero context, crop-first and projected output agree when the decoder is
+the same. This is an identity control, not an additional recognition gain.
+The full-clip target baseline is also invariant to the requested context
+budget at a fixed target. Table~\ref{tab:duration-geometry} makes clipping
+at video boundaries explicit. Clips without outside context remain in every
+whole-cohort comparison.
+
+Table~\ref{tab:duration-projection} keeps the incremental C--B comparisons
+for every target and corpus. The Spanish matched-CTC reductions span
+0.830--2.270 points, whereas the ViCocktail matched differences stay within
+0.133 points of zero. The two-second Spanish C--B comparison is stronger in
+this centered duration grid than in the principal placement mixture. Different
+placement and cohort composition make these complementary comparisons;
+the duration result does not replace the principal family-adjusted interval.
+Spanish one-second selected WER can exceed 100\% because insertions contribute
+to the numerator. The underlying edit counts, rather than a capped percentage,
+are retained in every comparison.
+
+\section{Complete context interventions}
+\label{app:context-controls}
+\input{tbl_context_controls}
+Table~\ref{tab:context-controls} keeps all five context conditions on the same
+outside-context subset in each corpus. Both real margins give lower projected
+WER than either margin alone in every displayed setting. The relative value
+of the two individual margins is not constant: selected VLR projection gives
+51.741\% with the left margin and 57.806\% with the right, whereas ViCocktail
+gives 54.876\% and 54.130\%, respectively. Removing a margin also shortens the
+encoder input and changes the native output cap, so these differences are
+operating-condition comparisons rather than isolated measures of directional
+linguistic information. They do not establish a language-specific rule.
+
+Reversing each margin separately preserves its frames and length but changes
+their temporal order and continuity with the target. Real context improves
+the selected projected output by 5.327 points on VLR, 8.114 on Spanish and
+10.079 on ViCocktail, with pointwise intervals excluding zero. LRS2 gives a
+4.207-point improvement, but its interval includes zero on the smaller
+48-clip subset. The matched pure-CTC contrasts have the same distinction.
+Thus repeated-boundary and reversed context probe different properties;
+neither intervention alone identifies the source of the recognition benefit.
+
+For the real-versus-repeat contrast, omitting any one recording source keeps
+the point difference favorable in all four corpora under both reported
+decoder regimes. In Spanish, the selected-system difference ranges from
+$-10.284$ to $-8.970$ points across these omissions, and the matched-CTC
+difference ranges from $-3.654$ to $-2.632$. This check reduces concern that
+one source alone determines the observed effect; it does not replace
+evaluation on additional sources.
+
+\section{Query-cost measurements}
+\input{tbl_query_costs}
+\input{tbl_matched_query_resources}
+The query schedules for one, three, and five requested intervals are separate
+scenarios, not nested prefixes of one common schedule. Median cost is therefore
+not required to increase monotonically between scenarios, especially after
+deduplication on short clips. Full-clip lookup caches a complete recognition
+and alignment result; projected inference recognizes the bounded inputs
+required by the distinct requests.
+
+Table~\ref{tab:matched-query-resources} complements the matched-decoder
+median costs with the 95th percentile and peak allocated GPU memory.
+These percentiles describe the stratified sample of per-clip medians;
+they do not estimate a deployment-population latency distribution.
+The accompanying numerical results retain duration strata, actual distinct
+query counts, first and later responses, cached responses, and computation
+counts. Duration strata are at most 2 seconds, (2,4], (4,8], and above
+8 seconds; empty strata are omitted.
+
+The timing endpoints include native normalization, device transfer, decoding,
+and the alignment needed by the output procedure. Prepared-input reading and
+decompression are measured separately. GPU memory is peak allocated tensor
+memory rather than total device usage. The calibration timing experiment adds
+no assessment WER measurements and cannot establish a universal break-even
+number of queries.
+
+\section{Sensitivity to reference timing}
+\input{tbl_timing_ranges}
+The seven midpoint conditions shift the reference word times by -160 ms,
+-80 ms, -40 ms, 0 ms, +40 ms, +80 ms, and +160 ms while leaving target
+geometry and predictions fixed. The eighth condition uses any positive temporal
+overlap at zero offset.
+Whole-clip targets retain their original full transcript.
+These changes can alter reference membership and the denominator, so each
+condition compares arms only against its own shared reference.
+
+Table~\ref{tab:timing-range} reports the full range of differences, rather than
+selecting a favorable clock shift. C--A and C--B keep negative point
+differences throughout the tested conditions. C--uniform is sensitive enough
+to reverse on VLR and LRS2. No clock offset or ownership convention is selected
+from these assessment results.
+
+\section{Sensitivity to decoder settings}
+\label{app:decoder-sensitivity}
+A separate development screen covers 256 VLR, 256 LRS2, 143 Spanish, and
+256 ViCocktail clips. These clips are disjoint from the calibration clips
+and from assessment sources. With the two-second target and the 0.64-second
+context allowance fixed, greedy and pure-CTC decoding use blank-logit biases
+of $-0.5$, $0$, and $+0.5$. Native hybrid decoding uses length bonuses of
+$-1$, $0$, and $+1$, retaining its previously chosen CTC/attention weight.
+This screen examines stability and does not select a replacement decoder.
+
+Projection improves on crop-first at all nine settings in every corpus.
+Its smaller advantage over contextual direct is less consistent. For VLR,
+the pure-CTC C--B difference ranges from $-0.213$ to $+0.426$ points;
+the zero-bias setting gives 60.085\% for C and 59.659\% for B, corresponding
+to eight additional errors. For ViCocktail, pure-CTC differences remain
+small and favorable ($-0.198$ to $-0.049$), whereas the hybrid difference
+ranges from $-0.495$ to $+1.088$ as the length bonus changes. These findings
+reinforce the distinction between the broad benefit of context and the
+decoder-dependent value of projection. The development screen is not pooled
+with the principal assessment or used to replace its frozen predictions.
+
+\section{Implementation scope}
+Visual-only inference retains native preprocessing, tokenizers, blank and
+end-of-sequence identities, and vocabularies (2,002 classes for VLR and
+ViCocktail, 5,049 for English, and 1,006 for Spanish). Audio-derived reference
+times are used only for evaluation. Word grouping preserves native boundary
+symbols and decodes byte tokens before Unicode normalization. Infeasible
+alignment falls back to uniform allocation; this fallback was unused in the
+reported principal, context-intervention, and duration cohorts. Whole-input
+targets return the native transcript unchanged.

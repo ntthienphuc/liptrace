@@ -1,0 +1,20 @@
+\begin{table}[tb]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Matched-decoder requested-interval WER (\%). Negative C--B favors projection. Brackets give explanatory pointwise 95\% paired-source bootstrap intervals from 10,000 draws; the primary adjusted family is reported separately.}
+\label{tab:matched}
+\begin{tabular}{llrrrl}
+\toprule
+Corpus & Decoder & A & B & C & C--B [95\% CI] (pp) \\
+\midrule
+VLR & Greedy & 58.602 & 50.579 & 50.434 & -0.145 [-0.181, -0.110] \\
+VLR & Pure CTC & 58.971 & 50.862 & 50.691 & -0.172 [-0.214, -0.129] \\
+LRS2 & Greedy & 30.527 & 28.749 & 28.471 & -0.277 [-0.463, -0.126] \\
+LRS2 & Pure CTC & 30.250 & 28.536 & 28.226 & -0.310 [-0.500, -0.155] \\
+Spanish & Greedy & 83.181 & 81.824 & 80.870 & -0.954 [-1.390, -0.672] \\
+Spanish & Pure CTC & 83.203 & 81.718 & 80.764 & -0.954 [-1.429, -0.670] \\
+ViCocktail & Greedy & 55.540 & 52.643 & 52.524 & -0.119 [-0.213, -0.011] \\
+ViCocktail & Pure CTC & 55.520 & 52.623 & 52.464 & -0.159 [-0.249, -0.061] \\
+\bottomrule
+\end{tabular}
+\end{table}

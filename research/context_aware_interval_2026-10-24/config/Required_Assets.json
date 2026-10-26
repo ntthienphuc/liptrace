@@ -1,0 +1,129 @@
+[
+  {
+    "model": "VLR_T0",
+    "role": "checkpoint",
+    "relative_path": "Server_Rescue_2026-10-15/Model_States/main_vlr_T0_17/best.pt",
+    "sha256": "1f237cde1853ff0b4bc192c838b2639555e1ac97da8534bac6c92e1c21fa3dae",
+    "local_present": true,
+    "bytes": 973777266,
+    "included": false
+  },
+  {
+    "model": "VLR_T0",
+    "role": "base_checkpoint",
+    "relative_path": "Server_Rescue_2026-10-15/Assets/VLR/pretrained.pt",
+    "sha256": "b38177ae98f1f3cbea1a4c183c2bca804cf0a576e99abd23aab85ae56f413280",
+    "local_present": true,
+    "bytes": 973787221,
+    "included": false
+  },
+  {
+    "model": "VLR_T0",
+    "role": "tokenizer",
+    "relative_path": "Research_Phase_05_2026-10-13/assets/tokenizers/vi.model",
+    "sha256": "6b8c7e138d86282217fad89d7e2be9452a90d398a4e034d9d390586c145e499b",
+    "local_present": true,
+    "bytes": 29678,
+    "included": false
+  },
+  {
+    "model": "VLR_T0",
+    "role": "units",
+    "relative_path": "Research_Phase_05_2026-10-13/assets/tokenizers/vi_units.txt",
+    "sha256": "90b0875aa114daad969c70d48589db7bfb49da548ea4d0f86bd07dab0514dfda",
+    "local_present": true,
+    "bytes": 21904,
+    "included": false
+  },
+  {
+    "model": "EN_B1",
+    "role": "checkpoint",
+    "relative_path": "Research_Strong_Baseline_2026-10-15/vsr_trlrs2lrs3vox2avsp_base.pth",
+    "sha256": "fbf7cd70ff1c0e694b3030fb779dbb4570f04e4b841d62f9296c229e94878ddb",
+    "local_present": true,
+    "bytes": 1001892616,
+    "included": false
+  },
+  {
+    "model": "EN_B1",
+    "role": "tokenizer",
+    "relative_path": "Research_Phase_05_2026-10-13/assets/tokenizers/en.model",
+    "sha256": "2c1d648ccf5fdce6612ecbea2ffbd1cab5aabc90458781186175c3911c4bdb1e",
+    "local_present": true,
+    "bytes": 327113,
+    "included": false
+  },
+  {
+    "model": "EN_B1",
+    "role": "units",
+    "relative_path": "Research_Phase_05_2026-10-13/assets/tokenizers/en_units.txt",
+    "sha256": "29001d967ad290e28f6f1d7d47e07e314354bf67d3b1f494e936fa2fed9a9122",
+    "local_present": true,
+    "bytes": 73778,
+    "included": false
+  },
+  {
+    "model": "ES_NATIVE",
+    "role": "checkpoint",
+    "relative_path": "Server_Rescue_2026-10-15/Assets/Spanish/pretrained.pt",
+    "sha256": "80a0cea8f46da205589eaee3ff9f712216915c699bb8de3540e0a3d52e123e0f",
+    "local_present": true,
+    "bytes": 964600904,
+    "included": false
+  },
+  {
+    "model": "ES_NATIVE",
+    "role": "tokenizer",
+    "relative_path": "Research_Spanish_Readout_2026-10-15/native_assets/unigram1000.model",
+    "sha256": "679c1e57d210fa475caa4a7a7706b815a52ca0de279ab009513db9fabf1f64b2",
+    "local_present": true,
+    "bytes": 253885,
+    "included": false
+  },
+  {
+    "model": "ES_NATIVE",
+    "role": "units",
+    "relative_path": "Research_Spanish_Readout_2026-10-15/native_assets/unigram1000_units.txt",
+    "sha256": "993942a27a4a90f9d6cc3c5049bd5badc256fe41e160d858f8c29302ee02ab47",
+    "local_present": true,
+    "bytes": 12141,
+    "included": false
+  },
+  {
+    "model": "VC_NATIVE",
+    "role": "checkpoint",
+    "relative_path": "experiments/_archive_sources/pavir_2026_08/03_models/w0/vicocktail_w0.ckpt",
+    "sha256": "6a41d0a3acf15075a0e2f75ead2215b5b8fcc38697885de8ee851eb3ff576c00",
+    "local_present": true,
+    "bytes": 2921268704,
+    "included": false
+  },
+  {
+    "model": "VC_NATIVE",
+    "role": "tokenizer",
+    "relative_path": "experiments/_archive_sources/pavir_2026_08/04_artifacts/tokenizer/vi_unigram_2000.model",
+    "sha256": "6b8c7e138d86282217fad89d7e2be9452a90d398a4e034d9d390586c145e499b",
+    "local_present": true,
+    "bytes": 29678,
+    "included": false
+  },
+  {
+    "model": "VC_NATIVE",
+    "role": "units",
+    "relative_path": "experiments/_archive_sources/pavir_2026_08/04_artifacts/tokenizer/vi_unigram_2000.auto_avsr_units.txt",
+    "sha256": "90b0875aa114daad969c70d48589db7bfb49da548ea4d0f86bd07dab0514dfda",
+    "local_present": true,
+    "bytes": 21904,
+    "included": false
+  },
+  {
+    "model": "ES_NATIVE",
+    "role": "upstream_source_archive",
+    "relative_path": "Research_Spanish_Readout_2026-10-15/native_assets/Source_0114f5f1248a.zip",
+    "sha256": "7c0a86be31e339f61a3abfe3607da2316e3604ba931f557b82199d9b9df5b94f",
+    "bytes": 52489776,
+    "local_present": true,
+    "included": false,
+    "source_url": "https://api.github.com/repos/JeongHun0716/vsr-low/zipball/0114f5f1248a55507c551ed88a69bb978ec9f126"
+  }
+]

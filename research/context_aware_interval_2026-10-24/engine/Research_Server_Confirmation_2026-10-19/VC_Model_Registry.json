@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "models": {
+    "VC_NATIVE": {
+      "corpus": "VC",
+      "language": "vi",
+      "metric": "wer",
+      "runtime_kind": "vicocktail_native",
+      "classes": 2002,
+      "state_field": "state_dict",
+      "state_prefix": "model.",
+      "source": "experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr",
+      "source_tree_sha256": "5b8068708e40ba1550d88d164bdf0a786379ceaa8cf281a815263d3ff3d183fd",
+      "source_python_files": 101,
+      "constructor": {
+        "odim": 2002,
+        "modality": "video",
+        "ctc_weight": 0.1
+      },
+      "epoch": 13,
+      "global_step": 55986,
+      "checkpoint": "experiments/_archive_sources/pavir_2026_08/03_models/w0/vicocktail_w0.ckpt",
+      "checkpoint_sha256": "6a41d0a3acf15075a0e2f75ead2215b5b8fcc38697885de8ee851eb3ff576c00",
+      "tokenizer": "experiments/_archive_sources/pavir_2026_08/04_artifacts/tokenizer/vi_unigram_2000.model",
+      "tokenizer_sha256": "6b8c7e138d86282217fad89d7e2be9452a90d398a4e034d9d390586c145e499b",
+      "units": "experiments/_archive_sources/pavir_2026_08/04_artifacts/tokenizer/vi_unigram_2000.auto_avsr_units.txt",
+      "units_sha256": "90b0875aa114daad969c70d48589db7bfb49da548ea4d0f86bd07dab0514dfda"
+    }
+  },
+  "factory_source": "experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/lightning.py",
+  "scope": "Isolated VC runtime; does not register or change active EN/VLR jobs.",
+  "horizon_source": "Research_Search_Horizon_Control_2026-10-15/horizon_search.py",
+  "safe_search_source": "Research_Spanish_Readout_2026-10-15/ctc_horizon.py",
+  "alignment_source": "Research_Span_Projection_2026-10-15/projection.py",
+  "support_sources_sha256": {
+    "experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/lightning.py": "5f7b89c79e98ac0505890a5c75d14e8768e6c5be70a871f583a524b35278f753",
+    "Research_Search_Horizon_Control_2026-10-15/horizon_search.py": "e5b117c1ba5a6521b4aaaec954077ec0dadc8fbec87915c1761c81a1961faa49",
+    "Research_Spanish_Readout_2026-10-15/ctc_horizon.py": "3f3b18e363dcc1f1ad07e628412ae4c0aac079215510e0c9ee73ed483cef5706",
+    "Research_Span_Projection_2026-10-15/projection.py": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957",
+    "Research_Server_Confirmation_2026-10-19/native_runtime.py": "8488abeb2584b33fefcaef1e1a45a30a8e894ecc3f17d0cf5e0e1586f3d770df",
+    "Research_Server_Confirmation_2026-10-19/confirmation_common.py": "31ba78f051ce21c620b0039cd73e34fe8bf2c193e264c5ad0343e3e7e0a55f6b"
+  },
+  "alignment_source_sha256": "2aad4638c72f0e30d7cc1a79f01a50bfc26c8c112047f772012890394f047957",
+  "required_provenance_assets": [
+    "experiments/_archive_sources/pavir_2026_08/MANIFEST.json",
+    "experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/scripts/run_vicocktail_w0_calib_decodes.sh",
+    "experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/scripts/activate_pavir_env.sh",
+    "experiments/_archive_sources/pavir_2026_08/01_results/project_campaign/graphs/vicocktail/w0_vc_calib/center/decode.log"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "dataset": "lrs2",
+  "language": "en",
+  "source": "vendor/auto_avsr",
+  "tokenizer": "assets/tokenizers/en.model",
+  "units": "assets/tokenizers/en_units.txt",
+  "checkpoint": "assets/checkpoints/vsr_trlrs3_base.pth",
+  "checkpoint_sha256": "ef7fef5639a25c5837a48dd71ba1b366ca2c10f9215f9e99a913c7ec0fb5a148",
+  "state_field": "raw",
+  "data_root": "data/lrs2/media/mvlrs_v1",
+  "prepared": "prepared/lrs2",
+  "train_list": "data/lrs2/train.txt",
+  "val_list": "data/lrs2/val.txt",
+  "test_list": "data/lrs2/test.txt",
+  "core_frames": 50,
+  "frame_cache_format": "npz",
+  "cache_full_training": true,
+  "training_exclusions": [
+    {
+      "clip_id": "5679613213077789161/00051",
+      "video_sha256": "1474e1d6d6c896bbd06507cca95e0d61faf02ded0651e0975ec25bfb6a214092",
+      "error": "ValueError: No face detected in clip",
+      "reason": "45-frame severely degraded face video; default detector and diagnostic thresholds 0.3, 0.2, 0.1 failed; no manual crop. Training only; below the 82-frame window threshold."
+    }
+  ]
+}

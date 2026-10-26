@@ -15,5 +15,6 @@ validation_local/
 *.avi
 *.mp4
 *.npz
+!research/context_aware_interval_2026-10-24/examples/*.npz
 .env
 .env.*

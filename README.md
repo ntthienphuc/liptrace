@@ -33,6 +33,19 @@ floating-point logits are within tolerance.
 | Measure loaded-backend host execution | Decode/pack/forward/CTC timings, warmup/repetitions, pooled p50/p95 and serial clips/s |
 | Assess saved predictions | Explicit sample-mean and corpus-weighted CER/WER, S/D/I counts and label-review status |
 
+## Pattern Recognition interval-transcription study
+
+This repository also contains the companion release for the visual-speech study
+`Context-Aware Interval Transcription for Visual Speech Recognition`.
+The release is kept under
+[`research/context_aware_interval_2026-10-24`](research/context_aware_interval_2026-10-24/README.md)
+so the LipTrace software history and its runtime contracts remain unchanged. It contains
+the compact analysis code, derived numerical tables, real VLR example frames, the revised
+manuscript and access/license notes. It does not redistribute restricted recordings or
+model weights. Run its `reproduce.py` and unit tests from that directory before citing a
+checkout. The paper and public-release handoff record the current evidence boundary and
+the terms for LRS2, MuAViC/mTEDx, ViCocktail and local checkpoints.
+
 ```mermaid
 flowchart LR
     A[CSV manifests + mouth clips] --> B[Dataset audit]

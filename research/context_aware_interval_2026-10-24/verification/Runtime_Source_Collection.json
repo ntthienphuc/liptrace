@@ -1,0 +1,10 @@
+{
+  "files": 203,
+  "bytes": 1789949,
+  "unchanged_source": true,
+  "weights_included": false,
+  "spanish_license_entries": [
+    "JeongHun0716-vsr-low-0114f5f/LICENSE"
+  ],
+  "note": "Historical paths retained only inside engine so original source hashes remain valid."
+}

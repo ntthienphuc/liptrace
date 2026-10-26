@@ -1,7 +1,7 @@
 # Context-aware interval transcription
 
 Research companion for **Context-Aware Interval Transcription for Visual Speech Recognition**.
-Public research release, 26 October 2026. The files are published in the `research/context_aware_interval_2026-10-24` subtree of [ntthienphuc/liptrace](https://github.com/ntthienphuc/liptrace/tree/c86f104b9e5a0c784df54024d717d7234da6ad31/research/context_aware_interval_2026-10-24). The existing VLR v2 Zenodo record is used for dataset citation; no separate software DOI has been created.
+Public research release, 26 October 2026. The files are published in the `research/context_aware_interval_2026-10-24` subtree of [ntthienphuc/liptrace](https://github.com/ntthienphuc/liptrace/tree/main/research/context_aware_interval_2026-10-24). The existing VLR v2 Zenodo record is used for dataset citation; no separate software DOI has been created.
 
 The task is to transcribe a requested time interval while allowing a bounded amount of real
 neighboring video. The recognizer is frozen. The comparison separates:
@@ -104,6 +104,7 @@ components are not covered by the MIT core-code license.
 The VLR image attribution is in `examples/Frame_Provenance.json`.
 Use the paper's bibliography for the original datasets, Auto-AVSR and vsr-low. The final
 paper citation and author metadata will be inserted before submission. The existing VLR v2 Zenodo record remains the dataset citation; the software release is identified by the GitHub commit above.
+
 
 
 

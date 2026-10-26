@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "archive": "Context_Aware_Interval_OpenScience_Release.zip",
-  "archive_sha256": "0739c2bef676ea8ed061e2d22e09854790df64f0196688f18c4ab83829f33315",
-  "archive_bytes": 6446756,
+  "archive_sha256": "d9dc2642e2c50cd00890c93d5248fb7ffc7c3d2d040e3bf31351223a5894c8fb",
+  "archive_bytes": 6446716,
   "entry_count": 296,
   "included_files": [
     {
@@ -142,8 +142,8 @@
     },
     {
       "path": "DATA_AND_MODELS.md",
-      "bytes": 5837,
-      "sha256": "2d4fd8e769559c2426a6c09574b8df0081b172e9411d6cf50a32faad443e54ec"
+      "bytes": 5839,
+      "sha256": "56bb9ff3f28214f7baba8c23b4180e905a5cb6b66b97b358ea87a086f3e0de6d"
     },
     {
       "path": "engine/experiments/_archive_sources/pavir_2026_08/02_code/current/Lip_Final/baselines/auto_avsr/average_checkpoints.py",
@@ -1412,8 +1412,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6657,
-      "sha256": "c02aba4a94a26e0ff923888f8015084dfa95b14df57ca7a4ea98f5f22bcaea4e"
+      "bytes": 6623,
+      "sha256": "d52a1bc4a8b9c33063b698e2278992fb39264957d1953951b43ef66ee826256e"
     },
     {
       "path": "reproduce.py",
@@ -1443,7 +1443,7 @@
     {
       "path": "verification/OpenScience_Release_Receipt.json",
       "bytes": 67943,
-      "sha256": "5b47614fd7a01a35c3fb706f24bf9d1f809338c33d2379f63c5817cff335e22a"
+      "sha256": "99f5e0727affc73153d873a21717c73878a81eca5cf3b15a41c155a2cfe3bc76"
     },
     {
       "path": "verification/Paper_Revision_Receipt.json",
@@ -1472,8 +1472,8 @@
     },
     {
       "path": "FINAL_STATUS_2026-10-26.md",
-      "bytes": 3084,
-      "sha256": "c045d9c15101b9a00603e04bb0baa1c69f8dc3ecd9b831920e5fd81fee005f78"
+      "bytes": 3086,
+      "sha256": "5961c3348d06a0fef3bd9406ea3e111ad9ea0738993e2ed89be56d4fd19c6636"
     },
     {
       "path": "PAPER_HANDOFF_2026-10-26.md",

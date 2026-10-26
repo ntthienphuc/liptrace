@@ -55,7 +55,7 @@ not silently deleting the check.
 
 ## What remains before a complete submission-ready release
 
-1. Replace the author list and final paper citation; the code-and-derived-results subtree is already published at `ntthienphuc/liptrace`, commit `c86f104`.
+1. Replace the author list and final paper citation; the code-and-derived-results subtree is already published at `ntthienphuc/liptrace`, commit `5f72387`.
 2. Replace the author placeholder in the MIT and CC BY 4.0 notices and preserve the final provenance.
 3. Deposit the two local Vietnamese checkpoints and their tokenizer/initialization dependencies,
    or explicitly state their access conditions. A hash alone is not public model availability.
@@ -74,4 +74,5 @@ be shared. The exact current [Pattern Recognition author guide](https://www.scie
 returned HTTP 403 in this check. Its current journal-specific wording therefore still needs
 confirmation in the author/submission interface. No blanket claim is made that every original
 third-party dataset can or must be relicensed publicly.
+
 
